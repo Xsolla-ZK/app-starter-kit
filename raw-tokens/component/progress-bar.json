@@ -1,0 +1,16 @@
+{
+  "progress-bar": {
+    "500": {
+      "frame": {
+        "height": {
+          "value": "{size.20}",
+          "type": "number"
+        },
+        "border-radius": {
+          "value": "{radius.999}",
+          "type": "number"
+        }
+      }
+    }
+  }
+}

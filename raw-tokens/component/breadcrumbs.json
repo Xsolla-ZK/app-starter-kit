@@ -1,0 +1,12 @@
+{
+  "breadcrumbs": {
+    "500": {
+      "frame": {
+        "gap": {
+          "value": "{space.200}",
+          "type": "number"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "gallery": {
+    "500": {
+      "gap": {
+        "value": "{space.100}",
+        "type": "number"
+      }
+    }
+  }
+}

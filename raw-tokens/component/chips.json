@@ -1,0 +1,52 @@
+{
+  "chips": {
+    "200": {
+      "frame": {
+        "gap": {
+          "value": "{space.100}",
+          "type": "number"
+        }
+      }
+    },
+    "300": {
+      "frame": {
+        "gap": {
+          "value": "{space.100}",
+          "type": "number"
+        }
+      }
+    },
+    "400": {
+      "frame": {
+        "gap": {
+          "value": "{space.100}",
+          "type": "number"
+        }
+      }
+    },
+    "500": {
+      "frame": {
+        "gap": {
+          "value": "{space.100}",
+          "type": "number"
+        }
+      }
+    },
+    "600": {
+      "frame": {
+        "gap": {
+          "value": "{space.100}",
+          "type": "number"
+        }
+      }
+    },
+    "700": {
+      "frame": {
+        "gap": {
+          "value": "{space.100}",
+          "type": "number"
+        }
+      }
+    }
+  }
+}

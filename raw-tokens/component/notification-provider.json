@@ -1,0 +1,42 @@
+{
+  "notification-provider": {
+    "500": {
+      "margin-horizontal": {
+        "sm": {
+          "value": "{layout.margin-horizontal.sm}",
+          "type": "number"
+        },
+        "md": {
+          "value": "{layout.margin-horizontal.md}",
+          "type": "number"
+        },
+        "lg": {
+          "value": "{layout.margin-horizontal.lg}",
+          "type": "number"
+        },
+        "xl": {
+          "value": "{layout.margin-horizontal.xl}",
+          "type": "number"
+        }
+      },
+      "margin-vertical": {
+        "sm": {
+          "value": "{space.450}",
+          "type": "number"
+        },
+        "md": {
+          "value": "{space.650}",
+          "type": "number"
+        },
+        "lg": {
+          "value": "{space.650}",
+          "type": "number"
+        },
+        "xl": {
+          "value": "{space.900}",
+          "type": "number"
+        }
+      }
+    }
+  }
+}
