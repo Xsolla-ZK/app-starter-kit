@@ -1,9 +1,11 @@
+'use client';
+
 import { ArrowLeft } from '@xsolla-zk/icons';
 import { NavBar, RichIcon, View } from '@xsolla-zk/react';
-import { usePathname, useRouter } from 'one';
+import dynamic from 'next/dynamic';
+import { usePathname, useRouter } from 'next/navigation';
 import type { ReactNode } from 'react';
 import { ScreenStack } from '~/components/stacks/screen-stack';
-import { ToggleThemeButton } from '~/interface/toggle-theme-button';
 
 const pageMappings: Record<string, string> = {
   '/': 'UI Kit Demo',
@@ -13,11 +15,14 @@ const pageMappings: Record<string, string> = {
   '/size': 'Size',
 };
 
+const DynamicToggleThemeButton = dynamic(() => import('~/interface/toggle-theme-button').then((mod) => mod.ToggleThemeButton), {
+  ssr: false,
+});
+
 export function MainLayout({ children }: { children: ReactNode }) {
-  const { back, replace, canGoBack } = useRouter();
+  const { back, replace } = useRouter();
   const pathname = usePathname();
 
-  const canBack = canGoBack();
   const notHomePage = pathname !== '/';
 
   return (
@@ -26,12 +31,12 @@ export function MainLayout({ children }: { children: ReactNode }) {
       <NavBar preset="prominent" backgroundColor="$layer.floor-1">
         {/* {isWeb && <Stack paddingTop={16} />} */}
         <NavBar.StartSlot>
-          {(canBack || notHomePage) && (
+          {(notHomePage) && (
             <RichIcon
               size="$300"
               pressable
               onPress={() => {
-                if (!canBack && notHomePage) {
+                if (notHomePage) {
                   replace('/');
                 } else {
                   back();
@@ -46,7 +51,7 @@ export function MainLayout({ children }: { children: ReactNode }) {
           <NavBar.Title>{pageMappings[pathname]}</NavBar.Title>
         </NavBar.Center>
         <NavBar.EndSlot>
-          <ToggleThemeButton />
+          <DynamicToggleThemeButton />
         </NavBar.EndSlot>
       </NavBar>
       {/* </SafeAreaView> */}

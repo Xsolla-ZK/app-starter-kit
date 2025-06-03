@@ -1,35 +1,50 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
+    "rootDir": ".",
+    "target": "ES2022",
+    "lib": [
+      "ES2022",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "incremental": true,
+    "jsx": "preserve",
     "paths": {
       "~/*": [
         "./src/*"
       ]
     },
-    "strict": true,
-    "rootDir": ".",
-    "module": "Preserve",
-    "moduleResolution": "Bundler",
-    "preserveSymlinks": true,
-    "skipLibCheck": true,
-    "jsx": "react-jsx",
-    "noImplicitAny": false,
-    "types": [
-      "node",
-      "react",
-      "vite/client"
-    ],
-    "lib": [
-      "dom",
-      "esnext"
+    "plugins": [
+      {
+        "name": "next"
+      }
     ]
   },
   "exclude": [
     "node_modules",
+    ".next",
+    ".tamagui",
     ".expo",
     "**/test",
     "**/dist",
     "**/types",
     "**/__tests__"
+  ],
+  "include": [
+    "next-env.d.ts",
+    ".next/types/**/*.ts",
+    "**/*.ts",
+    "**/*.tsx"
   ]
 }

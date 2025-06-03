@@ -10,6 +10,9 @@ catalog:
   "react-native-svg": 15.8.0
 
 catalogs:
+  next15:
+    next: 15.3.3
+    "eslint-config-next": 15.3.3
   eslint9:
     eslint: 9.26.0
     "@eslint/js": 9.26.0
@@ -29,4 +32,6 @@ catalogs:
   tamagui:
     "@tamagui/animate-presence": 1.126.13
     "@tamagui/image-next": 1.126.13
-    "@tamagui/vite-plugin": 1.126.13
+    "@tamagui/next-plugin": 1.126.13
+    "@tamagui/next-theme": 1.126.13
+    "@tamagui/polyfill-dev": 1.126.13

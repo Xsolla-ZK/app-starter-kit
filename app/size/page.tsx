@@ -1,3 +1,5 @@
+'use client';
+
 import { Cross, Eye, EyeSlash } from '@xsolla-zk/icons';
 import {
   Button,
@@ -67,7 +69,7 @@ const PasswordField = forwardRef<HTMLInputElement, InputProps>(function Password
   );
 });
 
-export function SizeScreen() {
+export default function SizeScreen() {
   const [size, setSize] = useState<FieldSizes>('$500');
   return (
     <>

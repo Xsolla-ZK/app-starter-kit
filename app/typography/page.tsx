@@ -1,3 +1,5 @@
+'use client';
+
 import {
   Markdown,
   SegmentedControl,
@@ -26,7 +28,7 @@ const typographyContent = {
 
 type TypographyContentKeys = keyof typeof typographyContent;
 
-export function TypographyScreen() {
+export default function TypographyScreen() {
   const [activeTab, setActiveTab] = useState<TypographyContentKeys>('typography');
 
   return (
