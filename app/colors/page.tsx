@@ -1,3 +1,5 @@
+'use client';
+
 import { Button, Chips, Input, MaskedInput, SemanticText, Stack } from '@xsolla-zk/react';
 import { useState } from 'react';
 import { ContentStack } from '~/components/stacks/content-stack';
@@ -25,7 +27,7 @@ const modes = {
 
 type Modes = keyof typeof modes;
 
-export function ColorsScreen() {
+export default function ColorsScreen() {
   const [value, setValue] = useState<Modes>('phone');
   return (
     <>

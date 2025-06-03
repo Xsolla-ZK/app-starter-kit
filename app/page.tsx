@@ -1,15 +1,17 @@
+'use client';
+
 import { Grid2x2 } from '@xsolla-zk/icons';
 import { getSafeTokenValue, RichIcon, SemanticText, Stack } from '@xsolla-zk/react';
-import { useRouter } from 'one';
 import { memo } from 'react';
 import { Path, Svg } from 'react-native-svg';
 import type { IconProp, RichIconSizes } from '@xsolla-zk/react';
 import { Card } from '~/components/card/card';
 import { ContentStack } from '~/components/stacks/content-stack';
+import { useRouter } from 'next/navigation';
 
 const Logo1 = memo(LogoXSollaZK) as IconProp;
 
-export function HomeScreen() {
+export default function HomeScreen() {
   const { push } = useRouter();
 
   return (

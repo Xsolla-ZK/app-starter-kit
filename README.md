@@ -1,23 +1,20 @@
 # Xsolla ZK App Starter Kit
 
-> **⚠️ NOTICE: This version is not very stable. Please use the version from the `next` branch for better stability.**
-
 Welcome to the **Xsolla ZK App Starter Kit** - a comprehensive development template built on top of the [Xsolla ZK UI Design System](https://github.com/Xsolla-ZK/Xsolla-ZK-UI). This starter kit provides a foundation for building cross-platform applications using modern React Native and web technologies with a unified design system.
 
 ## 🚀 Key Technologies
 
 - **[Xsolla ZK UI](https://ui-kit.xsollazk.com/)** - Comprehensive design system and component library
 - **[Tamagui](https://tamagui.dev/)** - Universal UI system and optimizing compiler
-- **[One Stack](https://onestack.dev/)** - Universal React framework for web and native
+- **[Next.js](https://nextjs.org/)** - React framework for production with hybrid static & server rendering
 - **Expo** - Platform for universal React applications
-- **Vite** - Fast build tool and development server
 - **TypeScript** - Type-safe JavaScript development
 
 ## 📁 Project Structure
 
 ```
 xsolla-zk-app-starter/
-├── app/                          # Application pages (One Stack routing)
+├── app/                          # Application pages (Next.js App Router)
 ├── src/                         # Source code
 │   ├── config/                  # Configuration files
 │   │   ├── tamagui.config.ts   # Main Tamagui configuration
@@ -26,7 +23,7 @@ xsolla-zk-app-starter/
 ├── raw-tokens/                 # Source design tokens from Figma
 ├── package.json               # Project dependencies and scripts
 ├── app.json                   # Expo configuration
-└── vite.config.ts            # Vite build configuration
+└── next.config.mjs           # Next.js build configuration
 ```
 
 ## 🎨 Design System Features
@@ -67,7 +64,7 @@ pnpm generate:tokens
 
 ### Development Commands
 
-Run your One app in development:
+Run your Next.js app in development:
 
 ```bash
 # Start development server
@@ -169,7 +166,7 @@ export default function HomePage() {
 ## 🏗 Architecture Highlights
 
 ### Universal Rendering
-- **Web**: Static site generation with Vite
+- **Web**: Static site generation and SSR with Next.js
 - **Native**: React Native with Expo
 - **Shared**: Universal components and styling
 
@@ -211,7 +208,7 @@ export default function HomePage() {
 
 - **[Full Documentation](./DOCUMENTATION.md)** - Complete project documentation
 - **[Xsolla ZK UI Documentation](https://ui-kit.xsollazk.com/)**
-- **[One Stack Documentation](https://onestack.dev/docs/introduction)**
+- **[Next.js Documentation](https://nextjs.org/docs)**
 - **[Tamagui Documentation](https://tamagui.dev/docs/intro/introduction)**
 - **[GitHub Repository](https://github.com/Xsolla-ZK/Xsolla-ZK-UI)**
 

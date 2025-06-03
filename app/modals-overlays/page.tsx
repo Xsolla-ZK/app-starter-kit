@@ -1,3 +1,5 @@
+'use client';
+
 import { Image } from '@tamagui/image-next';
 import { ArrowLeft, Cross } from '@xsolla-zk/icons';
 import {
@@ -16,7 +18,7 @@ import type { PropsWithChildren } from 'react';
 import { Card } from '~/components/card/card';
 import { ContentStack } from '~/components/stacks/content-stack';
 
-export function ModalsOverlaysScreen() {
+export default function ModalsOverlaysScreen() {
   const notify = useNotificationController();
   return (
     <>
