@@ -57,5 +57,10 @@
       "react-native": "catalog:reactNative",
       "react-native-renderer": "19.1.0"
     }
+  },
+  "packageManager": "pnpm@10.3.0",
+  "engines": {
+    "pnpm": "10.3.0",
+    "node": ">=20.9.0"
   }
 }
