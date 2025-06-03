@@ -1,13 +1,12 @@
 # Xsolla ZK App Starter Kit
 
-Welcome to the **Xsolla ZK App Starter Kit** - a comprehensive development template built on top of the [Xsolla ZK UI Design System](https://github.com/Xsolla-ZK/Xsolla-ZK-UI). This starter kit provides a foundation for building cross-platform applications using modern React Native and web technologies with a unified design system.
+Welcome to the **Xsolla ZK App Starter Kit** - a comprehensive development template built on top of the [Xsolla ZK UI Design System](https://github.com/Xsolla-ZK/Xsolla-ZK-UI). This starter kit provides a foundation for building modern web applications using React and Next.js with a unified design system.
 
 ## 🚀 Key Technologies
 
 - **[Xsolla ZK UI](https://ui-kit.xsollazk.com/)** - Comprehensive design system and component library
 - **[Tamagui](https://tamagui.dev/)** - Universal UI system and optimizing compiler
 - **[Next.js](https://nextjs.org/)** - React framework for production with hybrid static & server rendering
-- **Expo** - Platform for universal React applications
 - **TypeScript** - Type-safe JavaScript development
 
 ## 📁 Project Structure
@@ -16,13 +15,11 @@ Welcome to the **Xsolla ZK App Starter Kit** - a comprehensive development templ
 xsolla-zk-app-starter/
 ├── app/                          # Application pages (Next.js App Router)
 ├── src/                         # Source code
-│   ├── config/                  # Configuration files
-│   │   ├── tamagui.config.ts   # Main Tamagui configuration
-│   │   ├── components.config.ts # Component configuration
+│   ├── tamagui/                 # Tamagui configuration
 │   │   └── tokens/             # Generated design tokens
 ├── raw-tokens/                 # Source design tokens from Figma
+├── raw-icons/                  # Source icon assets
 ├── package.json               # Project dependencies and scripts
-├── app.json                   # Expo configuration
 └── next.config.mjs           # Next.js build configuration
 ```
 
@@ -48,9 +45,8 @@ Built-in responsive breakpoints:
 
 ### Prerequisites
 
-- Node.js 18+
-- pnpm 8+
-- Expo CLI (for native development)
+- Node.js 20+
+- pnpm 10+
 
 ### Installation
 
@@ -60,6 +56,9 @@ pnpm install
 
 # Generate design tokens
 pnpm generate:tokens
+
+# Generate icons (optional)
+pnpm generate:icons
 ```
 
 ### Development Commands
@@ -70,59 +69,52 @@ Run your Next.js app in development:
 # Start development server
 pnpm dev
 
-# Start with clean cache
-pnpm dev:clean
+# Build for production
+pnpm build
 
-# Type checking
-pnpm typecheck
+# Start production server
+pnpm start
 
-# Clean build artifacts
-pnpm clean
+# Build and export static files
+pnpm export
 ```
 
-### Design Token Generation
+### Asset Generation
 
 ```bash
-# Generate tokens from raw-tokens/ to src/config/tokens/
+# Generate design tokens from raw-tokens/ to src/tamagui/tokens/
 pnpm generate:tokens
+
+# Generate icon components from raw-icons/ to src/icons/
+pnpm generate:icons
 ```
 
-This command uses `@xsolla-zk/tokens` to:
+The `generate:tokens` command uses `@xsolla-zk/tokens` to:
 - Parse raw token files from `raw-tokens/`
 - Generate TypeScript token definitions
 - Create theme variations (light/dark)
 - Generate component-specific tokens
 
+The `generate:icons` command uses `@xsolla-zk/icons-generator` to:
+- Parse SVG files from `raw-icons/`
+- Generate optimized React components
+- Create barrel exports for tree-shaking
+
 ## 🏗 Production
 
 ### Web
 
-To build your app for production:
+To build and serve your app for production:
 
 ```bash
 # Build optimized web bundle
-pnpm build:web
+pnpm build
 
-# Serve built files
-pnpm serve
-```
+# Start production server
+pnpm start
 
-### Native Apps
-
-First, you'll need to generate the native code for your app:
-
-```bash
-pnpm prebuild:native
-```
-
-Afterward, follow the instructions printed in the terminal to build and upload your app for distribution.
-
-```bash
-# Run on iOS
-pnpm ios
-
-# Run on Android
-pnpm android
+# Build and export static files
+pnpm export
 ```
 
 ## 🎯 Quick Start
@@ -165,10 +157,10 @@ export default function HomePage() {
 
 ## 🏗 Architecture Highlights
 
-### Universal Rendering
-- **Web**: Static site generation and SSR with Next.js
-- **Native**: React Native with Expo
-- **Shared**: Universal components and styling
+### Web-First Approach
+- **SSG**: Static site generation with Next.js
+- **SSR**: Server-side rendering support
+- **SPA**: Single-page application routing
 
 ### Performance Optimizations
 - **Tamagui Compiler**: Static style extraction
@@ -185,15 +177,11 @@ export default function HomePage() {
 | Command | Description |
 |---------|-------------|
 | `pnpm dev` | Start development server |
-| `pnpm dev:clean` | Start development with clean cache |
-| `pnpm build:web` | Build optimized web bundle |
-| `pnpm serve` | Serve built files |
-| `pnpm prebuild:native` | Generate native project files |
-| `pnpm ios` | Run on iOS |
-| `pnpm android` | Run on Android |
+| `pnpm build` | Build optimized production bundle |
+| `pnpm start` | Start production server |
+| `pnpm export` | Build and export static files |
 | `pnpm generate:tokens` | Generate design tokens from Figma exports |
-| `pnpm typecheck` | Run TypeScript type checking |
-| `pnpm clean` | Clean build artifacts |
+| `pnpm generate:icons` | Generate icon components from SVG assets |
 
 ## 🎨 Design System Packages
 
@@ -203,6 +191,7 @@ export default function HomePage() {
 | `@xsolla-zk/icons` | SVG icon components |
 | `@xsolla-zk/config` | Tamagui configuration |
 | `@xsolla-zk/tokens` | Design token generator |
+| `@xsolla-zk/icons-generator` | Icon generation utilities |
 
 ## 📖 Resources
 
