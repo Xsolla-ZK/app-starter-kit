@@ -63,16 +63,16 @@ importers:
         version: 1.1.486(react-native@0.79.2(@babel/core@7.27.4)(@react-native-community/cli@15.1.3(typescript@5.8.2))(@types/react@19.1.4)(react@19.1.0))(react@19.1.0)
       '@xsolla-zk/config':
         specifier: latest
-        version: 1.0.4(@babel/core@7.27.4)(@react-native-community/cli@15.1.3(typescript@5.8.2))(@types/react@19.1.4)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+        version: 1.0.6(@babel/core@7.27.4)(@react-native-community/cli@15.1.3(typescript@5.8.2))(@types/react@19.1.4)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@xsolla-zk/icons':
         specifier: latest
-        version: 1.0.4(@tamagui/core@1.126.13(react-dom@19.1.0(react@19.1.0))(react-native@0.79.2(@babel/core@7.27.4)(@react-native-community/cli@15.1.3(typescript@5.8.2))(@types/react@19.1.4)(react@19.1.0))(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react-native-svg@15.8.0(react-native@0.79.2(@babel/core@7.27.4)(@react-native-community/cli@15.1.3(typescript@5.8.2))(@types/react@19.1.4)(react@19.1.0))(react@19.1.0))(react-native@0.79.2(@babel/core@7.27.4)(@react-native-community/cli@15.1.3(typescript@5.8.2))(@types/react@19.1.4)(react@19.1.0))(react@19.1.0)
+        version: 1.0.6(@tamagui/core@1.126.13(react-dom@19.1.0(react@19.1.0))(react-native@0.79.2(@babel/core@7.27.4)(@react-native-community/cli@15.1.3(typescript@5.8.2))(@types/react@19.1.4)(react@19.1.0))(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react-native-svg@15.8.0(react-native@0.79.2(@babel/core@7.27.4)(@react-native-community/cli@15.1.3(typescript@5.8.2))(@types/react@19.1.4)(react@19.1.0))(react@19.1.0))(react-native@0.79.2(@babel/core@7.27.4)(@react-native-community/cli@15.1.3(typescript@5.8.2))(@types/react@19.1.4)(react@19.1.0))(react@19.1.0)
       '@xsolla-zk/react':
         specifier: latest
-        version: 1.0.4(55f602be097d6c4cfa42820733cfa01f)
+        version: 1.0.6(55f602be097d6c4cfa42820733cfa01f)
       '@xsolla-zk/tokens':
         specifier: latest
-        version: 1.0.4
+        version: 1.0.6
       expo:
         specifier: 53.0.9
         version: 53.0.9(@babel/core@7.27.4)(babel-plugin-react-compiler@19.0.0-beta-ebf51a3-20250411)(react-native@0.79.2(@babel/core@7.27.4)(@react-native-community/cli@15.1.3(typescript@5.8.2))(@types/react@19.1.4)(react@19.1.0))(react@19.1.0)
@@ -2744,17 +2744,17 @@ packages:
     resolution: {integrity: sha512-2WALfTl4xo2SkGCYRt6rDTFfk9R1czmBvUQy12gK2KuRKIpWEhcbbzy8EZXtz/jkRqHX8bFEc6FC1HjX4TUWYw==}
     engines: {node: '>=10.0.0'}
 
-  '@xsolla-zk/config@1.0.4':
-    resolution: {integrity: sha512-a5RHIA6l9Q0pXriAcHyBBCvWGmMORGG6Xj4+tnNQ02rQXXw6XyCdhgITc4NdolfrcZmGCKURt1KOgP9X1aNZqQ==}
+  '@xsolla-zk/config@1.0.6':
+    resolution: {integrity: sha512-4C9i/yaQBDGcSHrgoQtiq3MDXVXsxHnnb7mjpCgvj0M7ghybM5l0fsuuqSvi696zm9QHPWihx7Ii1JKSEfn7Fg==}
 
-  '@xsolla-zk/icons@1.0.4':
-    resolution: {integrity: sha512-p7yc4zn+c9aUrxFbqEN3BRCZqL5v9L0YB/noFY9vkYV1WNCgXry4dEElXuKFBPpICKDowA9P8NSgLUZ1SxDOkw==}
+  '@xsolla-zk/icons@1.0.6':
+    resolution: {integrity: sha512-H1H/X5259qnIMzd2asaue2BKIULj7Szh/dAU0jNClptaOTIPPTdC8ewx7Hb9OPv2vHnxr04iD8n+GyIGkrzjfg==}
     peerDependencies:
       '@tamagui/core': 1.126.13
       react-native-svg: 15.8.0
 
-  '@xsolla-zk/react@1.0.4':
-    resolution: {integrity: sha512-Nw3AY02AlGakZTLTPlJdSd2HQHFoa4B4VvSQM4tvQA4edcx+Si9TiLeW84s+y3o6846mNvBUYbENp2ByttLzHg==}
+  '@xsolla-zk/react@1.0.6':
+    resolution: {integrity: sha512-Zt2OmV5GDgiPFr1oYfiny3xCFQaR1OpLYl4qyb8DX2fU9P7Y1BBad7+8EGel6rvgBBhzyNxRRovHXdEELDWf9w==}
     peerDependencies:
       '@tamagui/adapt': 1.126.13
       '@tamagui/animate-presence': 1.126.13
@@ -2764,8 +2764,8 @@ packages:
       react: '*'
       react-dom: '*'
 
-  '@xsolla-zk/tokens@1.0.4':
-    resolution: {integrity: sha512-mxRIN04Q+udHkJO2YJCQMJfYhsjXmdDlGONN97tg0xk4j0o/F1ARkxszYn43X1YFlmu3CXRNi8VdKghKKzXjWw==}
+  '@xsolla-zk/tokens@1.0.6':
+    resolution: {integrity: sha512-/2mH7z1UDzqq+KQh4bCiHHl+p6bZOCylVX1l+fgPuyJ9d5EXzcbvVIEjfLBzqyjDnA3jHqIqczc1xeVJQbTuzQ==}
     hasBin: true
 
   abort-controller@3.0.0:
@@ -10083,7 +10083,7 @@ snapshots:
 
   '@xmldom/xmldom@0.8.10': {}
 
-  '@xsolla-zk/config@1.0.4(@babel/core@7.27.4)(@react-native-community/cli@15.1.3(typescript@5.8.2))(@types/react@19.1.4)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
+  '@xsolla-zk/config@1.0.6(@babel/core@7.27.4)(@react-native-community/cli@15.1.3(typescript@5.8.2))(@types/react@19.1.4)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
     dependencies:
       '@tamagui/animations-css': 1.126.13(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@tamagui/animations-moti': 1.126.13(react-dom@19.1.0(react@19.1.0))(react-native-reanimated@3.18.0(@babel/core@7.27.4)(react-native@0.79.2(@babel/core@7.27.4)(@react-native-community/cli@15.1.3(typescript@5.8.2))(@types/react@19.1.4)(react@19.1.0))(react@19.1.0))(react@19.1.0)
@@ -10101,7 +10101,7 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  '@xsolla-zk/icons@1.0.4(@tamagui/core@1.126.13(react-dom@19.1.0(react@19.1.0))(react-native@0.79.2(@babel/core@7.27.4)(@react-native-community/cli@15.1.3(typescript@5.8.2))(@types/react@19.1.4)(react@19.1.0))(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react-native-svg@15.8.0(react-native@0.79.2(@babel/core@7.27.4)(@react-native-community/cli@15.1.3(typescript@5.8.2))(@types/react@19.1.4)(react@19.1.0))(react@19.1.0))(react-native@0.79.2(@babel/core@7.27.4)(@react-native-community/cli@15.1.3(typescript@5.8.2))(@types/react@19.1.4)(react@19.1.0))(react@19.1.0)':
+  '@xsolla-zk/icons@1.0.6(@tamagui/core@1.126.13(react-dom@19.1.0(react@19.1.0))(react-native@0.79.2(@babel/core@7.27.4)(@react-native-community/cli@15.1.3(typescript@5.8.2))(@types/react@19.1.4)(react@19.1.0))(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react-native-svg@15.8.0(react-native@0.79.2(@babel/core@7.27.4)(@react-native-community/cli@15.1.3(typescript@5.8.2))(@types/react@19.1.4)(react@19.1.0))(react@19.1.0))(react-native@0.79.2(@babel/core@7.27.4)(@react-native-community/cli@15.1.3(typescript@5.8.2))(@types/react@19.1.4)(react@19.1.0))(react@19.1.0)':
     dependencies:
       '@tamagui/core': 1.126.13(react-dom@19.1.0(react@19.1.0))(react-native@0.79.2(@babel/core@7.27.4)(@react-native-community/cli@15.1.3(typescript@5.8.2))(@types/react@19.1.4)(react@19.1.0))(react@19.1.0)
       '@tamagui/helpers-icon': 1.126.13(react-dom@19.1.0(react@19.1.0))(react-native-svg@15.8.0(react-native@0.79.2(@babel/core@7.27.4)(@react-native-community/cli@15.1.3(typescript@5.8.2))(@types/react@19.1.4)(react@19.1.0))(react@19.1.0))(react-native@0.79.2(@babel/core@7.27.4)(@react-native-community/cli@15.1.3(typescript@5.8.2))(@types/react@19.1.4)(react@19.1.0))(react@19.1.0)
@@ -10111,7 +10111,7 @@ snapshots:
       - react-dom
       - react-native
 
-  '@xsolla-zk/react@1.0.4(55f602be097d6c4cfa42820733cfa01f)':
+  '@xsolla-zk/react@1.0.6(55f602be097d6c4cfa42820733cfa01f)':
     dependencies:
       '@tamagui/adapt': 1.126.13(react-dom@19.1.0(react@19.1.0))(react-native@0.79.2(@babel/core@7.27.4)(@react-native-community/cli@15.1.3(typescript@5.8.2))(@types/react@19.1.4)(react@19.1.0))(react@19.1.0)
       '@tamagui/animate-presence': 1.126.13(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
@@ -10149,7 +10149,7 @@ snapshots:
       - react-native
       - supports-color
 
-  '@xsolla-zk/tokens@1.0.4':
+  '@xsolla-zk/tokens@1.0.6':
     dependencies:
       prettier: 3.5.3
 
