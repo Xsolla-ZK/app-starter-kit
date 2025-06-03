@@ -1,5 +1,7 @@
 # Xsolla ZK App Starter Kit
 
+> **⚠️ NOTICE: This version is not very stable. Please use the version from the `next` branch for better stability.**
+
 Welcome to the **Xsolla ZK App Starter Kit** - a comprehensive development template built on top of the [Xsolla ZK UI Design System](https://github.com/Xsolla-ZK/Xsolla-ZK-UI). This starter kit provides a foundation for building cross-platform applications using modern React Native and web technologies with a unified design system.
 
 ## 🚀 Key Technologies

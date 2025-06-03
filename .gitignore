@@ -35,4 +35,7 @@ tsconfig.tsbuildinfo
 /ios
 /android
 
+
+.next
+next-env.d.ts
 tamagui.css
