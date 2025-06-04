@@ -9,7 +9,7 @@
     "start": "next start",
     "export": "next build && next export",
     "generate:icons": "xzkui-icons generate -i ./raw-icons -o ./src/icons",
-    "generate:tokens": "xzkui-tokens generate -t tamagui -i ./raw-tokens -o ./src/tamagui/tokens -p"
+    "generate:tokens": "xzkui-tokens generate -t tamagui -i ./raw-tokens -o ./src/config/tokens -p"
   },
   "dependencies": {
     "@tamagui/image-next": "catalog:tamagui",
@@ -32,6 +32,7 @@
     "@types/react-dom": "*",
     "eslint-config-next": "catalog:next15",
     "@xsolla-zk/icons-generator": "latest",
+    "@xsolla-zk/tokens": "latest",
     "eslint": "catalog:eslint9",
     "eslint-config-prettier": "10.1.5",
     "eslint-import-resolver-typescript": "4.3.4",

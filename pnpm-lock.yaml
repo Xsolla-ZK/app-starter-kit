@@ -103,6 +103,9 @@ importers:
       '@xsolla-zk/icons-generator':
         specifier: latest
         version: 1.0.7
+      '@xsolla-zk/tokens':
+        specifier: latest
+        version: 1.0.7
       eslint:
         specifier: catalog:eslint9
         version: 9.26.0
@@ -2104,6 +2107,10 @@ packages:
       burnt: 0.13.0
       react: '*'
       react-dom: '*'
+
+  '@xsolla-zk/tokens@1.0.7':
+    resolution: {integrity: sha512-tkahrhAuKX6pN5dlsAWhyEAR2SPuqOXkLcvVijOpmILS4ufL3RH6B2kI4flOhFgC5enIg+jNmddtAGlcNTIP9A==}
+    hasBin: true
 
   '@xtuc/ieee754@1.2.0':
     resolution: {integrity: sha512-DX8nKgqcGwsc0eJSqYt5lwP4DH5FlHnmuWWBRy7X0NcaGR0ZtuyeESgMwTYVEtxmsNGY+qit4QYT/MIYTOTPeA==}
@@ -8221,6 +8228,10 @@ snapshots:
       - '@types/react'
       - react-native
       - supports-color
+
+  '@xsolla-zk/tokens@1.0.7':
+    dependencies:
+      prettier: 3.5.3
 
   '@xtuc/ieee754@1.2.0': {}
 

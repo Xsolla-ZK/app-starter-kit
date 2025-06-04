@@ -6,7 +6,7 @@
     "selectedTokenSets": {
       "common/layout/apple": "enabled",
       "common/media/apple": "enabled",
-      "common/spacing/spacing": "source"
+      "common/space/space": "source"
     },
     "$figmaCollectionId": "VariableCollectionId:2056:381498",
     "$figmaModeId": "2081:3",
@@ -68,7 +68,7 @@
     "selectedTokenSets": {
       "common/layout/android": "enabled",
       "common/media/android": "enabled",
-      "common/spacing/spacing": "source"
+      "common/space/space": "source"
     },
     "$figmaCollectionId": "VariableCollectionId:2056:381498",
     "$figmaModeId": "2081:4",
@@ -130,7 +130,7 @@
     "selectedTokenSets": {
       "common/layout/web": "enabled",
       "common/media/web": "enabled",
-      "common/spacing/spacing": "source"
+      "common/space/space": "source"
     },
     "$figmaCollectionId": "VariableCollectionId:2056:381498",
     "$figmaModeId": "2081:5",

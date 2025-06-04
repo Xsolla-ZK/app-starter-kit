@@ -542,8 +542,8 @@ export const input = {
       borderRadius: '$radius.400',
       gap: '$space.100',
       borderWidth: '$stroke.200',
-      paddingVertical: '$space.300',
-      paddingHorizontal: '$space.350',
+      paddingVertical: '$space.250',
+      paddingHorizontal: '$space.325',
     },
     label: {
       typography: 'compact.250.default',
@@ -555,8 +555,8 @@ export const input = {
       borderRadius: '$radius.500',
       gap: '$space.100',
       borderWidth: '$stroke.200',
-      paddingVertical: '$space.300',
-      paddingHorizontal: '$space.350',
+      paddingVertical: '$space.250',
+      paddingHorizontal: '$space.325',
     },
     label: {
       typography: 'compact.300.default',
@@ -568,8 +568,8 @@ export const input = {
       borderRadius: '$radius.500',
       gap: '$space.150',
       borderWidth: '$stroke.200',
-      paddingVertical: '$space.300',
-      paddingHorizontal: '$space.350',
+      paddingVertical: '$space.250',
+      paddingHorizontal: '$space.325',
     },
     label: {
       typography: 'compact.350.default',
@@ -582,12 +582,13 @@ export const list = {
       frame: {
         gap: '$space.50',
       },
-      title: {
+      row: {
         gap: '$space.200',
+      },
+      title: {
         typography: 'compact.300.accent',
       },
       subtitle: {
-        gap: '$space.200',
         typography: 'compact.250.default',
       },
     },
@@ -595,12 +596,13 @@ export const list = {
       frame: {
         gap: '$space.50',
       },
-      title: {
+      row: {
         gap: '$space.200',
+      },
+      title: {
         typography: 'compact.350.accent',
       },
       subtitle: {
-        gap: '$space.200',
         typography: 'compact.250.default',
       },
     },
@@ -1094,32 +1096,32 @@ export const segment = {
 export const segmentedControl = {
   $400: {
     frame: {
-      paddingHorizontal: '$space.100',
-      paddingVertical: '$space.100',
+      paddingHorizontal: '$space.75',
+      paddingVertical: '$space.75',
       borderRadius: '$radius.400',
       borderWidth: '$stroke.100',
     },
   },
   $500: {
     frame: {
-      paddingHorizontal: '$space.100',
-      paddingVertical: '$space.100',
+      paddingHorizontal: '$space.75',
+      paddingVertical: '$space.75',
       borderRadius: '$radius.500',
       borderWidth: '$stroke.100',
     },
   },
   $600: {
     frame: {
-      paddingHorizontal: '$space.100',
-      paddingVertical: '$space.100',
+      paddingHorizontal: '$space.75',
+      paddingVertical: '$space.75',
       borderRadius: '$radius.500',
       borderWidth: '$stroke.100',
     },
   },
   $700: {
     frame: {
-      paddingHorizontal: '$space.100',
-      paddingVertical: '$space.100',
+      paddingHorizontal: '$space.75',
+      paddingVertical: '$space.75',
       borderRadius: '$radius.550',
       borderWidth: '$stroke.100',
     },

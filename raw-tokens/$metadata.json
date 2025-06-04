@@ -10,7 +10,7 @@
     "common/effect/shadow",
     "common/radius/radius",
     "common/size/size",
-    "common/spacing/spacing",
+    "common/space/space",
     "common/stroke/stroke",
     "common/layout/web",
     "common/layout/apple",
