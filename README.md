@@ -15,7 +15,7 @@ Welcome to the **Xsolla ZK App Starter Kit** - a comprehensive development templ
 xsolla-zk-app-starter/
 ├── app/                          # Application pages (Next.js App Router)
 ├── src/                         # Source code
-│   ├── tamagui/                 # Tamagui configuration
+│   ├── config/                 # App configuration
 │   │   └── tokens/             # Generated design tokens
 ├── raw-tokens/                 # Source design tokens from Figma
 ├── raw-icons/                  # Source icon assets
@@ -82,7 +82,7 @@ pnpm export
 ### Asset Generation
 
 ```bash
-# Generate design tokens from raw-tokens/ to src/tamagui/tokens/
+# Generate design tokens from raw-tokens/ to src/config/tokens/
 pnpm generate:tokens
 
 # Generate icon components from raw-icons/ to src/icons/
@@ -189,7 +189,7 @@ export default function HomePage() {
 |---------|-------------|
 | `@xsolla-zk/react` | React component library |
 | `@xsolla-zk/icons` | SVG icon components |
-| `@xsolla-zk/config` | Tamagui configuration |
+| `@xsolla-zk/config` | Default UI-Kit configuration |
 | `@xsolla-zk/tokens` | Design token generator |
 | `@xsolla-zk/icons-generator` | Icon generation utilities |
 
