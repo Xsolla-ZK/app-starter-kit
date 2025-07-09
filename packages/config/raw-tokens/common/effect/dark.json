@@ -1,0 +1,18 @@
+{
+  "effect": {
+    "shadow": {
+      "100": {
+        "value": "rgba( {goose.999}, {opacity.effect.shadow.dark.100})",
+        "type": "color"
+      },
+      "500": {
+        "value": "rgba( {goose.999}, {opacity.effect.shadow.dark.500})",
+        "type": "color"
+      },
+      "900": {
+        "value": "rgba( {goose.999}, {opacity.effect.shadow.dark.900})",
+        "type": "color"
+      }
+    }
+  }
+}

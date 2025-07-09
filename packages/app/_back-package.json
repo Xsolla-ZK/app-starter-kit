@@ -1,0 +1,36 @@
+{
+  "name": "app",
+  "version": "0.0.0",
+  "main": "index.ts",
+  "private": true,
+  "type": "module",
+  "sideEffects": ["*.css"],
+  "dependencies": {
+    "@app/api": "workspace:*",
+    "@app/config": "workspace:*",
+    "@app/icons": "workspace:*",
+    "@app/ui": "workspace:*",
+    "@app/utils": "workspace:*",
+    "@react-three/drei": "^10.3.0",
+    "@react-three/fiber": "^9.0.0",
+    "@simplewebauthn/browser": "^13.1.0",
+    "@simplewebauthn/server": "^13.1.1",
+    "@tamagui/animations-react-native": "1.127.2",
+    "@tanstack/react-query": "^5.80.7",
+    "@wagmi/core": "^2.17.3",
+    "@xsolla-zk/icons": "latest",
+    "solito": "patch:solito@npm%3A4.4.1#~/.yarn/patches/solito-npm-4.4.1-976dc5859c.patch",
+    "viem": "2.x",
+    "wagmi": "^2.15.6",
+    "zksync-sso": "^0.3.3"
+  },
+  "devDependencies": {
+    "@app/typescript-config": "workspace:*",
+    "@types/react": "*",
+    "@types/react-native": "*",
+    "pino-pretty": "^7.6.0"
+  },
+  "resolutions": {
+    "next": "^15.3.4"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "slider": {
+    "500": {
+      "frame": {
+        "height": {
+          "value": "{size.20}",
+          "type": "number"
+        },
+        "border-radius": {
+          "value": "{radius.999}",
+          "type": "number"
+        }
+      },
+      "knob": {
+        "size": {
+          "value": "{size.150}",
+          "type": "number"
+        },
+        "border-width": {
+          "value": "{stroke.100}",
+          "type": "number"
+        }
+      }
+    }
+  }
+}

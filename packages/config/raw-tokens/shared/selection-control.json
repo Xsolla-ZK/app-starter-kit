@@ -1,0 +1,70 @@
+{
+  "selection-control": {
+    "400": {
+      "frame": {
+        "size": {
+          "value": "{size.100}",
+          "type": "number"
+        },
+        "border-radius": {
+          "value": "{radius.200}",
+          "type": "number"
+        },
+        "border-width": {
+          "value": "{stroke.100}",
+          "type": "number"
+        }
+      },
+      "icon": {
+        "size": {
+          "value": "{size.80}",
+          "type": "number"
+        }
+      }
+    },
+    "500": {
+      "frame": {
+        "size": {
+          "value": "{size.200}",
+          "type": "number"
+        },
+        "border-radius": {
+          "value": "{radius.300}",
+          "type": "number"
+        },
+        "border-width": {
+          "value": "{stroke.100}",
+          "type": "number"
+        }
+      },
+      "icon": {
+        "size": {
+          "value": "{size.100}",
+          "type": "number"
+        }
+      }
+    },
+    "600": {
+      "frame": {
+        "size": {
+          "value": "{size.300}",
+          "type": "number"
+        },
+        "border-radius": {
+          "value": "{radius.300}",
+          "type": "number"
+        },
+        "border-width": {
+          "value": "{stroke.200}",
+          "type": "number"
+        }
+      },
+      "icon": {
+        "size": {
+          "value": "{size.150}",
+          "type": "number"
+        }
+      }
+    }
+  }
+}

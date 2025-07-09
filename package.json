@@ -1,0 +1,31 @@
+{
+  "name": "turborepo-next",
+  "private": true,
+  "workspaces": [
+    "./apps/*",
+    "./packages/*"
+  ],
+  "scripts": {
+    "native": "cd apps/native && yarn start",
+    "native:prebuild": "cd apps/native && yarn prebuild",
+    "ios": "cd apps/native && yarn ios",
+    "android": "cd apps/native && yarn android",
+    "build": "yarn workspaces foreach --all --exclude web run build",
+    "web": "yarn build && cd apps/web && yarn dev",
+    "web:extract": "DISABLE_EXTRACTION=false yarn workspace web dev",
+    "web:prod": "yarn workspace web build",
+    "web:prod:start": "yarn workspace web start",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write ."
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.0.5",
+    "@types/node": "^22.15.3",
+    "turbo": "^2.5.4",
+    "typescript": "5.8.3"
+  },
+  "engines": {
+    "node": ">=20.11.0"
+  },
+  "packageManager": "yarn@4.9.2"
+}

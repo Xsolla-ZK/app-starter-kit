@@ -1,0 +1,220 @@
+{
+  "base-component": {
+    "100": {
+      "frame": {
+        "min-size": {
+          "value": "{size.100}",
+          "type": "number"
+        }
+      },
+      "label": {
+        "style": {
+          "value": "compact",
+          "type": "other"
+        },
+        "size": {
+          "value": "150",
+          "type": "other"
+        }
+      },
+      "icon": {
+        "size": {
+          "value": "{size.80}",
+          "type": "number"
+        }
+      }
+    },
+    "200": {
+      "frame": {
+        "min-size": {
+          "value": "{size.200}",
+          "type": "number"
+        }
+      },
+      "label": {
+        "style": {
+          "value": "compact",
+          "type": "other"
+        },
+        "size": {
+          "value": "200",
+          "type": "other"
+        }
+      },
+      "icon": {
+        "size": {
+          "value": "{size.100}",
+          "type": "number"
+        }
+      }
+    },
+    "300": {
+      "frame": {
+        "min-size": {
+          "value": "{size.300}",
+          "type": "number"
+        }
+      },
+      "label": {
+        "style": {
+          "value": "compact",
+          "type": "other"
+        },
+        "size": {
+          "value": "200",
+          "type": "other"
+        }
+      },
+      "icon": {
+        "size": {
+          "value": "{size.100}",
+          "type": "number"
+        }
+      }
+    },
+    "400": {
+      "frame": {
+        "min-size": {
+          "value": "{size.400}",
+          "type": "number"
+        }
+      },
+      "label": {
+        "style": {
+          "value": "compact",
+          "type": "other"
+        },
+        "size": {
+          "value": "250",
+          "type": "other"
+        }
+      },
+      "icon": {
+        "size": {
+          "value": "{size.150}",
+          "type": "number"
+        }
+      }
+    },
+    "500": {
+      "frame": {
+        "min-size": {
+          "value": "{size.500}",
+          "type": "number"
+        }
+      },
+      "label": {
+        "style": {
+          "value": "compact",
+          "type": "other"
+        },
+        "size": {
+          "value": "300",
+          "type": "other"
+        }
+      },
+      "icon": {
+        "size": {
+          "value": "{size.150}",
+          "type": "number"
+        }
+      }
+    },
+    "600": {
+      "frame": {
+        "min-size": {
+          "value": "{size.600}",
+          "type": "number"
+        }
+      },
+      "label": {
+        "style": {
+          "value": "compact",
+          "type": "other"
+        },
+        "size": {
+          "value": "350",
+          "type": "other"
+        }
+      },
+      "icon": {
+        "size": {
+          "value": "{size.200}",
+          "type": "number"
+        }
+      }
+    },
+    "700": {
+      "frame": {
+        "min-size": {
+          "value": "{size.700}",
+          "type": "number"
+        }
+      },
+      "label": {
+        "style": {
+          "value": "compact",
+          "type": "other"
+        },
+        "size": {
+          "value": "350",
+          "type": "other"
+        }
+      },
+      "icon": {
+        "size": {
+          "value": "{size.200}",
+          "type": "number"
+        }
+      }
+    },
+    "800": {
+      "frame": {
+        "min-size": {
+          "value": "{size.800}",
+          "type": "number"
+        }
+      },
+      "label": {
+        "style": {
+          "value": "compact",
+          "type": "other"
+        },
+        "size": {
+          "value": "400",
+          "type": "other"
+        }
+      },
+      "icon": {
+        "size": {
+          "value": "{size.200}",
+          "type": "number"
+        }
+      }
+    },
+    "900": {
+      "frame": {
+        "min-size": {
+          "value": "{size.900}",
+          "type": "number"
+        }
+      },
+      "label": {
+        "style": {
+          "value": "compact",
+          "type": "other"
+        },
+        "size": {
+          "value": "400",
+          "type": "other"
+        }
+      },
+      "icon": {
+        "size": {
+          "value": "{size.200}",
+          "type": "number"
+        }
+      }
+    }
+  }
+}

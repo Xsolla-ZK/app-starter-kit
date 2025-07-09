@@ -1,0 +1,34 @@
+{
+  "name": "web",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --port 3000",
+    "build": "next build",
+    "start": "next start",
+    "lint": "biome check src",
+    "lint:fix": "biome check --write src"
+  },
+  "dependencies": {
+    "@tamagui/next-theme": "1.127.2",
+    "@xsolla-zk/icons": "latest",
+    "app": "0.0.0",
+    "next": "^15.3.4",
+    "react": "*",
+    "react-dom": "*",
+    "react-native": "*",
+    "react-native-web": "0.20.0",
+    "solito": "patch:solito@npm%3A4.4.1#~/.yarn/patches/solito-npm-4.4.1-976dc5859c.patch"
+  },
+  "devDependencies": {
+    "@app/typescript-config": "workspace:*",
+    "@tamagui/next-plugin": "1.127.2",
+    "@types/node": "^22.15.3",
+    "@types/react": "*",
+    "@types/react-dom": "*",
+    "eslint": "^9.29.0",
+    "typescript": "5.8.3",
+    "webpack": "*"
+  }
+}

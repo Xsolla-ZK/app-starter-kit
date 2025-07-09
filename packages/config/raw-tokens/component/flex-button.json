@@ -1,0 +1,100 @@
+{
+  "flex-button": {
+    "300": {
+      "frame": {
+        "gap": {
+          "value": "{control-ghost.300.frame.gap}",
+          "type": "number"
+        },
+        "min-height": {
+          "value": "{size.100}",
+          "type": "number"
+        }
+      },
+      "label": {
+        "typography": {
+          "value": "{base-component.300.label.style}.{base-component.300.label.size}.accent",
+          "type": "other"
+        }
+      },
+      "icon": {
+        "size": {
+          "value": "{base-component.300.icon.size}",
+          "type": "number"
+        }
+      }
+    },
+    "400": {
+      "frame": {
+        "gap": {
+          "value": "{control-ghost.400.frame.gap}",
+          "type": "number"
+        },
+        "min-height": {
+          "value": "{size.150}",
+          "type": "number"
+        }
+      },
+      "label": {
+        "typography": {
+          "value": "{base-component.400.label.style}.{base-component.400.label.size}.accent",
+          "type": "other"
+        }
+      },
+      "icon": {
+        "size": {
+          "value": "{base-component.400.icon.size}",
+          "type": "number"
+        }
+      }
+    },
+    "500": {
+      "frame": {
+        "gap": {
+          "value": "{control-ghost.500.frame.gap}",
+          "type": "number"
+        },
+        "min-height": {
+          "value": "{size.150}",
+          "type": "number"
+        }
+      },
+      "label": {
+        "typography": {
+          "value": "{base-component.500.label.style}.{base-component.500.label.size}.accent",
+          "type": "other"
+        }
+      },
+      "icon": {
+        "size": {
+          "value": "{base-component.500.icon.size}",
+          "type": "number"
+        }
+      }
+    },
+    "600": {
+      "frame": {
+        "gap": {
+          "value": "{control-ghost.600.frame.gap}",
+          "type": "number"
+        },
+        "min-height": {
+          "value": "{size.200}",
+          "type": "number"
+        }
+      },
+      "label": {
+        "typography": {
+          "value": "{base-component.600.label.style}.{base-component.600.label.size}.accent",
+          "type": "other"
+        }
+      },
+      "icon": {
+        "size": {
+          "value": "{base-component.600.icon.size}",
+          "type": "number"
+        }
+      }
+    }
+  }
+}

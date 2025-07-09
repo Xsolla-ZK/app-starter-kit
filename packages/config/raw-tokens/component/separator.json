@@ -1,0 +1,10 @@
+{
+  "separator": {
+    "500": {
+      "border-width": {
+        "value": "{stroke.100}",
+        "type": "number"
+      }
+    }
+  }
+}

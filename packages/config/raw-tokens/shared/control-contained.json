@@ -1,0 +1,202 @@
+{
+  "control-contained": {
+    "100": {
+      "frame": {
+        "border-radius": {
+          "value": "{radius.200}",
+          "type": "number"
+        },
+        "padding-horizontal": {
+          "value": "{space.50}",
+          "type": "number"
+        },
+        "gap": {
+          "value": "{space.0}",
+          "type": "number"
+        }
+      },
+      "label": {
+        "padding-horizontal": {
+          "value": "{space.50}",
+          "type": "number"
+        }
+      }
+    },
+    "200": {
+      "frame": {
+        "border-radius": {
+          "value": "{radius.300}",
+          "type": "number"
+        },
+        "padding-horizontal": {
+          "value": "{space.100}",
+          "type": "number"
+        },
+        "gap": {
+          "value": "{space.50}",
+          "type": "number"
+        }
+      },
+      "label": {
+        "padding-horizontal": {
+          "value": "{space.100}",
+          "type": "number"
+        }
+      }
+    },
+    "300": {
+      "frame": {
+        "border-radius": {
+          "value": "{radius.300}",
+          "type": "number"
+        },
+        "padding-horizontal": {
+          "value": "{space.200}",
+          "type": "number"
+        },
+        "gap": {
+          "value": "{space.50}",
+          "type": "number"
+        }
+      },
+      "label": {
+        "padding-horizontal": {
+          "value": "{space.100}",
+          "type": "number"
+        }
+      }
+    },
+    "400": {
+      "frame": {
+        "border-radius": {
+          "value": "{radius.400}",
+          "type": "number"
+        },
+        "padding-horizontal": {
+          "value": "{space.250}",
+          "type": "number"
+        },
+        "gap": {
+          "value": "{space.100}",
+          "type": "number"
+        }
+      },
+      "label": {
+        "padding-horizontal": {
+          "value": "{space.150}",
+          "type": "number"
+        }
+      }
+    },
+    "500": {
+      "frame": {
+        "border-radius": {
+          "value": "{radius.500}",
+          "type": "number"
+        },
+        "padding-horizontal": {
+          "value": "{space.300}",
+          "type": "number"
+        },
+        "gap": {
+          "value": "{space.100}",
+          "type": "number"
+        }
+      },
+      "label": {
+        "padding-horizontal": {
+          "value": "{space.200}",
+          "type": "number"
+        }
+      }
+    },
+    "600": {
+      "frame": {
+        "border-radius": {
+          "value": "{radius.500}",
+          "type": "number"
+        },
+        "padding-horizontal": {
+          "value": "{space.350}",
+          "type": "number"
+        },
+        "gap": {
+          "value": "{space.150}",
+          "type": "number"
+        }
+      },
+      "label": {
+        "padding-horizontal": {
+          "value": "{space.200}",
+          "type": "number"
+        }
+      }
+    },
+    "700": {
+      "frame": {
+        "border-radius": {
+          "value": "{radius.550}",
+          "type": "number"
+        },
+        "padding-horizontal": {
+          "value": "{space.400}",
+          "type": "number"
+        },
+        "gap": {
+          "value": "{space.150}",
+          "type": "number"
+        }
+      },
+      "label": {
+        "padding-horizontal": {
+          "value": "{space.200}",
+          "type": "number"
+        }
+      }
+    },
+    "800": {
+      "frame": {
+        "border-radius": {
+          "value": "{radius.600}",
+          "type": "number"
+        },
+        "padding-horizontal": {
+          "value": "{space.400}",
+          "type": "number"
+        },
+        "gap": {
+          "value": "{space.150}",
+          "type": "number"
+        }
+      },
+      "label": {
+        "padding-horizontal": {
+          "value": "{space.200}",
+          "type": "number"
+        }
+      }
+    },
+    "900": {
+      "frame": {
+        "border-radius": {
+          "value": "{radius.700}",
+          "type": "number"
+        },
+        "padding-horizontal": {
+          "value": "{space.400}",
+          "type": "number"
+        },
+        "gap": {
+          "value": "{space.150}",
+          "type": "number"
+        }
+      },
+      "label": {
+        "padding-horizontal": {
+          "value": "{space.200}",
+          "type": "number"
+        }
+      }
+    }
+  }
+}

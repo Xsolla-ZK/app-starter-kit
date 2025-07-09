@@ -1,0 +1,106 @@
+{
+  "input": {
+    "400": {
+      "frame": {
+        "min-size": {
+          "value": "{base-component.400.frame.min-size}",
+          "type": "number"
+        },
+        "border-radius": {
+          "value": "{control-contained.400.frame.border-radius}",
+          "type": "number"
+        },
+        "gap": {
+          "value": "{control-contained.400.frame.gap}",
+          "type": "number"
+        },
+        "border-width": {
+          "value": "{stroke.200}",
+          "type": "number"
+        },
+        "padding-vertical": {
+          "value": "{space.250}",
+          "type": "number"
+        },
+        "padding-horizontal": {
+          "value": "{space.325}",
+          "type": "number"
+        }
+      },
+      "label": {
+        "typography": {
+          "value": "{base-component.400.label.style}.{base-component.400.label.size}.default",
+          "type": "other"
+        }
+      }
+    },
+    "500": {
+      "frame": {
+        "min-size": {
+          "value": "{base-component.500.frame.min-size}",
+          "type": "number"
+        },
+        "border-radius": {
+          "value": "{control-contained.500.frame.border-radius}",
+          "type": "number"
+        },
+        "gap": {
+          "value": "{control-contained.500.frame.gap}",
+          "type": "number"
+        },
+        "border-width": {
+          "value": "{stroke.200}",
+          "type": "number"
+        },
+        "padding-vertical": {
+          "value": "{space.250}",
+          "type": "number"
+        },
+        "padding-horizontal": {
+          "value": "{space.325}",
+          "type": "number"
+        }
+      },
+      "label": {
+        "typography": {
+          "value": "{base-component.500.label.style}.{base-component.500.label.size}.default",
+          "type": "other"
+        }
+      }
+    },
+    "600": {
+      "frame": {
+        "min-size": {
+          "value": "{base-component.600.frame.min-size}",
+          "type": "number"
+        },
+        "border-radius": {
+          "value": "{control-contained.600.frame.border-radius}",
+          "type": "number"
+        },
+        "gap": {
+          "value": "{control-contained.600.frame.gap}",
+          "type": "number"
+        },
+        "border-width": {
+          "value": "{stroke.200}",
+          "type": "number"
+        },
+        "padding-vertical": {
+          "value": "{space.250}",
+          "type": "number"
+        },
+        "padding-horizontal": {
+          "value": "{space.325}",
+          "type": "number"
+        }
+      },
+      "label": {
+        "typography": {
+          "value": "{base-component.600.label.style}.{base-component.600.label.size}.default",
+          "type": "other"
+        }
+      }
+    }
+  }
+}

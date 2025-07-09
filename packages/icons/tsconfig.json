@@ -1,0 +1,13 @@
+{
+  "extends": "@app/typescript-config/react-library.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "noEmit": false,
+    "composite": true,
+    "declaration": true,
+    "declarationMap": true,
+    "emitDeclarationOnly": true
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "exclude": ["types", "dist", "**/__tests__"]
+}

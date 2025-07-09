@@ -1,0 +1,620 @@
+{
+  "semantic-typography": {
+    "header-xl": {
+      "style": {
+        "sm": {
+          "value": "display",
+          "type": "other"
+        },
+        "md": {
+          "value": "display",
+          "type": "other"
+        },
+        "lg": {
+          "value": "display",
+          "type": "other"
+        },
+        "xl": {
+          "value": "display",
+          "type": "other"
+        }
+      },
+      "size": {
+        "sm": {
+          "value": "500",
+          "type": "other"
+        },
+        "md": {
+          "value": "500",
+          "type": "other"
+        },
+        "lg": {
+          "value": "600",
+          "type": "other"
+        },
+        "xl": {
+          "value": "700",
+          "type": "other"
+        }
+      },
+      "category": {
+        "sm": {
+          "value": "accent",
+          "type": "other"
+        },
+        "md": {
+          "value": "accent",
+          "type": "other"
+        },
+        "lg": {
+          "value": "accent",
+          "type": "other"
+        },
+        "xl": {
+          "value": "accent",
+          "type": "other"
+        }
+      }
+    },
+    "header-l": {
+      "style": {
+        "sm": {
+          "value": "display",
+          "type": "other"
+        },
+        "md": {
+          "value": "display",
+          "type": "other"
+        },
+        "lg": {
+          "value": "display",
+          "type": "other"
+        },
+        "xl": {
+          "value": "display",
+          "type": "other"
+        }
+      },
+      "size": {
+        "sm": {
+          "value": "450",
+          "type": "other"
+        },
+        "md": {
+          "value": "450",
+          "type": "other"
+        },
+        "lg": {
+          "value": "500",
+          "type": "other"
+        },
+        "xl": {
+          "value": "600",
+          "type": "other"
+        }
+      },
+      "category": {
+        "sm": {
+          "value": "accent",
+          "type": "other"
+        },
+        "md": {
+          "value": "accent",
+          "type": "other"
+        },
+        "lg": {
+          "value": "accent",
+          "type": "other"
+        },
+        "xl": {
+          "value": "accent",
+          "type": "other"
+        }
+      }
+    },
+    "header-m": {
+      "style": {
+        "sm": {
+          "value": "display",
+          "type": "other"
+        },
+        "md": {
+          "value": "display",
+          "type": "other"
+        },
+        "lg": {
+          "value": "display",
+          "type": "other"
+        },
+        "xl": {
+          "value": "display",
+          "type": "other"
+        }
+      },
+      "size": {
+        "sm": {
+          "value": "400",
+          "type": "other"
+        },
+        "md": {
+          "value": "400",
+          "type": "other"
+        },
+        "lg": {
+          "value": "450",
+          "type": "other"
+        },
+        "xl": {
+          "value": "500",
+          "type": "other"
+        }
+      },
+      "category": {
+        "sm": {
+          "value": "accent",
+          "type": "other"
+        },
+        "md": {
+          "value": "accent",
+          "type": "other"
+        },
+        "lg": {
+          "value": "accent",
+          "type": "other"
+        },
+        "xl": {
+          "value": "accent",
+          "type": "other"
+        }
+      }
+    },
+    "header-s": {
+      "style": {
+        "sm": {
+          "value": "display",
+          "type": "other"
+        },
+        "md": {
+          "value": "display",
+          "type": "other"
+        },
+        "lg": {
+          "value": "display",
+          "type": "other"
+        },
+        "xl": {
+          "value": "display",
+          "type": "other"
+        }
+      },
+      "size": {
+        "sm": {
+          "value": "350",
+          "type": "other"
+        },
+        "md": {
+          "value": "350",
+          "type": "other"
+        },
+        "lg": {
+          "value": "400",
+          "type": "other"
+        },
+        "xl": {
+          "value": "450",
+          "type": "other"
+        }
+      },
+      "category": {
+        "sm": {
+          "value": "accent",
+          "type": "other"
+        },
+        "md": {
+          "value": "accent",
+          "type": "other"
+        },
+        "lg": {
+          "value": "accent",
+          "type": "other"
+        },
+        "xl": {
+          "value": "accent",
+          "type": "other"
+        }
+      }
+    },
+    "header-xs": {
+      "style": {
+        "sm": {
+          "value": "compact",
+          "type": "other"
+        },
+        "md": {
+          "value": "compact",
+          "type": "other"
+        },
+        "lg": {
+          "value": "display",
+          "type": "other"
+        },
+        "xl": {
+          "value": "display",
+          "type": "other"
+        }
+      },
+      "size": {
+        "sm": {
+          "value": "300",
+          "type": "other"
+        },
+        "md": {
+          "value": "300",
+          "type": "other"
+        },
+        "lg": {
+          "value": "350",
+          "type": "other"
+        },
+        "xl": {
+          "value": "400",
+          "type": "other"
+        }
+      },
+      "category": {
+        "sm": {
+          "value": "accent",
+          "type": "other"
+        },
+        "md": {
+          "value": "accent",
+          "type": "other"
+        },
+        "lg": {
+          "value": "accent",
+          "type": "other"
+        },
+        "xl": {
+          "value": "accent",
+          "type": "other"
+        }
+      }
+    },
+    "paragraph-l": {
+      "style": {
+        "sm": {
+          "value": "text",
+          "type": "other"
+        },
+        "md": {
+          "value": "text",
+          "type": "other"
+        },
+        "lg": {
+          "value": "text",
+          "type": "other"
+        },
+        "xl": {
+          "value": "text",
+          "type": "other"
+        }
+      },
+      "size": {
+        "sm": {
+          "value": "350",
+          "type": "other"
+        },
+        "md": {
+          "value": "350",
+          "type": "other"
+        },
+        "lg": {
+          "value": "400",
+          "type": "other"
+        },
+        "xl": {
+          "value": "400",
+          "type": "other"
+        }
+      },
+      "category": {
+        "sm": {
+          "value": "default",
+          "type": "other"
+        },
+        "md": {
+          "value": "default",
+          "type": "other"
+        },
+        "lg": {
+          "value": "default",
+          "type": "other"
+        },
+        "xl": {
+          "value": "default",
+          "type": "other"
+        }
+      }
+    },
+    "paragraph-m": {
+      "style": {
+        "sm": {
+          "value": "text",
+          "type": "other"
+        },
+        "md": {
+          "value": "text",
+          "type": "other"
+        },
+        "lg": {
+          "value": "text",
+          "type": "other"
+        },
+        "xl": {
+          "value": "text",
+          "type": "other"
+        }
+      },
+      "size": {
+        "sm": {
+          "value": "300",
+          "type": "other"
+        },
+        "md": {
+          "value": "300",
+          "type": "other"
+        },
+        "lg": {
+          "value": "350",
+          "type": "other"
+        },
+        "xl": {
+          "value": "350",
+          "type": "other"
+        }
+      },
+      "category": {
+        "sm": {
+          "value": "default",
+          "type": "other"
+        },
+        "md": {
+          "value": "default",
+          "type": "other"
+        },
+        "lg": {
+          "value": "default",
+          "type": "other"
+        },
+        "xl": {
+          "value": "default",
+          "type": "other"
+        }
+      }
+    },
+    "paragraph-s": {
+      "style": {
+        "sm": {
+          "value": "text",
+          "type": "other"
+        },
+        "md": {
+          "value": "text",
+          "type": "other"
+        },
+        "lg": {
+          "value": "text",
+          "type": "other"
+        },
+        "xl": {
+          "value": "text",
+          "type": "other"
+        }
+      },
+      "size": {
+        "sm": {
+          "value": "250",
+          "type": "other"
+        },
+        "md": {
+          "value": "250",
+          "type": "other"
+        },
+        "lg": {
+          "value": "300",
+          "type": "other"
+        },
+        "xl": {
+          "value": "300",
+          "type": "other"
+        }
+      },
+      "category": {
+        "sm": {
+          "value": "default",
+          "type": "other"
+        },
+        "md": {
+          "value": "default",
+          "type": "other"
+        },
+        "lg": {
+          "value": "default",
+          "type": "other"
+        },
+        "xl": {
+          "value": "default",
+          "type": "other"
+        }
+      }
+    },
+    "compact-l": {
+      "style": {
+        "sm": {
+          "value": "compact",
+          "type": "other"
+        },
+        "md": {
+          "value": "compact",
+          "type": "other"
+        },
+        "lg": {
+          "value": "compact",
+          "type": "other"
+        },
+        "xl": {
+          "value": "compact",
+          "type": "other"
+        }
+      },
+      "size": {
+        "sm": {
+          "value": "350",
+          "type": "other"
+        },
+        "md": {
+          "value": "350",
+          "type": "other"
+        },
+        "lg": {
+          "value": "400",
+          "type": "other"
+        },
+        "xl": {
+          "value": "400",
+          "type": "other"
+        }
+      },
+      "category": {
+        "sm": {
+          "value": "default",
+          "type": "other"
+        },
+        "md": {
+          "value": "default",
+          "type": "other"
+        },
+        "lg": {
+          "value": "default",
+          "type": "other"
+        },
+        "xl": {
+          "value": "default",
+          "type": "other"
+        }
+      }
+    },
+    "compact-m": {
+      "style": {
+        "sm": {
+          "value": "compact",
+          "type": "other"
+        },
+        "md": {
+          "value": "compact",
+          "type": "other"
+        },
+        "lg": {
+          "value": "compact",
+          "type": "other"
+        },
+        "xl": {
+          "value": "compact",
+          "type": "other"
+        }
+      },
+      "size": {
+        "sm": {
+          "value": "300",
+          "type": "other"
+        },
+        "md": {
+          "value": "300",
+          "type": "other"
+        },
+        "lg": {
+          "value": "350",
+          "type": "other"
+        },
+        "xl": {
+          "value": "350",
+          "type": "other"
+        }
+      },
+      "category": {
+        "sm": {
+          "value": "default",
+          "type": "other"
+        },
+        "md": {
+          "value": "default",
+          "type": "other"
+        },
+        "lg": {
+          "value": "default",
+          "type": "other"
+        },
+        "xl": {
+          "value": "default",
+          "type": "other"
+        }
+      }
+    },
+    "compact-s": {
+      "style": {
+        "sm": {
+          "value": "compact",
+          "type": "other"
+        },
+        "md": {
+          "value": "compact",
+          "type": "other"
+        },
+        "lg": {
+          "value": "compact",
+          "type": "other"
+        },
+        "xl": {
+          "value": "compact",
+          "type": "other"
+        }
+      },
+      "size": {
+        "sm": {
+          "value": "250",
+          "type": "other"
+        },
+        "md": {
+          "value": "250",
+          "type": "other"
+        },
+        "lg": {
+          "value": "300",
+          "type": "other"
+        },
+        "xl": {
+          "value": "300",
+          "type": "other"
+        }
+      },
+      "category": {
+        "sm": {
+          "value": "default",
+          "type": "other"
+        },
+        "md": {
+          "value": "default",
+          "type": "other"
+        },
+        "lg": {
+          "value": "default",
+          "type": "other"
+        },
+        "xl": {
+          "value": "default",
+          "type": "other"
+        }
+      }
+    }
+  }
+}
