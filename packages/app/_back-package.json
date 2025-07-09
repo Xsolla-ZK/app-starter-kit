@@ -6,7 +6,6 @@
   "type": "module",
   "sideEffects": ["*.css"],
   "dependencies": {
-    "@app/api": "workspace:*",
     "@app/config": "workspace:*",
     "@app/icons": "workspace:*",
     "@app/ui": "workspace:*",
