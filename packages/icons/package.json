@@ -2,14 +2,17 @@
   "name": "@app/icons",
   "version": "0.0.1",
   "sideEffects": false,
-  "types": "./src",
-  "main": "src/index.ts",
+  "source": "src/index.ts",
+  "types": "./types/index.d.ts",
+  "type": "module",
+  "main": "dist/cjs/index.cjs",
+  "module": "dist/esm/index.mjs",
   "files": [
     "types",
     "dist"
   ],
   "scripts": {
-    "build": "tamagui-build --skip-types",
+    "build": "yarn generate && tamagui-build --skip-types",
     "watch": "tamagui-build --skip-types --watch",
     "clean": "tamagui-build clean",
     "clean:build": "tamagui-build clean:build",
@@ -24,5 +27,18 @@
     "@xsolla-zk/icons-generator": "latest",
     "react-native-svg": "15.8.0",
     "typescript": "5.8.3"
+  },
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "react-native": {
+        "import": "./dist/esm/index.native.js",
+        "require": "./dist/cjs/index.native.js"
+      },
+      "types": "./types/index.d.ts",
+      "import": "./dist/esm/index.mjs",
+      "require": "./dist/cjs/index.cjs",
+      "default": "./dist/esm/index.mjs"
+    }
   }
 }
