@@ -3,7 +3,13 @@ import { type GetProps, isWeb, useComposedRefs, useTheme } from '@app/ui';
 import { registerFocusable, useFocusable } from '@tamagui/focusable';
 import type { ForwardedRef, KeyboardEvent, RefObject } from 'react';
 import { forwardRef, useEffect, useMemo, useRef } from 'react';
-import type { ColorValue, TextInput } from 'react-native';
+import type {
+  ColorValue,
+  NativeSyntheticEvent,
+  TextInput,
+  TextInputKeyPressEventData,
+  TextInputSubmitEditingEventData,
+} from 'react-native';
 import type { InputElementBaseProps, InputElementProps } from './input.types';
 
 export function createInput<T extends TamaguiComponent>(Element: T) {
@@ -13,9 +19,9 @@ export function createInput<T extends TamaguiComponent>(Element: T) {
       const ref = useRef<TextInput>(null);
       const composedRefs = useComposedRefs(forwardedRef, ref);
 
-      const { size = '$500', type, id, rows, minRows = 1, maxRows, ...restProps } = _props;
+      const { size = '$500', id, ...restProps } = _props;
 
-      const inputProps = useInputProps({ ...restProps, type, rows, minRows, maxRows }, ref);
+      const { inputProps, multilineProps } = useInputProps(restProps, ref);
 
       useEffect(() => {
         if (!id || !inputProps.editable) return;
@@ -28,28 +34,7 @@ export function createInput<T extends TamaguiComponent>(Element: T) {
       }, [id, inputProps.editable]);
 
       return (
-        <Component
-          id={id}
-          size={size}
-          {...inputProps}
-          {...(inputProps.multiline
-            ? {
-                tag: 'textarea',
-                rows,
-                minRows,
-                maxRows,
-                ...(!isWeb ? { flexWrap: 'wrap' } : {}),
-                overflowX: 'hidden',
-                whiteSpace: 'pre-wrap',
-                width: '100%',
-                style: {
-                  wordBreak: 'break-word',
-                  resize: 'none',
-                } as Record<string, unknown>,
-              }
-            : {})}
-          ref={composedRefs}
-        />
+        <Component id={id} size={size} {...inputProps} {...multilineProps} ref={composedRefs} />
       );
     }),
     { disableTheme: true },
@@ -60,7 +45,6 @@ function useInputProps(props: InputElementProps, ref: RefObject<TextInput | null
   const {
     type,
     onKeyDown,
-    onKeyUp,
     autoFocus,
     disabled,
     placeholderTextColor: placeholderProp,
@@ -125,8 +109,32 @@ function useInputProps(props: InputElementProps, ref: RefObject<TextInput | null
   const multiline = Boolean(rows || minRows > 1);
   const numberOfLines = rows || Math.max(minRows, 1);
 
-  return useMemo<InputElementBaseProps>(
-    () => ({
+  const inputProps = useMemo<InputElementBaseProps>(() => {
+    const handlers = onKeyDown
+      ? {
+          onKeyPress: (e: NativeSyntheticEvent<TextInputKeyPressEventData>) => {
+            onKeyDown(e as unknown as KeyboardEvent<HTMLInputElement>);
+          },
+
+          onSubmitEditing: (
+            e:
+              | NativeSyntheticEvent<TextInputSubmitEditingEventData>
+              | KeyboardEvent<HTMLInputElement>,
+          ) => {
+            if ('key' in e.nativeEvent && e.nativeEvent.key === 'Enter') {
+              onKeyDown(e as KeyboardEvent<HTMLInputElement>);
+              return;
+            }
+
+            if (!('key' in e.nativeEvent)) {
+              const syntheticEvent = { key: 'Enter' } as KeyboardEvent<HTMLInputElement>;
+              onKeyDown(syntheticEvent);
+            }
+          },
+        }
+      : {};
+
+    return {
       ref: focusable.ref,
 
       // editable ↔ disabled
@@ -148,39 +156,44 @@ function useInputProps(props: InputElementProps, ref: RefObject<TextInput | null
 
       // autoFocus
       autoFocus,
-
-      // onKeyDown/web → onKeyPress RN
-      ...(onKeyDown
-        ? {
-            onKeyPress: (e) => {
-              onKeyDown(e as unknown as KeyboardEvent<HTMLInputElement>);
-            },
-            onSubmitEditing: (e) => {
-              onKeyDown(e as unknown as KeyboardEvent<HTMLInputElement>);
-            },
-          }
-        : {}),
-
-      // onChange(web) → onChangeText(RN)
-      onChangeText: (text: string) => {
-        // setText(text);
-        focusable.onChangeText(text);
-      },
-
-      // other valid props
+      onChangeText: focusable.onChangeText,
+      ...handlers,
       ...rest,
-    }),
-    [
-      focusable,
-      disabled,
-      placeholderTextColor,
-      type,
-      keyboardType,
-      multiline,
-      numberOfLines,
-      autoFocus,
-      rest,
-      onKeyDown,
-    ],
+    };
+  }, [
+    focusable,
+    disabled,
+    placeholderTextColor,
+    type,
+    keyboardType,
+    multiline,
+    numberOfLines,
+    autoFocus,
+    onKeyDown,
+  ]);
+
+  const finalInputProps = useMemo(() => ({ ...inputProps, ...rest }), [inputProps, rest]);
+
+  const multilineProps = useMemo(
+    () =>
+      multiline
+        ? {
+            tag: 'textarea',
+            rows,
+            minRows,
+            maxRows,
+            ...(!isWeb ? { flexWrap: 'wrap' } : {}),
+            overflowX: 'hidden',
+            whiteSpace: 'pre-wrap',
+            width: '100%',
+            style: {
+              wordBreak: 'break-word',
+              resize: 'none',
+            } as const,
+          }
+        : {},
+    [multiline, rows, minRows, maxRows],
   );
+
+  return { inputProps: finalInputProps, multilineProps };
 }
