@@ -1,5 +1,13 @@
 import type { TamaguiComponent, TamaguiElement } from '@app/ui';
-import { type GetProps, isWeb, useComposedRefs, useTheme } from '@app/ui';
+import {
+  type GetProps,
+  getComponentsConfig,
+  getTokenValue,
+  isWeb,
+  type Token,
+  useComposedRefs,
+  useTheme,
+} from '@app/ui';
 import { registerFocusable, useFocusable } from '@tamagui/focusable';
 import type { ForwardedRef, KeyboardEvent, RefObject } from 'react';
 import { forwardRef, useEffect, useMemo, useRef } from 'react';
@@ -17,11 +25,32 @@ export function createInput<T extends TamaguiComponent>(Element: T) {
     forwardRef((_props: InputElementProps, forwardedRef: ForwardedRef<TamaguiElement>) => {
       const Component = Element as unknown as TamaguiComponent<InputElementBaseProps>;
       const ref = useRef<TextInput>(null);
+      const config = getComponentsConfig();
+
       const composedRefs = useComposedRefs(forwardedRef, ref);
 
-      const { size = '$500', id, ...restProps } = _props;
+      const { size = '$500', id, height, ...restProps } = _props;
 
-      const { inputProps, multilineProps } = useInputProps(restProps, ref);
+      const { inputProps, multilineProps, rows } = useInputProps(restProps, ref);
+
+      const componentProps = config.input[size as keyof typeof config.input];
+
+      const calculatedHeight = useMemo(() => {
+        if (height !== undefined) {
+          return height;
+        }
+
+        if (rows) {
+          const LINE_HEIGHT = getTokenValue(
+            `line-height.${componentProps?.label?.typography?.split('.').slice(0, -1).join('.')}` as Token,
+            'typography',
+          );
+
+          return rows * LINE_HEIGHT;
+        }
+        //return default height
+        return undefined;
+      }, [height, rows]);
 
       useEffect(() => {
         if (!id || !inputProps.editable) return;
@@ -34,7 +63,14 @@ export function createInput<T extends TamaguiComponent>(Element: T) {
       }, [id, inputProps.editable]);
 
       return (
-        <Component id={id} size={size} {...inputProps} {...multilineProps} ref={composedRefs} />
+        <Component
+          height={isWeb ? undefined : calculatedHeight}
+          id={id}
+          size={size}
+          {...inputProps}
+          {...multilineProps}
+          ref={composedRefs}
+        />
       );
     }),
     { disableTheme: true },
@@ -195,5 +231,5 @@ function useInputProps(props: InputElementProps, ref: RefObject<TextInput | null
     [multiline, rows, minRows, maxRows],
   );
 
-  return { inputProps: finalInputProps, multilineProps };
+  return { inputProps: finalInputProps, multilineProps, rows };
 }
