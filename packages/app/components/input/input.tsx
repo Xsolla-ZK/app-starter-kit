@@ -3,6 +3,7 @@ import { useChildrenArray, useComposedRefs, withStaticProperties } from '@app/ui
 import { useControllableState } from '@tamagui/use-controllable-state';
 import type { ForwardedRef, ReactElement } from 'react';
 import { forwardRef, isValidElement, useMemo, useRef } from 'react';
+import { useAutoResizeFont } from './auto-resize-font';
 import { createInput } from './create-input';
 import {
   InputContext,
@@ -27,17 +28,25 @@ const InputComponent = InputBase.styleable<InputProps>(
       onBlur,
       isFocused,
       onFocusChange,
+      autoResize,
       ...props
     } = _props;
+
     const childrenArray = useChildrenArray(children);
     const [focused, setFocused] = useControllableState({
       prop: isFocused,
       defaultProp: false,
       onChange: onFocusChange,
     });
-    const ref = useRef<TamaguiElement>(null);
+
+    const ref = useRef<TamaguiElement | null>(null);
     const composedRefs = useComposedRefs(forwardedRef, ref);
     const isInteractingWithFrame = useRef(false);
+
+    // 🧠 Получаем autoResizeProps
+    useAutoResizeFont(ref, {
+      enabled: autoResize,
+    });
 
     const { startSlot, endSlot } = useMemo(() => {
       let start: ReactElement | null = null;
@@ -53,10 +62,7 @@ const InputComponent = InputBase.styleable<InputProps>(
         }
       });
 
-      return {
-        startSlot: start,
-        endSlot: end,
-      };
+      return { startSlot: start, endSlot: end };
     }, [childrenArray]);
 
     return (
@@ -73,8 +79,9 @@ const InputComponent = InputBase.styleable<InputProps>(
           isInteractingWithFrame.current = false;
         }}
         onPress={() => {
-          if (props.readOnly) return;
-          ref.current?.focus();
+          if (!props.readOnly) {
+            ref.current?.focus();
+          }
         }}
         {...frameStyles}
       >
