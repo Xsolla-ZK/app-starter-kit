@@ -49,6 +49,7 @@ const InputComponent = InputBase.styleable<InputProps>(
     useAutoResizeFont(ref, {
       enabled: autoResize,
       fontScaling: fontScaling,
+      size,
       maxRows,
     });
 
