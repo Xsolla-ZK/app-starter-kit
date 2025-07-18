@@ -10,6 +10,7 @@ import { useCallback, useEffect, useMemo } from 'react';
 
 interface AutoResizeOptions {
   enabled?: boolean;
+  fontScaling?: boolean;
   step?: number;
   size?: InputSizes;
   minRows?: number;
@@ -51,63 +52,67 @@ export function useAutoResizeFont(
   inputRef: React.RefObject<TamaguiElement | null>,
   options: AutoResizeOptions = {},
 ) {
-  const { enabled = false, size = '$500', step = 0.5, maxRows } = options;
+  const { enabled = false, fontScaling = true, size = '$500', step = 0.5, maxRows } = options;
 
   const maxSize = useMemo(() => extractTypographyValues(size), [size]);
   const scale = useMemo(() => getScaleConfig(size), [size]);
 
-  const adjustWebFontSize = useCallback(
+  const adjustElementSize = useCallback(
     (element: HTMLTextAreaElement) => {
       if (!element) return;
 
       const computedStyle = window.getComputedStyle(element);
-      let currentSize = Number.parseFloat(computedStyle.fontSize);
       const lineHeight = Number.parseFloat(computedStyle.lineHeight);
-      const minAllowedSize = scale.maxScale * maxSize;
 
-      const isOverflowing = (): boolean =>
-        element.scrollHeight > element.clientHeight || element.scrollWidth > element.clientWidth;
+      if (fontScaling) {
+        let currentSize = Number.parseFloat(computedStyle.fontSize);
+        const minAllowedSize = scale.maxScale * maxSize;
 
-      element.style.height = 'auto';
-      element.style.wordBreak = 'normal';
+        const isOverflowing = (): boolean =>
+          element.scrollHeight > element.clientHeight || element.scrollWidth > element.clientWidth;
 
-      if (isOverflowing()) {
-        while (isOverflowing() && currentSize > minAllowedSize) {
-          currentSize -= step;
-          element.style.fontSize = `${currentSize}px`;
-        }
+        element.style.height = 'auto';
+        element.style.wordBreak = 'normal';
 
         if (isOverflowing()) {
-          if (element.scrollWidth > element.clientWidth) {
+          while (isOverflowing() && currentSize > minAllowedSize) {
+            currentSize -= step;
+            element.style.fontSize = `${currentSize}px`;
+          }
+          if (isOverflowing() && element.scrollWidth > element.clientWidth) {
             element.style.wordBreak = 'break-all';
           }
-          if (element.scrollHeight > element.clientHeight) {
-            if (maxRows && maxRows > 0) {
-              const maxHeight = maxRows * lineHeight;
-              element.style.height = `${Math.min(element.scrollHeight, maxHeight)}px`;
-            } else {
-              element.style.height = `${element.scrollHeight}px`;
-            }
+        } else {
+          while (!isOverflowing() && currentSize < maxSize) {
+            currentSize += step;
+            element.style.fontSize = `${currentSize}px`;
+          }
+          if (isOverflowing()) {
+            currentSize -= step;
+            element.style.fontSize = `${currentSize}px`;
           }
         }
+
+        if (currentSize >= maxSize) {
+          element.style.fontSize = '';
+        } else {
+          element.style.fontSize = `${currentSize}px`;
+        }
       } else {
-        while (!isOverflowing() && currentSize < maxSize) {
-          currentSize += step;
-          element.style.fontSize = `${currentSize}px`;
-        }
-        if (isOverflowing()) {
-          currentSize -= step;
-          element.style.fontSize = `${currentSize}px`;
-        }
+        element.style.fontSize = '';
       }
 
-      if (currentSize >= maxSize) {
-        element.style.fontSize = '';
-      } else {
-        element.style.fontSize = `${currentSize}px`;
+      element.style.height = 'auto';
+      if (element.scrollHeight > element.clientHeight) {
+        if (maxRows && maxRows > 0) {
+          const maxHeight = maxRows * lineHeight;
+          element.style.height = `${Math.min(element.scrollHeight, maxHeight)}px`;
+        } else {
+          element.style.height = `${element.scrollHeight}px`;
+        }
       }
     },
-    [maxSize, maxRows, scale, step],
+    [maxSize, maxRows, scale, step, fontScaling],
   );
 
   useEffect(() => {
@@ -119,15 +124,19 @@ export function useAutoResizeFont(
 
     const debouncedHandler = debounce((event: Event) => {
       if ((event as InputEvent).isComposing) return;
-      adjustWebFontSize(event.target as HTMLTextAreaElement);
+      adjustElementSize(event.target as HTMLTextAreaElement);
     }, 150);
 
     element.addEventListener('input', debouncedHandler);
 
-    adjustWebFontSize(element);
+    adjustElementSize(element);
 
     return () => {
       element.removeEventListener('input', debouncedHandler);
+      if (element) {
+        element.style.fontSize = '';
+        element.style.height = '';
+      }
     };
-  }, [enabled, inputRef, adjustWebFontSize]);
+  }, [enabled, inputRef, adjustElementSize, fontScaling]);
 }

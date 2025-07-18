@@ -67,6 +67,7 @@ export interface InputProps extends InputElementProps {
   frameStyles?: StackStyle;
   isFocused?: boolean;
   autoResize?: boolean;
+  fontScaling?: boolean;
   onFocusChange?: (value: boolean) => void;
   children?: ReactNode;
 }

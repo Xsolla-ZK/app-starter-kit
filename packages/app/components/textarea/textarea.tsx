@@ -42,6 +42,8 @@ const TextAreaBase = forwardRef<HTMLInputElement, InputProps>(function TextAreaB
       {...props}
       maxRows={maxRows}
       minRows={minRows}
+      fontScaling={false}
+      autoResize
       rows={!isWeb ? (rows ?? maxRows) : rows}
       whiteSpace="pre-wrap"
       ref={ref}

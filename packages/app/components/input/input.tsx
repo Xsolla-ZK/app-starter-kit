@@ -30,6 +30,7 @@ const InputComponent = InputBase.styleable<InputProps>(
       maxRows,
       onFocusChange,
       autoResize,
+      fontScaling,
       ...props
     } = _props;
 
@@ -47,6 +48,7 @@ const InputComponent = InputBase.styleable<InputProps>(
     // 🧠 Получаем autoResizeProps
     useAutoResizeFont(ref, {
       enabled: autoResize,
+      fontScaling: fontScaling,
       maxRows,
     });
 
