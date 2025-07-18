@@ -1,11 +1,40 @@
-import { isWeb, type TamaguiElement } from '@app/ui';
-import { useCallback, useEffect } from 'react';
+import {
+  getComponentsConfig,
+  getTokenValue,
+  type InputSizes,
+  isWeb,
+  type TamaguiElement,
+  type Token,
+} from '@app/ui';
+import { useCallback, useEffect, useMemo } from 'react';
 
 interface AutoResizeOptions {
   enabled?: boolean;
-  minSize?: number;
-  maxSize?: number; // Важно: для Native это обязательная опция
   step?: number;
+  size?: InputSizes;
+  minRows?: number;
+  maxRows?: number;
+}
+
+function getScaleConfig(size: string) {
+  const scaleConfigs = {
+    $600: { maxScale: 0.5 },
+    $500: { maxScale: 0.7 },
+    $400: { maxScale: 1.0 },
+  };
+  return scaleConfigs[size as keyof typeof scaleConfigs] || { maxScale: 1.0 };
+}
+
+function extractTypographyValues(size: string) {
+  const config = getComponentsConfig();
+  const componentProps = config.input[size as keyof typeof config.input].label.typography;
+  if (!componentProps) {
+    return 16;
+  }
+  return getTokenValue(
+    `line-height.${componentProps?.split('.').slice(0, -1).join('.')}` as Token,
+    'typography',
+  );
 }
 
 function debounce<T extends (...args: never[]) => void>(func: T, delay = 150) {
@@ -18,67 +47,87 @@ function debounce<T extends (...args: never[]) => void>(func: T, delay = 150) {
   };
 }
 
-/**
- * Кросс-платформенный хук для автоматического изменения размера шрифта в TextInput.
- * @param inputRef - Ref на элемент TextInput.
- * @param options - Опции для настройки.
- */
 export function useAutoResizeFont(
   inputRef: React.RefObject<TamaguiElement | null>,
   options: AutoResizeOptions = {},
 ) {
-  const { enabled = false, minSize = 10, maxSize = 16, step = 0.5 } = options;
+  const { enabled = false, size = '$500', step = 0.5, maxRows } = options;
 
-  // --- Логика для Web (без изменений) ---
-  const adjustWebFontSize = useCallback((inputElement: HTMLInputElement) => {
-    if (!inputElement) return;
+  const maxSize = useMemo(() => extractTypographyValues(size), [size]);
+  const scale = useMemo(() => getScaleConfig(size), [size]);
 
-    const isOverflowing = (el: HTMLElement): boolean => el.scrollWidth > el.clientWidth;
-    let currentSize = Number.parseFloat(window.getComputedStyle(inputElement).fontSize);
+  const adjustWebFontSize = useCallback(
+    (element: HTMLTextAreaElement) => {
+      if (!element) return;
 
-    if (isOverflowing(inputElement)) {
-      while (isOverflowing(inputElement) && currentSize > minSize) {
-        currentSize -= step;
-        inputElement.style.fontSize = `${currentSize}px`;
+      const computedStyle = window.getComputedStyle(element);
+      let currentSize = Number.parseFloat(computedStyle.fontSize);
+      const lineHeight = Number.parseFloat(computedStyle.lineHeight);
+      const minAllowedSize = scale.maxScale * maxSize;
+
+      const isOverflowing = (): boolean =>
+        element.scrollHeight > element.clientHeight || element.scrollWidth > element.clientWidth;
+
+      element.style.height = 'auto';
+      element.style.wordBreak = 'normal';
+
+      if (isOverflowing()) {
+        while (isOverflowing() && currentSize > minAllowedSize) {
+          currentSize -= step;
+          element.style.fontSize = `${currentSize}px`;
+        }
+
+        if (isOverflowing()) {
+          if (element.scrollWidth > element.clientWidth) {
+            element.style.wordBreak = 'break-all';
+          }
+          if (element.scrollHeight > element.clientHeight) {
+            if (maxRows && maxRows > 0) {
+              const maxHeight = maxRows * lineHeight;
+              element.style.height = `${Math.min(element.scrollHeight, maxHeight)}px`;
+            } else {
+              element.style.height = `${element.scrollHeight}px`;
+            }
+          }
+        }
+      } else {
+        while (!isOverflowing() && currentSize < maxSize) {
+          currentSize += step;
+          element.style.fontSize = `${currentSize}px`;
+        }
+        if (isOverflowing()) {
+          currentSize -= step;
+          element.style.fontSize = `${currentSize}px`;
+        }
       }
-    } else {
-      while (!isOverflowing(inputElement) && currentSize < maxSize) {
-        currentSize += step;
-        inputElement.style.fontSize = `${currentSize}px`;
+
+      if (currentSize >= maxSize) {
+        element.style.fontSize = '';
+      } else {
+        element.style.fontSize = `${currentSize}px`;
       }
-      if (isOverflowing(inputElement)) {
-        currentSize -= step;
-        inputElement.style.fontSize = `${currentSize}px`;
-      }
-    }
-    if (Number.parseFloat(inputElement.style.fontSize) >= maxSize) {
-      inputElement.style.fontSize = '';
-    }
-  }, []);
+    },
+    [maxSize, maxRows, scale, step],
+  );
 
   useEffect(() => {
-    if (!isWeb || !enabled) return;
+    if (!isWeb || !enabled || !inputRef.current) {
+      return;
+    }
 
-    const inputElement = inputRef.current as HTMLInputElement;
-    if (!inputElement) return;
+    const element = inputRef.current as HTMLTextAreaElement;
 
-    const handleInput = (event: Event) => {
+    const debouncedHandler = debounce((event: Event) => {
       if ((event as InputEvent).isComposing) return;
-      adjustWebFontSize(event.target as HTMLInputElement);
-    };
+      adjustWebFontSize(event.target as HTMLTextAreaElement);
+    }, 150);
 
-    const debouncedHandler = debounce(handleInput as () => void, 150);
-    inputElement.addEventListener('input', debouncedHandler);
-    adjustWebFontSize(inputElement);
+    element.addEventListener('input', debouncedHandler);
+
+    adjustWebFontSize(element);
 
     return () => {
-      inputElement.removeEventListener('input', debouncedHandler);
+      element.removeEventListener('input', debouncedHandler);
     };
-  });
-
-  // Эффект для сброса размера шрифта, если хук отключается
-
-  if (isWeb || !enabled) {
-    return {}; // Для веба и в выключенном состоянии возвращаем пустой объект
-  }
+  }, [enabled, inputRef, adjustWebFontSize]);
 }

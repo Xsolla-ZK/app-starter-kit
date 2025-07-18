@@ -27,6 +27,7 @@ const InputComponent = InputBase.styleable<InputProps>(
       onFocus,
       onBlur,
       isFocused,
+      maxRows,
       onFocusChange,
       autoResize,
       ...props
@@ -46,6 +47,7 @@ const InputComponent = InputBase.styleable<InputProps>(
     // 🧠 Получаем autoResizeProps
     useAutoResizeFont(ref, {
       enabled: autoResize,
+      maxRows,
     });
 
     const { startSlot, endSlot } = useMemo(() => {
