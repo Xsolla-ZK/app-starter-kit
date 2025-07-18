@@ -1,0 +1,36 @@
+{
+  "name": "@app/ui",
+  "version": "0.0.1",
+  "sideEffects": [
+    "*.css"
+  ],
+  "private": true,
+  "types": "./src",
+  "main": "src/index.tsx",
+  "module:jsx": "src",
+  "files": [
+    "types",
+    "dist"
+  ],
+  "scripts": {
+    "build": "tamagui-build --skip-types",
+    "watch": "tamagui-build --skip-types --watch"
+  },
+  "dependencies": {
+    "@tamagui/animate-presence": "1.127.2",
+    "@tamagui/image-next": "1.127.2",
+    "@tamagui/portal": "1.127.2",
+    "@tamagui/scroll-view": "1.127.2",
+    "@xsolla-zk/icons": "latest",
+    "@xsolla-zk/react": "latest"
+  },
+  "devDependencies": {
+    "@app/config": "workspace:*",
+    "@app/typescript-config": "workspace:*",
+    "@tamagui/build": "1.127.2",
+    "@types/react": "*",
+    "@types/react-native": "*",
+    "react-native": "*",
+    "typescript": "5.8.3"
+  }
+}

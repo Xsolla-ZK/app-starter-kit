@@ -1,0 +1,20 @@
+{
+  "name": "@app/utils",
+  "version": "0.0.1",
+  "private": true,
+  "types": "./src",
+  "main": "src/index.ts",
+  "files": [
+    "types",
+    "dist"
+  ],
+  "scripts": {
+    "build": "tamagui-build --skip-types",
+    "watch": "tamagui-build --skip-types --watch"
+  },
+  "devDependencies": {
+    "@app/typescript-config": "workspace:*",
+    "@tamagui/build": "1.127.2",
+    "typescript": "5.8.3"
+  }
+}

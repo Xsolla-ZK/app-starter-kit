@@ -1,0 +1,57 @@
+# Dependencies
+node_modules
+.pnpm
+.npm
+
+# Git and version control
+.git
+.gitignore
+.github
+
+# Documentation and README files
+*.md
+README*
+LICENSE
+
+# Build outputs
+**/dist
+**/.next
+**/out
+**/build
+
+# Cache and logs
+.cache
+*.log
+.DS_Store
+.env*
+.logs
+
+# Development tools
+.vscode
+.idea
+.cursor
+*.tgz
+coverage
+
+# Testing
+__tests__
+*.test.*
+*.spec.*
+
+# Temporary files
+tmp
+temp
+.tmp
+
+# Development scripts and configs
+scripts
+.githooks
+.cursorignore
+.gitconfig
+
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions

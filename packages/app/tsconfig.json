@@ -1,0 +1,17 @@
+{
+  "extends": "@app/typescript-config/react-library.json",
+  "include": ["**/*.ts", "**/*.tsx"],
+  "compilerOptions": {
+    "composite": true,
+    "jsx": "react-jsx",
+    "paths": {
+      "app/*": ["./packages/app/*"],
+      "@app/ui/*": ["./packages/ui/*"],
+      "@app/api/*": ["./packages/api/*"],
+      "@app/utils/*": ["./packages/utils/*"],
+      "@app/icons/*": ["./packages/icons/*"],
+      "@app/config/*": ["./packages/config/*"]
+    }
+  },
+  "references": []
+}

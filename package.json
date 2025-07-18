@@ -2,51 +2,33 @@
   "name": "@xsolla-zk/app-starter-kit",
   "version": "0.0.1",
   "private": true,
-  "type": "module",
+  "workspaces": [
+    "./apps/*",
+    "./packages/*"
+  ],
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "export": "next build && next export",
-    "generate:icons": "xzkui-icons generate -i ./raw-icons -o ./src/icons",
-    "generate:tokens": "xzkui-tokens generate -t tamagui -i ./raw-tokens -o ./src/config/tokens"
-  },
-  "dependencies": {
-    "@tamagui/image-next": "catalog:tamagui",
-    "@tamagui/next-theme": "catalog:tamagui",
-    "@tamagui/polyfill-dev": "catalog:tamagui",
-    "@xsolla-zk/config": "latest",
-    "@xsolla-zk/icons": "latest",
-    "@xsolla-zk/react": "latest",
-    "next": "catalog:next15",
-    "react": "*",
-    "react-dom": "*",
-    "react-native": "*",
-    "react-native-web": "^0.20.0"
+    "native": "cd apps/native && yarn start",
+    "native:prebuild": "cd apps/native && yarn prebuild",
+    "ios": "cd apps/native && yarn ios",
+    "android": "cd apps/native && yarn android",
+    "build": "yarn workspaces foreach --all --exclude web --exclude extension run build",
+    "build:extension": "yarn workspace extension build",
+    "web": "yarn build && cd apps/web && yarn dev",
+    "web:extract": "DISABLE_EXTRACTION=false yarn workspace web dev",
+    "web:prod": "yarn workspace web build",
+    "web:prod:start": "yarn workspace web start",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write ."
   },
   "devDependencies": {
-    "@eslint/js": "catalog:eslint9",
-    "@tamagui/next-plugin": "catalog:tamagui",
-    "@types/node": "catalog:",
-    "@types/react": "*",
-    "@types/react-dom": "*",
-    "@xsolla-zk/icons-generator": "latest",
-    "@xsolla-zk/tokens": "latest",
-    "eslint": "catalog:eslint9",
-    "eslint-config-next": "catalog:next15",
-    "eslint-config-prettier": "10.1.5",
-    "eslint-import-resolver-typescript": "4.3.4",
-    "eslint-plugin-import": "2.31.0",
-    "eslint-plugin-prettier": "^5.4.0",
-    "eslint-plugin-react-hooks": "^5.2.0",
-    "eslint-plugin-react-refresh": "^0.4.20",
-    "globals": "catalog:",
-    "react-native": "*",
-    "typescript": "catalog:",
-    "typescript-eslint": "catalog:typescript-eslint"
+    "@biomejs/biome": "2.1.1",
+    "@types/node": "^22.15.3",
+    "cross-env": "^7.0.3",
+    "turbo": "^2.5.4",
+    "typescript": "5.8.3"
   },
   "engines": {
-    "pnpm": ">=10.3.0",
-    "node": ">=20.9.0"
-  }
+    "node": ">=20.11.0"
+  },
+  "packageManager": "yarn@4.9.2"
 }

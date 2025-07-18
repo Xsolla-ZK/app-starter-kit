@@ -1,0 +1,11 @@
+node_modules
+dist
+.next
+.expo
+.yarn
+.tamagui
+ios
+android
+coverage
+build
+tmp

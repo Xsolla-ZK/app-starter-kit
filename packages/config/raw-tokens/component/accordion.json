@@ -1,0 +1,56 @@
+{
+  "accordion": {
+    "size": {
+      "medium": {
+        "header": {
+          "gap": {
+            "value": "{space.200}",
+            "type": "number"
+          }
+        }
+      }
+    },
+    "board": {
+      "medium": {
+        "frame": {
+          "padding-left": {
+            "sm": {
+              "value": "{layout.content-compensation.sm}",
+              "type": "number"
+            },
+            "md": {
+              "value": "{layout.content-compensation.md}",
+              "type": "number"
+            },
+            "lg": {
+              "value": "{layout.content-compensation.lg}",
+              "type": "number"
+            },
+            "xl": {
+              "value": "{layout.content-compensation.xl}",
+              "type": "number"
+            }
+          },
+          "padding-right": {
+            "value": "{space.200}",
+            "type": "number"
+          },
+          "padding-vertical": {
+            "value": "{space.200}",
+            "type": "number"
+          },
+          "border-radius": {
+            "value": "{radius.500}",
+            "type": "number"
+          }
+        },
+        "content": {
+          "min-height": {
+            "value": "{size.0}",
+            "type": "number"
+          }
+        }
+      }
+    }
+  }
+}

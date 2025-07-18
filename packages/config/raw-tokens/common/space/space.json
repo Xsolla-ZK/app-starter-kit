@@ -1,0 +1,92 @@
+{
+  "space": {
+    "0": {
+      "value": "0",
+      "type": "number"
+    },
+    "25": {
+      "value": "1",
+      "type": "number"
+    },
+    "50": {
+      "value": "2",
+      "type": "number"
+    },
+    "75": {
+      "value": "3",
+      "type": "number"
+    },
+    "100": {
+      "value": "4",
+      "type": "number"
+    },
+    "150": {
+      "value": "6",
+      "type": "number"
+    },
+    "200": {
+      "value": "8",
+      "type": "number"
+    },
+    "250": {
+      "value": "10",
+      "type": "number"
+    },
+    "300": {
+      "value": 12,
+      "type": "number"
+    },
+    "325": {
+      "value": 14,
+      "type": "number"
+    },
+    "350": {
+      "value": 16,
+      "type": "number"
+    },
+    "400": {
+      "value": "20",
+      "type": "number"
+    },
+    "450": {
+      "value": "24",
+      "type": "number"
+    },
+    "500": {
+      "value": "28",
+      "type": "number"
+    },
+    "550": {
+      "value": "32",
+      "type": "number"
+    },
+    "600": {
+      "value": "36",
+      "type": "number"
+    },
+    "650": {
+      "value": "40",
+      "type": "number"
+    },
+    "700": {
+      "value": "48",
+      "type": "number"
+    },
+    "750": {
+      "value": "56",
+      "type": "number"
+    },
+    "800": {
+      "value": "64",
+      "type": "number"
+    },
+    "850": {
+      "value": "72",
+      "type": "number"
+    },
+    "900": {
+      "value": "80",
+      "type": "number"
+    }
+  }
+}

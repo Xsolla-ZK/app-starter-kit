@@ -1,3 +1,6 @@
+dist
+
+**/node_modules
 .yarn/*
 !.yarn/patches
 !.yarn/plugins
@@ -5,37 +8,45 @@
 !.yarn/sdks
 !.yarn/versions
 
-.turbo
+**/release/*
 
-tmp
-dist
-node_modules
+# expo
+**/.expo/*
 
-*.tsbuildinfo
-*.tmp.js
+# next.js
+**/.next/*
+/out/
 
-yarn-error.log
-tsconfig.tsbuildinfo
-.DS_Store
+# tamagui
+**/.tamagui/*
 
-.tamagui
+# production
+/build
 
-.idea
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+tamagui-debug.log*
 
-.env
 # local env files
 .env.local
 .env.development.local
-.env.test.localp
+.env.test.local
 .env.production.local
 
-.expo
+# vercel
+.vercel
 
-# generated code
-/ios
-/android
+# typescript
+*.tsbuildinfo
 
+# os
+.DS_Store
+THUMBS_DB
+thumbs.db
 
-.next
-next-env.d.ts
-tamagui.css
+# turbo build log
+**/.turbo/*
+/backpack/sdk/archive/

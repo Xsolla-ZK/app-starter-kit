@@ -1,0 +1,27 @@
+{
+  "name": "app",
+  "version": "0.0.0",
+  "main": "index.ts",
+  "private": true,
+  "type": "module",
+  "sideEffects": [
+    "*.css"
+  ],
+  "dependencies": {
+    "@app/config": "workspace:*",
+    "@app/icons": "workspace:*",
+    "@app/ui": "workspace:*",
+    "@app/utils": "workspace:*",
+    "@tanstack/react-query": "^5.80.7",
+    "@xsolla-zk/icons": "latest",
+    "solito": "patch:solito@npm%3A4.4.1#~/.yarn/patches/solito-npm-4.4.1-976dc5859c.patch"
+  },
+  "devDependencies": {
+    "@app/typescript-config": "workspace:*",
+    "@types/react": "*",
+    "@types/react-native": "*"
+  },
+  "resolutions": {
+    "next": "^15.3.4"
+  }
+}

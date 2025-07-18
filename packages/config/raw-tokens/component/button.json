@@ -1,0 +1,220 @@
+{
+  "button": {
+    "200": {
+      "frame": {
+        "min-size": {
+          "value": "{base-component.200.frame.min-size}",
+          "type": "number"
+        },
+        "border-radius": {
+          "value": "{control-contained.200.frame.border-radius}",
+          "type": "number"
+        },
+        "padding-horizontal": {
+          "value": "{control-contained.200.frame.padding-horizontal}",
+          "type": "number"
+        },
+        "gap": {
+          "value": "{control-contained.200.frame.gap}",
+          "type": "number"
+        }
+      },
+      "icon": {
+        "size": {
+          "value": "{base-component.200.icon.size}",
+          "type": "number"
+        }
+      },
+      "label": {
+        "padding-horizontal": {
+          "value": "{control-contained.200.label.padding-horizontal}",
+          "type": "number"
+        },
+        "typography": {
+          "value": "{base-component.200.label.style}.{base-component.200.label.size}.accent",
+          "type": "other"
+        }
+      }
+    },
+    "300": {
+      "frame": {
+        "min-size": {
+          "value": "{base-component.300.frame.min-size}",
+          "type": "number"
+        },
+        "border-radius": {
+          "value": "{control-contained.300.frame.border-radius}",
+          "type": "number"
+        },
+        "padding-horizontal": {
+          "value": "{control-contained.300.frame.padding-horizontal}",
+          "type": "number"
+        },
+        "gap": {
+          "value": "{control-contained.300.frame.gap}",
+          "type": "number"
+        }
+      },
+      "icon": {
+        "size": {
+          "value": "{base-component.300.icon.size}",
+          "type": "number"
+        }
+      },
+      "label": {
+        "padding-horizontal": {
+          "value": "{control-contained.300.label.padding-horizontal}",
+          "type": "number"
+        },
+        "typography": {
+          "value": "{base-component.300.label.style}.{base-component.300.label.size}.accent",
+          "type": "other"
+        }
+      }
+    },
+    "400": {
+      "frame": {
+        "min-size": {
+          "value": "{base-component.400.frame.min-size}",
+          "type": "number"
+        },
+        "border-radius": {
+          "value": "{control-contained.400.frame.border-radius}",
+          "type": "number"
+        },
+        "padding-horizontal": {
+          "value": "{control-contained.400.frame.padding-horizontal}",
+          "type": "number"
+        },
+        "gap": {
+          "value": "{control-contained.400.frame.gap}",
+          "type": "number"
+        }
+      },
+      "icon": {
+        "size": {
+          "value": "{base-component.400.icon.size}",
+          "type": "number"
+        }
+      },
+      "label": {
+        "padding-horizontal": {
+          "value": "{control-contained.400.label.padding-horizontal}",
+          "type": "number"
+        },
+        "typography": {
+          "value": "{base-component.400.label.style}.{base-component.400.label.size}.accent",
+          "type": "other"
+        }
+      }
+    },
+    "500": {
+      "frame": {
+        "min-size": {
+          "value": "{base-component.500.frame.min-size}",
+          "type": "number"
+        },
+        "border-radius": {
+          "value": "{control-contained.500.frame.border-radius}",
+          "type": "number"
+        },
+        "padding-horizontal": {
+          "value": "{control-contained.500.frame.padding-horizontal}",
+          "type": "number"
+        },
+        "gap": {
+          "value": "{control-contained.500.frame.gap}",
+          "type": "number"
+        }
+      },
+      "icon": {
+        "size": {
+          "value": "{base-component.500.icon.size}",
+          "type": "number"
+        }
+      },
+      "label": {
+        "padding-horizontal": {
+          "value": "{control-contained.500.label.padding-horizontal}",
+          "type": "number"
+        },
+        "typography": {
+          "value": "{base-component.500.label.style}.{base-component.500.label.size}.accent",
+          "type": "other"
+        }
+      }
+    },
+    "600": {
+      "frame": {
+        "min-size": {
+          "value": "{base-component.600.frame.min-size}",
+          "type": "number"
+        },
+        "border-radius": {
+          "value": "{control-contained.600.frame.border-radius}",
+          "type": "number"
+        },
+        "padding-horizontal": {
+          "value": "{control-contained.600.frame.padding-horizontal}",
+          "type": "number"
+        },
+        "gap": {
+          "value": "{control-contained.600.frame.gap}",
+          "type": "number"
+        }
+      },
+      "icon": {
+        "size": {
+          "value": "{base-component.600.icon.size}",
+          "type": "number"
+        }
+      },
+      "label": {
+        "padding-horizontal": {
+          "value": "{control-contained.600.label.padding-horizontal}",
+          "type": "number"
+        },
+        "typography": {
+          "value": "{base-component.600.label.style}.{base-component.600.label.size}.accent",
+          "type": "other"
+        }
+      }
+    },
+    "700": {
+      "frame": {
+        "min-size": {
+          "value": "{base-component.700.frame.min-size}",
+          "type": "number"
+        },
+        "border-radius": {
+          "value": "{control-contained.700.frame.border-radius}",
+          "type": "number"
+        },
+        "padding-horizontal": {
+          "value": "{control-contained.700.frame.padding-horizontal}",
+          "type": "number"
+        },
+        "gap": {
+          "value": "{control-contained.700.frame.gap}",
+          "type": "number"
+        }
+      },
+      "icon": {
+        "size": {
+          "value": "{base-component.700.icon.size}",
+          "type": "number"
+        }
+      },
+      "label": {
+        "padding-horizontal": {
+          "value": "{control-contained.700.label.padding-horizontal}",
+          "type": "number"
+        },
+        "typography": {
+          "value": "{base-component.700.label.style}.{base-component.700.label.size}.accent",
+          "type": "other"
+        }
+      }
+    }
+  }
+}

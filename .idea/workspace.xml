@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="28900854-3b89-46fa-94b9-012d511ff68f" name="Changes" comment="feat(sdk/provider): Add error constants and enhance `Provider` for better error handling, caching, and chain/account management">
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/extensions.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/extensions.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/extension/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/extension/manifest.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/extension/manifest.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/extension/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/extension/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/extension/src/background.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/extension/src/background.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/extension/src/content/app.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/extension/src/content/content.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/extension/src/content/content.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/extension/src/content/injected.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/extension/src/content/injected.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/extension/src/content/main.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/extension/src/popup/app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/extension/src/popup/app.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/extension/src/popup/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/extension/src/popup/main.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/extension/src/utils/browser-polyfill.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/extension/src/utils/browser-polyfill.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/extension/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/extension/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/extension/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/extension/vite.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/extension/vite.injected.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/extension/vite.injected.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/native/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/native/app.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/native/app/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/native/app/_layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/native/app/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/native/app/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/native/app/types.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/native/app/types.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/native/babel.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/apps/native/babel.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/native/eas.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/native/eas.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/native/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/apps/native/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/native/metro.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/apps/native/metro.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/native/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/native/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/native/scripts/fix-xcode-env.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/apps/native/scripts/fix-xcode-env.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/native/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/native/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/next.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/next.config.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/public/favicon/site.webmanifest" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/public/favicon/site.webmanifest" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/public/tamagui.css" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/public/tamagui.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/src/providers/next-provider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/src/providers/next-provider.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/types.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/types.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/archive/bus/bus.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/archive/bus/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/archive/channels.types.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/archive/communicator.interface.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/archive/communicator.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/archive/extension-bridge.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/archive/popup-bridge.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/archive/service-worker-bridge.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/archive/types.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/archive/window-bridge.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/archive/worker-bridge.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backpack/sdk/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/playwright.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backpack/sdk/playwright.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/src/background/service-worker/background.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/src/background/service-worker/client/constants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backpack/sdk/src/background/service-worker/client/constants.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/src/background/service-worker/client/errors.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backpack/sdk/src/background/service-worker/client/errors.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/src/background/service-worker/client/events.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backpack/sdk/src/background/service-worker/client/events.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/src/background/service-worker/client/service-worker-manager.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backpack/sdk/src/background/service-worker/client/service-worker-manager.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/src/background/service-worker/client/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backpack/sdk/src/background/service-worker/client/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/src/background/service-worker/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backpack/sdk/src/background/service-worker/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/src/background/service-worker/sw/constants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backpack/sdk/src/background/service-worker/sw/constants.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/src/background/service-worker/sw/errors.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backpack/sdk/src/background/service-worker/sw/errors.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/src/background/service-worker/sw/events.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backpack/sdk/src/background/service-worker/sw/events.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/src/background/service-worker/sw/service-worker-runtime.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backpack/sdk/src/background/service-worker/sw/service-worker-runtime.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/src/background/service-worker/sw/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backpack/sdk/src/background/service-worker/sw/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backpack/sdk/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/src/provider/errors.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backpack/sdk/src/provider/errors.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/src/provider/events.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backpack/sdk/src/provider/events.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/src/provider/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backpack/sdk/src/provider/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/src/provider/provider.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backpack/sdk/src/provider/xsolla-provider.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/src/sandbox/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/src/sandbox/main.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/src/sandbox/sw.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/src/shared/errorHandler/errorHandler.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backpack/sdk/src/shared/error-handler/error-handler.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/src/shared/errorHandler/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backpack/sdk/src/shared/error-handler/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/src/shared/errorHandler/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backpack/sdk/src/shared/error-handler/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/src/shared/eventEmitter/eventEmitter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backpack/sdk/src/shared/event-emitter/event-emitter.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/src/shared/eventEmitter/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backpack/sdk/src/shared/event-emitter/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/src/shared/eventEmitter/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backpack/sdk/src/shared/event-emitter/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/src/shared/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backpack/sdk/src/shared/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/src/shared/logger/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backpack/sdk/src/shared/logger/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/src/shared/logger/logger.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backpack/sdk/src/shared/logger/logger.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/src/shared/logger/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backpack/sdk/src/shared/logger/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/src/transport/communicator/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/src/transport/communicator/__tests__/serialization.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backpack/sdk/src/transport/communicator/__tests__/serialization.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/src/transport/communicator/__tests__/setup.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backpack/sdk/src/transport/communicator/__tests__/setup.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/src/transport/communicator/adapters/base-communicator.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/src/transport/communicator/adapters/extension-communicator.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/src/transport/communicator/adapters/popup-communicator.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/src/transport/communicator/adapters/window-communicator.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/src/transport/communicator/adapters/worker-communicator.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/src/transport/communicator/bridge/bridge.interface.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backpack/sdk/src/transport/communicator/bridge/bridge.interface.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/src/transport/communicator/bridge/bridge.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backpack/sdk/src/transport/communicator/bridge/bridge.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/src/transport/communicator/bridge/extensionBridge/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backpack/sdk/src/transport/communicator/bridge/extension-bridge/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/src/transport/communicator/bridge/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backpack/sdk/src/transport/communicator/bridge/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/src/transport/communicator/bridge/pageBridge/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backpack/sdk/src/transport/communicator/bridge/page-bridge/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/src/transport/communicator/bridge/serviceWorkerBridge/service-worker-bridge.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backpack/sdk/src/transport/communicator/bridge/service-worker-bridge/service-worker-bridge.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/src/transport/communicator/bridge/serviceWorkerBridge/service-worker-client-bridge.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backpack/sdk/src/transport/communicator/bridge/service-worker-bridge/service-worker-client-bridge.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/src/transport/communicator/bridge/serviceWorkerBridge/service-worker-transport-bridge.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/src/transport/communicator/contentBus/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backpack/sdk/src/transport/communicator/content-bus/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/src/transport/communicator/core/communicator.interface.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backpack/sdk/src/transport/communicator/core/communicator.interface.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/src/transport/communicator/core/communicator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backpack/sdk/src/transport/communicator/core/communicator.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/src/transport/communicator/core/constants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backpack/sdk/src/transport/communicator/core/constants.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/src/transport/communicator/core/events.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backpack/sdk/src/transport/communicator/core/events.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/src/transport/communicator/core/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backpack/sdk/src/transport/communicator/core/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/src/transport/communicator/core/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backpack/sdk/src/transport/communicator/types/common.types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/src/transport/communicator/create-communicator.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/src/transport/communicator/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backpack/sdk/src/transport/communicator/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/src/transport/communicator/types/channel-method-map.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backpack/sdk/src/transport/communicator/types/channel-method-map.types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/src/transport/communicator/types/channels.types.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/src/transport/communicator/types/communicator.types.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/src/transport/communicator/types/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backpack/sdk/src/transport/communicator/types/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/src/transport/communicator/types/rpc.methods.type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backpack/sdk/src/transport/communicator/types/rpc-methods.type.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/src/transport/communicator/utils/handshake.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/src/transport/communicator/utils/serialization.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/src/utils/generateId.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backpack/sdk/src/utils/generateId.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/src/utils/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backpack/sdk/src/utils/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/src/utils/serialization.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backpack/sdk/src/utils/serialization.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/src/utils/serializationErrors.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backpack/sdk/src/utils/serializationErrors.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/backpack/sdk/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/tsconfig.node.json" beforeDir="false" afterPath="$PROJECT_DIR$/backpack/sdk/tsconfig.node.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/tsup.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backpack/sdk/tsup.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/tsup.sandbox.config.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backpack/sdk/vitest.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backpack/sdk/vitest.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/biome.json" beforeDir="false" afterPath="$PROJECT_DIR$/biome.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/api/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/api/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/api/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/api/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/api/src/nft/check-task-status.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/api/src/nft/check-task-status.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/api/src/nft/create-nft.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/api/src/nft/create-nft.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/api/src/nft/generate-model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/api/src/nft/generate-model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/api/src/nft/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/api/src/nft/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/api/src/nft/refine-model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/api/src/nft/refine-model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/api/src/nft/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/api/src/nft/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/api/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/api/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/app/components/footer/footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/app/components/footer/footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/app/components/icons/brand-logo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/app/components/icons/brand-logo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/app/components/icons/logo-xsolla-zk.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/app/components/icons/logo-xsolla-zk.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/app/components/icons/meta-mask.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/app/components/icons/meta-mask.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/app/components/icons/wallet-connect.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/app/components/icons/wallet-connect.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/app/components/icons/xsolla-zk-diamond.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/app/components/icons/xsolla-zk-diamond.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/app/components/input/create-input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/app/components/input/create-input.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/app/components/input/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/app/components/input/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/app/components/input/input.shared.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/app/components/input/input.shared.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/app/components/input/input.styled.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/app/components/input/input.styled.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/app/components/input/input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/app/components/input/input.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/app/components/input/input.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/app/components/input/input.types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/app/features/home/screen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/app/features/home/screen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/app/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/app/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/app/layouts/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/app/layouts/main.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/app/layouts/onboarding.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/app/layouts/onboarding.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/app/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/app/provider/api-provider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/app/provider/api-provider.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/app/provider/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/app/provider/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/app/provider/wagmi-provider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/app/provider/wagmi-provider.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/app/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/app/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/app/types/images.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/app/types/images.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/app/types/types.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/app/types/types.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/raw-tokens/$metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/raw-tokens/$metadata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/raw-tokens/$themes.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/raw-tokens/$themes.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/raw-tokens/common/effect/dark.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/raw-tokens/common/effect/dark.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/raw-tokens/common/effect/light.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/raw-tokens/common/effect/light.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/raw-tokens/common/effect/shadow.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/raw-tokens/common/effect/shadow.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/raw-tokens/common/layout/android.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/raw-tokens/common/layout/android.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/raw-tokens/common/layout/apple.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/raw-tokens/common/layout/apple.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/raw-tokens/common/layout/web.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/raw-tokens/common/layout/web.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/raw-tokens/common/media/android.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/raw-tokens/common/media/android.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/raw-tokens/common/media/apple.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/raw-tokens/common/media/apple.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/raw-tokens/common/media/web.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/raw-tokens/common/media/web.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/raw-tokens/common/opacity/opacity.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/raw-tokens/common/opacity/opacity.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/raw-tokens/common/palette/dark.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/raw-tokens/common/palette/dark.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/raw-tokens/common/palette/light.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/raw-tokens/common/palette/light.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/raw-tokens/common/radius/radius.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/raw-tokens/common/radius/radius.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/raw-tokens/common/size/size.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/raw-tokens/common/size/size.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/raw-tokens/common/space/space.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/raw-tokens/common/space/space.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/raw-tokens/common/stroke/stroke.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/raw-tokens/common/stroke/stroke.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/raw-tokens/common/theme/dark.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/raw-tokens/common/theme/dark.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/raw-tokens/common/theme/light.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/raw-tokens/common/theme/light.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/raw-tokens/common/typography/typography.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/raw-tokens/common/typography/typography.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/raw-tokens/component/accordion.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/raw-tokens/component/accordion.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/raw-tokens/component/badge.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/raw-tokens/component/badge.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/raw-tokens/component/breadcrumbs.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/raw-tokens/component/breadcrumbs.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/raw-tokens/component/button.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/raw-tokens/component/button.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/raw-tokens/component/cell.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/raw-tokens/component/cell.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/raw-tokens/component/checkbox.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/raw-tokens/component/checkbox.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/raw-tokens/component/chip.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/raw-tokens/component/chip.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/raw-tokens/component/chips.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/raw-tokens/component/chips.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/raw-tokens/component/dropdown.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/raw-tokens/component/dropdown.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/raw-tokens/component/field.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/raw-tokens/component/field.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/raw-tokens/component/flex-button.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/raw-tokens/component/flex-button.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/raw-tokens/component/gallery.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/raw-tokens/component/gallery.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/raw-tokens/component/inline-input.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/raw-tokens/component/inline-input.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/raw-tokens/component/input.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/raw-tokens/component/input.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/raw-tokens/component/list.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/raw-tokens/component/list.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/raw-tokens/component/loader.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/raw-tokens/component/loader.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/raw-tokens/component/markdown.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/raw-tokens/component/markdown.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/raw-tokens/component/modal.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/raw-tokens/component/modal.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/raw-tokens/component/nav-bar.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/raw-tokens/component/nav-bar.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/raw-tokens/component/notification-provider.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/raw-tokens/component/notification-provider.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/raw-tokens/component/pimple.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/raw-tokens/component/pimple.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/raw-tokens/component/progress-bar.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/raw-tokens/component/progress-bar.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/raw-tokens/component/radio.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/raw-tokens/component/radio.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/raw-tokens/component/rich-icon.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/raw-tokens/component/rich-icon.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/raw-tokens/component/segment.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/raw-tokens/component/segment.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/raw-tokens/component/segmented-control.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/raw-tokens/component/segmented-control.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/raw-tokens/component/semantic-text.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/raw-tokens/component/semantic-text.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/raw-tokens/component/separator.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/raw-tokens/component/separator.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/raw-tokens/component/slider.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/raw-tokens/component/slider.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/raw-tokens/component/snack-bar.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/raw-tokens/component/snack-bar.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/raw-tokens/component/switch.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/raw-tokens/component/switch.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/raw-tokens/component/tab-bar.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/raw-tokens/component/tab-bar.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/raw-tokens/component/tab.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/raw-tokens/component/tab.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/raw-tokens/component/tabs.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/raw-tokens/component/tabs.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/raw-tokens/component/toast.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/raw-tokens/component/toast.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/raw-tokens/shared/base-component.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/raw-tokens/shared/base-component.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/raw-tokens/shared/control-contained.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/raw-tokens/shared/control-contained.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/raw-tokens/shared/control-ghost.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/raw-tokens/shared/control-ghost.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/raw-tokens/shared/selection-control.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/raw-tokens/shared/selection-control.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/raw-tokens/shared/semantic-typography.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/raw-tokens/shared/semantic-typography.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/src/animations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/src/animations.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/src/components.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/src/components.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/src/config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/src/config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/src/custom-fonts.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/src/custom-fonts.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/src/tamagui.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/src/tamagui.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/src/themes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/src/themes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/src/tokens/components.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/src/tokens/components.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/src/tokens/fonts.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/src/tokens/fonts.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/src/tokens/media/android.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/src/tokens/media/android.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/src/tokens/media/ios.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/src/tokens/media/ios.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/src/tokens/media/web.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/src/tokens/media/web.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/src/tokens/platform.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/src/tokens/platform.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/src/tokens/themes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/src/tokens/themes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/src/tokens/tokens.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/src/tokens/tokens.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/src/tokens/typography.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/src/tokens/typography.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/config/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/config/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/icons/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/icons/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/icons/src/icons/discord.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/icons/src/icons/discord.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/icons/src/icons/linkedin.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/icons/src/icons/linkedin.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/icons/src/icons/x-twitter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/icons/src/icons/x-twitter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/icons/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/icons/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/icons/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/icons/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/typescript-config/base.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/typescript-config/base.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/typescript-config/nextjs.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/typescript-config/nextjs.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/typescript-config/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/typescript-config/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/typescript-config/react-library.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/typescript-config/react-library.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui/src/modal/modal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/src/modal/modal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui/src/promo-text/promo-text.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/src/promo-text/promo-text.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui/src/snack-bar/snack-bar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/src/snack-bar/snack-bar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui/src/stacks/content-stack.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/src/stacks/content-stack.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui/src/stacks/screen-stack.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/src/stacks/screen-stack.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui/src/toast/toast.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/src/toast/toast.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui/src/types.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/src/types.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/ui/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/ui/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/utils/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/utils/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/utils/src/to-short-string.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/src/to-short-string.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/utils/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/turbo.json" beforeDir="false" afterPath="$PROJECT_DIR$/turbo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="dev" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitLabMergeRequestFiltersHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPENED&quot;,
+    &quot;assignee&quot;: {
+      &quot;type&quot;: &quot;org.jetbrains.plugins.gitlab.mergerequest.ui.filters.GitLabMergeRequestsFiltersValue.MergeRequestsMemberFilterValue.MergeRequestsAssigneeFilterValue&quot;,
+      &quot;username&quot;: &quot;imshavlovsky&quot;,
+      &quot;fullname&quot;: &quot;Igor&quot;
+    }
+  }
+}</component>
+  <component name="GitLabMergeRequestsSettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;first&quot;: &quot;https://gitlab.whattofarm.io/wallet/wallet-client.git&quot;,
+    &quot;second&quot;: &quot;f3f2e9dd-1961-4aba-9e30-f86200dbdad1&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2zlu83eUlv4Es1gH04clpoBquI7" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;SDK/default&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;22.14.0&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;22.14.1&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/shavl/WebstormProjects/wallet-client/apps/extention2&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.stylelint&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;C:\\Users\\shavl\\WebstormProjects\\wallet-client\\.yarn\\releases\\yarn-4.9.2.cjs&quot;,
+    &quot;npm.extension &gt; build.executor&quot;: &quot;Run&quot;,
+    &quot;npm.extension &gt; build:all.executor&quot;: &quot;Run&quot;,
+    &quot;npm.extension &gt; build:extension.executor&quot;: &quot;Run&quot;,
+    &quot;npm.extension &gt; build:injected.executor&quot;: &quot;Run&quot;,
+    &quot;npm.extension &gt; dev.executor&quot;: &quot;Run&quot;,
+    &quot;npm.extention2 &gt; build.executor&quot;: &quot;Run&quot;,
+    &quot;npm.extention2 &gt; build:all.executor&quot;: &quot;Run&quot;,
+    &quot;npm.lint:fix.executor&quot;: &quot;Run&quot;,
+    &quot;npm.sdk &gt; build.executor&quot;: &quot;Run&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\shavl\\WebstormProjects\\wallet-client\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\shavl\WebstormProjects\wallet-client\apps\extention2" />
+      <recent name="C:\Users\shavl\WebstormProjects\wallet-client\apps\extention2\src" />
+      <recent name="C:\Users\shavl\WebstormProjects\wallet-client\apps\extension" />
+      <recent name="C:\Users\shavl\WebstormProjects\wallet-client\apps\extension\src\pages\options" />
+      <recent name="C:\Users\shavl\WebstormProjects\wallet-client\apps" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\shavl\WebstormProjects\wallet-client\apps\extention2" />
+      <recent name="C:\Users\shavl\WebstormProjects\wallet-client\apps\extension\dist" />
+      <recent name="C:\Users\shavl\WebstormProjects\wallet-client" />
+      <recent name="C:\Users\shavl\WebstormProjects\wallet-client\apps\extension" />
+      <recent name="C:\Users\shavl\WebstormProjects\wallet-client\apps\extension\public\icons" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.lint:fix">
+    <configuration default="true" type="ShConfigurationType">
+      <option name="SCRIPT_TEXT" value="" />
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="false" />
+      <option name="INTERPRETER_PATH" value="&quot;$PROJECT_DIR$/../../../../Program Files/Git/bin/bash.exe&quot;" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="EXECUTE_IN_TERMINAL" value="true" />
+      <option name="EXECUTE_SCRIPT_FILE" value="true" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="extension &gt; build:all" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/apps/extension/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build:all" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="extension &gt; build:injected" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/apps/extension/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build:injected" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="extension &gt; dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/apps/extension/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="lint:fix" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="lint:fix" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="sdk &gt; build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/backpack/sdk/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.lint:fix" />
+        <item itemvalue="npm.extension &gt; dev" />
+        <item itemvalue="npm.extension &gt; build:injected" />
+        <item itemvalue="npm.sdk &gt; build" />
+        <item itemvalue="npm.extension &gt; build:all" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-09060db00ec0-JavaScript-WS-251.26927.40" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\shavl\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="28900854-3b89-46fa-94b9-012d511ff68f" name="Changes" comment="" />
+      <created>1752317818628</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1752317818628</updated>
+      <workItem from="1752317820267" duration="2954000" />
+      <workItem from="1752320869443" duration="5615000" />
+      <workItem from="1752514496842" duration="2693000" />
+      <workItem from="1752517281242" duration="6081000" />
+    </task>
+    <task id="LOCAL-00001" summary="update">
+      <option name="closed" value="true" />
+      <created>1752320808000</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1752320808000</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="package.json" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

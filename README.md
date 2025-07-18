@@ -1,223 +1,261 @@
-# Xsolla ZK App Starter Kit
+# Xsolla ZK - App Starter Kit
 
-Welcome to the **Xsolla ZK App Starter Kit** - a comprehensive development template built on top of the [Xsolla ZK UI Design System](https://github.com/Xsolla-ZK/Xsolla-ZK-UI). This starter kit provides a foundation for building modern web applications using React and Next.js with a unified design system.
+This is a **Turborepo monorepo** with the following structure:
 
-## 🚀 Key Technologies
+### Apps
+- **`apps/native/`** - React Native application with Expo Router (iOS/Android)
+- **`apps/web/`** - Next.js web application (main frontend)
 
-- **[Xsolla ZK UI](https://ui-kit.xsollazk.com/)** - Comprehensive design system and component library
-- **[Tamagui](https://tamagui.dev/)** - Universal UI system and optimizing compiler
-- **[Next.js](https://nextjs.org/)** - React framework for production with hybrid static & server rendering
-- **TypeScript** - Type-safe JavaScript development
+### Packages
+- **`packages/app/`** - Core application components and business logic
+- **`packages/config/`** - Tamagui configuration and design tokens
+- **`packages/icons/`** - SVG icon components
+- **`packages/ui/`** - Reusable UI components based on @xsolla-zk/react (modals, toasts, etc.)
+- **`packages/utils/`** - Utility functions
+- **`packages/typescript-config/`** - Shared TypeScript configurations
 
-## 📁 Project Structure
+## 🛠️ Tech Stack
 
-```
-xsolla-zk-app-starter/
-├── app/                          # Application pages (Next.js App Router)
-├── src/                         # Source code
-│   ├── config/                 # App configuration
-│   │   └── tokens/             # Generated design tokens
-├── raw-tokens/                 # Source design tokens from Figma
-├── raw-icons/                  # Source icon assets
-├── package.json               # Project dependencies and scripts
-└── next.config.mjs           # Next.js build configuration
-```
+### Cross-Platform Development
+- **Solito** - Navigation between React Native and Next.js
+- **Expo Router** - File-based routing with type safety
+- **Tamagui** - Universal UI system
 
-## 🎨 Design System Features
+### Frontend (UI)
+- **@xsolla-zk/react** - Xsolla ZK React UI components
+- **Next.js 15** - React framework with App Router
+- **React 19** - UI library
+- **TypeScript** - Type safety
+- **React Native Web** - React Native support in web
 
-### Design Token Pipeline
-- **Source**: Design tokens exported from Figma
-- **Generated**: TypeScript configurations with semantic naming
-- **Themes**: Light and dark theme support
-- **Components**: Token-based component system
+### Mobile Development
+- **Expo SDK 53** - React Native development platform
+- **React Native** - Mobile development framework
+- **Expo Dev Client** - Custom development environment
 
-### Semantic Color System
-- **Content**: Text and foreground colors
-- **Background**: Surface and container colors
-- **Brand**: Primary (green) and secondary (purple) brand colors
-- **Semantic**: Success, warning, error, info variations
+### Development Tools
+- **Turborepo** - Monorepo build system
+- **Biome** - Code linting and formatting
+- **Yarn 4.9.2** - Package manager
+- **Docker** - Containerization
 
-### Responsive Design
-Built-in responsive breakpoints:
-- `$sm`: 640px, `$md`: 768px, `$lg`: 1024px, `$xl`: 1280px
-
-## 🛠 Development
+## 📦 Installation
 
 ### Prerequisites
+- Node.js >= 20.11.0
+- Yarn 4.9.2
+- Docker (optional, for containerized deployment)
+- Expo CLI (for mobile development)
+- iOS Simulator / Android Studio (for mobile development)
 
-- Node.js 20+
-- pnpm 10+
+### Setup
 
-### Installation
+1. **Clone the repository**
+   ```bash
+   git clone git@github.com:Xsolla-ZK/app-starter-kit.git
+   cd app-starter-kit
+   ```
 
+2. **Install dependencies**
+   ```bash
+   yarn install
+   ```
+
+3. **Start development server**
+
+   **Web application:**
+   ```bash
+   yarn web
+   ```
+   The application will be available at `http://localhost:3000`
+
+   **Native application:**
+   ```bash
+   yarn native
+   ```
+
+## 🚀 Available Scripts
+
+### Web Development
+- `yarn web` - Start web app in development mode
+- `yarn web:extract` - Start with design token extraction enabled
+- `yarn web:prod` - Build web app for production
+- `yarn web:prod:start` - Start production build
+
+### Mobile Development
+- `yarn native` - Start Expo Dev Server
+- `yarn ios` - Start iOS simulator (macOS)
+- `yarn android` - Start Android emulator
+- `yarn native:prebuild` - Prebuild native files
+
+### General Commands
+- `yarn build` - Build all packages (excluding web)
+- `yarn lint` - Run Biome linter
+- `yarn lint:fix` - Fix linting issues automatically
+
+## 📱 Mobile Development
+
+### Expo Configuration
+The native application uses Expo with the following features:
+- **Expo Router** - File-based routing with type safety
+- **Expo Dev Client** - Custom development environment
+- **Universal platforms** - iOS, Android, Web
+
+### Running on Devices
+
+**iOS (requires macOS):**
 ```bash
-# Install dependencies
-pnpm install
-
-# Generate design tokens
-pnpm generate:tokens
-
-# Generate icons (optional)
-pnpm generate:icons
+yarn ios
 ```
 
-### Development Commands
-
-Run your Next.js app in development:
-
+**Android:**
 ```bash
-# Start development server
-pnpm dev
-
-# Build for production
-pnpm build
-
-# Start production server
-pnpm start
-
-# Build and export static files
-pnpm export
+yarn android
 ```
 
-### Asset Generation
-
+**QR code for physical devices:**
 ```bash
-# Generate design tokens from raw-tokens/ to src/config/tokens/
-pnpm generate:tokens
-
-# Generate icon components from raw-icons/ to src/icons/
-pnpm generate:icons
+yarn native
+# Scan QR code in Expo Go app
 ```
 
-The `generate:tokens` command uses `@xsolla-zk/tokens` to:
-- Parse raw token files from `raw-tokens/`
-- Generate TypeScript token definitions
-- Create theme variations (light/dark)
-- Generate component-specific tokens
+## 🐳 Docker Deployment
 
-The `generate:icons` command uses `@xsolla-zk/icons-generator` to:
-- Parse SVG files from `raw-icons/`
-- Generate optimized React components
-- Create barrel exports for tree-shaking
-
-## 🏗 Production
-
-### Web
-
-To build and serve your app for production:
-
+### Build Docker Image
 ```bash
-# Build optimized web bundle
-pnpm build
-
-# Start production server
-pnpm start
-
-# Build and export static files
-pnpm export
+docker build -t app-starter-kit .
 ```
 
-## 🎯 Quick Start
-
-### Basic Usage
-
-```typescript
-import { Button, Text, View } from '@xsolla-zk/react';
-
-export default function HomePage() {
-  return (
-    <View padding="$400">
-      <Text fontSize="$600">Welcome to Xsolla ZK</Text>
-      <Button size="$500" onPress={() => console.log('Pressed!')}>
-        Get Started
-      </Button>
-    </View>
-  );
-}
+### Run Container
+```bash
+docker run -p 3000:3000 app-starter-kit
 ```
 
-### Component Examples
+**Note:** Docker configuration is optimized for web application only.
 
-```typescript
-// Design token integration
-<Button size="$400" variant="contained">Primary Action</Button>
+## 🏗️ Project Structure Details
 
-// Responsive design
-<View
-  padding="$200"
-  $md={{ padding: '$400' }}
-  $lg={{ padding: '$600' }}
->
-  Responsive Content
-</View>
-
-// Theme-aware colors
-<Text color="$content.neutral-primary">Themed Text</Text>
+```
+app-starter-kit/
+├── apps/
+│   ├── native/                 # Expo React Native application
+│   │   ├── app/               # Expo Router pages
+│   │   ├── assets/            # Static resources (icons, splash)
+│   │   ├── app.json           # Expo configuration
+│   │   └── scripts/           # Build scripts
+│   └── web/                   # Next.js web application
+│       ├── app/               # App Router pages
+│       ├── src/               # Source code
+│       └── public/            # Static assets
+├── packages/
+│   ├── app/                   # Core application logic
+│   │   ├── components/        # React components
+│   │   ├── features/          # Feature-specific code
+│   │   ├── layouts/           # Page layouts
+│   │   └── provider/          # Context providers
+│   ├── config/               # Tamagui configuration
+│   │   ├── src/              # Configuration source
+│   │   └── raw-tokens/       # Design tokens
+│   ├── icons/                # SVG icon components
+│   ├── ui/                   # Reusable UI components
+│   ├── utils/                # Utility functions
+│   └── typescript-config/    # Shared TypeScript configurations
+├── biome.json                # Biome configuration
+├── turbo.json                # Turborepo configuration
+├── package.json              # Root package.json
+└── Dockerfile               # Docker configuration
 ```
 
-## 🏗 Architecture Highlights
+## 🔄 Development Workflow
 
-### Web-First Approach
-- **SSG**: Static site generation with Next.js
-- **SSR**: Server-side rendering support
-- **SPA**: Single-page application routing
+1. **Making Changes**: Edit files in relevant packages
+2. **Building**: Run `yarn build` to build all packages
+3. **Testing**:
+   - Web: `yarn web`
+   - Mobile: `yarn native`
+4. **Linting**: Run `yarn lint:fix` before committing
 
-### Performance Optimizations
-- **Tamagui Compiler**: Static style extraction
-- **Tree Shaking**: Unused code elimination
-- **Icon Optimization**: Barrel exports for optimal bundling
+### Cross-Platform Development
+Thanks to **Solito**, navigation and component code can be shared between web and mobile platforms:
+- Shared components in `packages/app/`
+- Platform-specific logic in respective applications
+- Unified design system through Tamagui
 
-### Type Safety
-- **Design Tokens**: Full TypeScript integration
-- **Components**: Type-safe props and variants
-- **Themes**: Semantic color typing
+## 🌐 Deployment
 
-## 📚 Available Commands
-
-| Command | Description |
-|---------|-------------|
-| `pnpm dev` | Start development server |
-| `pnpm build` | Build optimized production bundle |
-| `pnpm start` | Start production server |
-| `pnpm export` | Build and export static files |
-| `pnpm generate:tokens` | Generate design tokens from Figma exports |
-| `pnpm generate:icons` | Generate icon components from SVG assets |
-
-## 🎨 Design System Packages
-
-| Package | Description |
-|---------|-------------|
-| `@xsolla-zk/react` | React component library |
-| `@xsolla-zk/icons` | SVG icon components |
-| `@xsolla-zk/config` | Default UI-Kit configuration |
-| `@xsolla-zk/tokens` | Design token generator |
-| `@xsolla-zk/icons-generator` | Icon generation utilities |
-
-## 📖 Resources
-
-- **[Full Documentation](./DOCUMENTATION.md)** - Complete project documentation
-- **[Xsolla ZK UI Documentation](https://ui-kit.xsollazk.com/)**
-- **[Next.js Documentation](https://nextjs.org/docs)**
-- **[Tamagui Documentation](https://tamagui.dev/docs/intro/introduction)**
-- **[GitHub Repository](https://github.com/Xsolla-ZK/Xsolla-ZK-UI)**
-
-## 🚦 Best Practices
-
-✅ **Use semantic design tokens**
-```typescript
-<Text color="$content.neutral-primary">
+### Production Build (Web)
+```bash
+yarn web:prod
+yarn web:prod:start
 ```
 
-✅ **Leverage responsive props**
-```typescript
-<View padding="$200" $md={{ padding: '$400' }}>
+### Docker Production
+```bash
+docker build -t app-starter-kit .
+docker run -p 3000:3000 app-starter-kit
 ```
 
-✅ **Follow component variants**
-```typescript
-<Button size="$400" variant="contained">
+### Mobile Deployment
+```bash
+# Prebuild native files
+yarn native:prebuild
+
+# Build for iOS (requires macOS and Xcode)
+yarn ios
+
+# Build for Android
+yarn android
 ```
 
----
+## ⚙️ Configuration
 
-Built with ❤️ using the Xsolla ZK Design System
+### Biome
+The project uses Biome for linting and formatting with strict rules:
+- TypeScript strict typing
+- React hooks validation
+- Automatic import fixing
+- Consistent code formatting
+
+### Tamagui
+Universal design system with:
+- Cross-platform components
+- Design tokens
+- Theming (light/dark themes)
+- Performance optimization
+
+## 🔗 Related Links
+
+- [XSolla-ZK UI KIT](https://ui-kit.xsollazk.com)
+- [Tamagui Documentation](https://tamagui.dev)
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Expo Documentation](https://docs.expo.dev)
+- [Solito Documentation](https://solito.dev)
+- [Turborepo Documentation](https://turbo.build/repo/docs)
+- [Biome Documentation](https://biomejs.dev)
+- [Xsolla ZK Explorer](https://x.la/explorer)
+
+## 🐛 Troubleshooting
+
+### Common Issues
+
+**Metro bundler errors:**
+```bash
+yarn native --clear-cache
+```
+
+**TypeScript errors:**
+```bash
+yarn build
+```
+
+**Xcode environment (iOS):**
+```bash
+cd apps/native && yarn fix-xcode-env
+```
+
+**Docker issues:**
+Make sure you have sufficient Docker resources (RAM >= 4GB)
+
+### Debugging
+- Web application: Use React DevTools
+- Native: Use Expo DevTools and React Native Debugger

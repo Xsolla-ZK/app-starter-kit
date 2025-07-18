@@ -1,0 +1,84 @@
+{
+  "segmented-control": {
+    "400": {
+      "frame": {
+        "padding-horizontal": {
+          "value": "{space.75}",
+          "type": "number"
+        },
+        "padding-vertical": {
+          "value": "{space.75}",
+          "type": "number"
+        },
+        "border-radius": {
+          "value": "{control-contained.400.frame.border-radius}",
+          "type": "number"
+        },
+        "border-width": {
+          "value": "{stroke.100}",
+          "type": "number"
+        }
+      }
+    },
+    "500": {
+      "frame": {
+        "padding-horizontal": {
+          "value": "{space.75}",
+          "type": "number"
+        },
+        "padding-vertical": {
+          "value": "{space.75}",
+          "type": "number"
+        },
+        "border-radius": {
+          "value": "{control-contained.500.frame.border-radius}",
+          "type": "number"
+        },
+        "border-width": {
+          "value": "{stroke.100}",
+          "type": "number"
+        }
+      }
+    },
+    "600": {
+      "frame": {
+        "padding-horizontal": {
+          "value": "{space.75}",
+          "type": "number"
+        },
+        "padding-vertical": {
+          "value": "{space.75}",
+          "type": "number"
+        },
+        "border-radius": {
+          "value": "{control-contained.600.frame.border-radius}",
+          "type": "number"
+        },
+        "border-width": {
+          "value": "{stroke.100}",
+          "type": "number"
+        }
+      }
+    },
+    "700": {
+      "frame": {
+        "padding-horizontal": {
+          "value": "{space.75}",
+          "type": "number"
+        },
+        "padding-vertical": {
+          "value": "{space.75}",
+          "type": "number"
+        },
+        "border-radius": {
+          "value": "{control-contained.700.frame.border-radius}",
+          "type": "number"
+        },
+        "border-width": {
+          "value": "{stroke.100}",
+          "type": "number"
+        }
+      }
+    }
+  }
+}
