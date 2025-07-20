@@ -3,7 +3,7 @@ import { useChildrenArray, useComposedRefs, withStaticProperties } from '@app/ui
 import { useControllableState } from '@tamagui/use-controllable-state';
 import type { ForwardedRef, ReactElement } from 'react';
 import { forwardRef, isValidElement, useMemo, useRef } from 'react';
-import { useAutoResizeFont } from './auto-resize-font';
+import { useAutoResizeFont } from '../hooks';
 import { createInput } from './create-input';
 import {
   InputContext,
