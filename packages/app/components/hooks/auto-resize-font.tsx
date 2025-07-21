@@ -7,11 +7,7 @@ import {
   type Token,
 } from '@app/ui';
 import { useCallback, useEffect, useMemo, useState } from 'react';
-import type {
-  LayoutChangeEvent,
-  NativeSyntheticEvent,
-  TextInputContentSizeChangeEventData,
-} from 'react-native';
+import type { LayoutChangeEvent } from 'react-native';
 
 interface AutoResizeOptions {
   enabled?: boolean;
@@ -22,25 +18,29 @@ interface AutoResizeOptions {
   maxRows?: number;
 }
 
-function getScaleConfig(size: string) {
-  const scaleConfigs = {
-    $600: { maxScale: 0.5 },
-    $500: { maxScale: 0.7 },
-    $400: { maxScale: 1.0 },
-  };
-  return scaleConfigs[size as keyof typeof scaleConfigs] || { maxScale: 1.0 };
+const scaleConfigs: Record<InputSizes, { maxScale: number }> = {
+  $600: { maxScale: 0.5 },
+  $500: { maxScale: 0.7 },
+  $400: { maxScale: 1.0 },
+};
+
+function getScaleConfig(size: InputSizes) {
+  return scaleConfigs[size] || { maxScale: 1.0 };
 }
 
-function extractTypographyValues(prop: 'line-height' | 'font-size', size: string) {
+function extractTypographyValues(prop: 'line-height' | 'font-size', size: string): number {
   const config = getComponentsConfig();
-  const componentProps = config.input[size as keyof typeof config.input].label.typography;
+  const componentProps = config.input[size as keyof typeof config.input]?.label?.typography;
+
   if (!componentProps) {
     return prop === 'line-height' ? 18 : 16;
   }
+
   const tokenPath = componentProps
-    ?.split('.')
+    .split('.')
     .slice(prop === 'line-height' ? 0 : 1, -1)
     .join('.');
+
   const value = getTokenValue(`${prop}.${tokenPath}` as Token, 'typography');
   return value || (prop === 'line-height' ? 18 : 16);
 }
@@ -55,140 +55,112 @@ function debounce<T extends (...args: never[]) => void>(func: T, delay = 150) {
   };
 }
 
+function isElementOverflowing(element: HTMLTextAreaElement): boolean {
+  return element.scrollHeight > element.clientHeight || element.scrollWidth > element.clientWidth;
+}
+
 export function useAutoResizeFont(
   inputRef: React.RefObject<TamaguiElement | null>,
   options: AutoResizeOptions = {},
 ) {
   const { enabled = false, fontScaling = true, size = '$500', step = 0.5, maxRows } = options;
+
   const initialFontSize = useMemo(() => extractTypographyValues('font-size', size), [size]);
   const lineHeight = useMemo(() => extractTypographyValues('line-height', size), [size]);
   const scale = useMemo(() => getScaleConfig(size), [size]);
   const minFontSize = useMemo(() => scale.maxScale * initialFontSize, [scale, initialFontSize]);
-  const [rnStyle, setRnStyle] = useState({
-    fontSize: initialFontSize,
-    height: lineHeight as number | 'auto',
-  });
-  const [layout, setLayout] = useState({ width: 0, height: 0 });
 
-  const handleLayout = useCallback((event: LayoutChangeEvent) => {
-    const { width, height } = event.nativeEvent.layout;
-    console.log('width', width);
-    console.log('height', height);
-    setLayout({ width, height });
-  }, []);
-
-  const handleContentSizeChange = useCallback(
-    (event: NativeSyntheticEvent<TextInputContentSizeChangeEventData>) => {
-      if (!enabled || layout.width === 0) return;
-
-      const { contentSize } = event.nativeEvent;
-      console.log('contentSize', contentSize);
-      let newFontSize = rnStyle.fontSize;
-
-      if (fontScaling && contentSize.width > layout.width) {
-        const overflowRatio = layout.width / contentSize.width;
-        newFontSize = Math.max(rnStyle.fontSize * overflowRatio, minFontSize);
-      }
-
-      let newHeight: number | 'auto' = 'auto';
-      const maxHeight = maxRows ? maxRows * lineHeight : undefined;
-
-      if (maxHeight && contentSize.height > maxHeight) {
-        newHeight = maxHeight;
-      } else {
-        newHeight = Math.max(contentSize.height, lineHeight);
-      }
-
-      setRnStyle({ fontSize: newFontSize, height: newHeight });
-    },
-    [
-      enabled,
-      fontScaling,
-      layout.width,
-      lineHeight,
-      minFontSize,
-      initialFontSize,
-      maxRows,
-      rnStyle.fontSize,
-    ],
-  );
+  const [fontSize, setFontSize] = useState(initialFontSize);
+  const [text, setText] = useState('');
+  const [inputWidth, setInputWidth] = useState(0);
+  const [textWidth, setTextWidth] = useState(0);
 
   const adjustElementSize = useCallback(
     (element: HTMLTextAreaElement) => {
-      if (!element) return;
+      if (!element || typeof window === 'undefined') return;
 
       const computedStyle = window.getComputedStyle(element);
       const webLineHeight = Number.parseFloat(computedStyle.lineHeight);
+      let currentSize = Number.parseFloat(computedStyle.fontSize);
+
+      const minAllowedSize = scale.maxScale * initialFontSize;
+
+      element.style.height = 'auto';
+      element.style.wordBreak = 'normal';
 
       if (fontScaling) {
-        let currentSize = Number.parseFloat(computedStyle.fontSize);
-        const minAllowedSize = scale.maxScale * initialFontSize;
-
-        const isOverflowing = (): boolean =>
-          element.scrollHeight > element.clientHeight || element.scrollWidth > element.clientWidth;
-
-        element.style.height = 'auto';
-        element.style.wordBreak = 'normal';
-
-        if (isOverflowing()) {
-          while (isOverflowing() && currentSize > minAllowedSize) {
+        if (isElementOverflowing(element)) {
+          while (isElementOverflowing(element) && currentSize > minAllowedSize) {
             currentSize -= step;
             element.style.fontSize = `${currentSize}px`;
           }
-          if (isOverflowing() && element.scrollWidth > element.clientWidth) {
+
+          if (isElementOverflowing(element) && element.scrollWidth > element.clientWidth) {
             element.style.wordBreak = 'break-all';
           }
         } else {
-          while (!isOverflowing() && currentSize < initialFontSize) {
+          while (!isElementOverflowing(element) && currentSize < initialFontSize) {
             currentSize += step;
-            element.style.fontSize = element.style.fontSize = `${currentSize}px`;
+            element.style.fontSize = `${currentSize}px`;
           }
-          if (isOverflowing()) {
+
+          if (isElementOverflowing(element)) {
             currentSize -= step;
-            `${currentSize}px`;
+            element.style.fontSize = `${currentSize}px`;
           }
         }
 
-        if (currentSize >= initialFontSize) {
-          element.style.fontSize = '';
-        } else {
-          element.style.fontSize = element.style.fontSize = `${currentSize}px`;
-        }
+        element.style.fontSize = currentSize >= initialFontSize ? '' : `${currentSize}px`;
       } else {
         element.style.fontSize = '';
       }
 
-      element.style.height = 'auto';
       if (element.scrollHeight > element.clientHeight) {
-        if (maxRows && maxRows > 0) {
-          const maxHeight = maxRows * webLineHeight;
-          element.style.height = `${Math.min(element.scrollHeight, maxHeight)}px`;
-        } else {
-          element.style.height = `${element.scrollHeight}px`;
-        }
+        const height =
+          maxRows && maxRows > 0
+            ? Math.min(element.scrollHeight, maxRows * webLineHeight)
+            : element.scrollHeight;
+        element.style.height = `${height}px`;
       }
     },
-    [initialFontSize, maxRows, scale, step, fontScaling],
+    [initialFontSize, maxRows, scale.maxScale, step, fontScaling],
   );
 
+  const onLayout = useCallback(
+    (event: LayoutChangeEvent) => {
+      if (inputWidth === 0) {
+        setInputWidth(event.nativeEvent.layout.width);
+      }
+    },
+    [inputWidth],
+  );
+
+  const handleTextLayout = (e: LayoutChangeEvent) => {
+    const newTextWidth = e.nativeEvent.layout.width;
+    setTextWidth(newTextWidth);
+
+    if (inputWidth > 0 && newTextWidth > inputWidth && fontSize > minFontSize) {
+      setFontSize((prev) => prev - step);
+    }
+  };
+
   useEffect(() => {
-    if (!isWeb || !enabled || !inputRef.current) return;
+    if (isWeb || !enabled) return;
+
+    const noOverflowing = inputWidth > 0 && textWidth < inputWidth;
+    if (noOverflowing && fontSize < initialFontSize) {
+      setFontSize((prev) => prev + step);
+    }
+  }, [text]);
+
+  useEffect(() => {
+    if (!isWeb || !enabled || !inputRef.current || typeof window === 'undefined') return;
 
     const element = inputRef.current as unknown as HTMLTextAreaElement;
-    if (!element) return;
-
     const debouncedHandler = debounce((event: Event) => {
-      // 1. Проверяем, что цель события — это действительно HTMLTextAreaElement
-      const target = event.target;
-      if (!(target instanceof HTMLTextAreaElement)) {
-        return;
-      }
-
-      if ('isComposing' in event && event.isComposing) {
-        return;
-      }
-
-      adjustElementSize(target);
+      if (!(event.target instanceof HTMLTextAreaElement)) return;
+      if ('isComposing' in event && event.isComposing) return;
+      adjustElementSize(event.target);
     }, 150);
 
     element.addEventListener('input', debouncedHandler);
@@ -196,20 +168,19 @@ export function useAutoResizeFont(
 
     return () => {
       element.removeEventListener('input', debouncedHandler);
-      if (element.style) {
-        element.style.fontSize = '';
-        element.style.height = '';
-      }
+      element.style.fontSize = '';
+      element.style.height = '';
     };
   }, [enabled, inputRef, adjustElementSize]);
 
-  if (isWeb) {
-    return {};
-  }
-
-  return {
-    style: enabled ? rnStyle : { fontSize: initialFontSize, height: 'auto' },
-    handleLayout,
-    handleContentSizeChange,
-  };
+  return isWeb
+    ? {}
+    : {
+        onLayout,
+        handleTextLayout,
+        fontSize: fontScaling ? fontSize : initialFontSize,
+        lineHeight,
+        text,
+        setText,
+      };
 }

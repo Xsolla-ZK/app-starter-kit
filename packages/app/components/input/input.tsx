@@ -3,7 +3,6 @@ import { useChildrenArray, useComposedRefs, withStaticProperties } from '@app/ui
 import { useControllableState } from '@tamagui/use-controllable-state';
 import type { ForwardedRef, ReactElement } from 'react';
 import { forwardRef, isValidElement, useMemo, useRef } from 'react';
-import { useAutoResizeFont } from '../hooks';
 import { createInput } from './create-input';
 import {
   InputContext,
@@ -27,10 +26,7 @@ const InputComponent = InputBase.styleable<InputProps>(
       onFocus,
       onBlur,
       isFocused,
-      maxRows,
       onFocusChange,
-      autoResize,
-      fontScaling,
       ...props
     } = _props;
 
@@ -44,14 +40,6 @@ const InputComponent = InputBase.styleable<InputProps>(
     const ref = useRef<TamaguiElement | null>(null);
     const composedRefs = useComposedRefs(forwardedRef, ref);
     const isInteractingWithFrame = useRef(false);
-
-    // 🧠 Получаем autoResizeProps
-    useAutoResizeFont(ref, {
-      enabled: autoResize,
-      fontScaling: fontScaling,
-      size,
-      maxRows,
-    });
 
     const { startSlot, endSlot } = useMemo(() => {
       let start: ReactElement | null = null;

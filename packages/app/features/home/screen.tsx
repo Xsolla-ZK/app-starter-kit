@@ -6,8 +6,6 @@ import { InlineInput } from '../../components/inline-input';
 import { Input } from '../../components/input';
 
 export default function HomeScreen() {
-  // 1. Используем useRef для немедленного доступа к размерам layout
-
   return (
     <ScreenStack gap="$space.200">
       {/* <Input lineHeight={20} rows={5} autoResize>
@@ -36,6 +34,7 @@ export default function HomeScreen() {
           </RichIcon>
         </Input.EndSlot>
       </TextArea> */}
+
       <InlineInput size="$600" minRows={2} maxRows={3}>
         <Input.StartSlot>
           <RichIcon pressable shape="squircle" size="$200" aria-label="toggle password visibility">
