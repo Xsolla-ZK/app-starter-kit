@@ -1,52 +1,50 @@
-import {
-  getComponentsConfig,
-  getTokenValue,
-  isWeb,
-  type Token,
-  withStaticProperties,
-} from '@app/ui';
-import { forwardRef } from 'react';
+import { isWeb, useComposedRefs, withStaticProperties } from '@app/ui';
+import { forwardRef, useMemo, useRef } from 'react';
+import { useAutoResizeFont } from '../hooks';
 import { Input, type InputProps } from '../input';
 import { InputContext, InputEndSlot, InputStartSlot } from '../input/input.styled';
 
-function extractTypographyValues(size: string) {
-  const config = getComponentsConfig();
-  const componentProps = config.input[size as keyof typeof config.input].label.typography;
-  if (!componentProps) {
-    return {};
-  }
-
-  return getTokenValue(
-    `line-height.${componentProps?.split('.').slice(0, -1).join('.')}` as Token,
-    'typography',
-  );
-}
-
-const TextAreaBase = forwardRef<HTMLInputElement, InputProps>(function TextAreaBase(
-  { rows, minRows, maxRows, size = '$500', ...props },
-  ref,
+const TextAreaBase = forwardRef<HTMLInputElement, InputProps>(function InlineInputBase(
+  { rows, minRows: propMinRows, maxRows: propMaxRows, size = '$500', ...props },
+  forwardedRef,
 ) {
+  let minRows = propMinRows;
+  let maxRows = propMaxRows;
+
   if (typeof minRows === 'number' && typeof maxRows === 'number' && minRows > maxRows) {
+    console.warn('[InlineInput] `minRows` > `maxRows` — значения будут переупорядочены');
     [minRows, maxRows] = [maxRows, minRows];
   }
+
   if (rows) {
     minRows = rows;
     maxRows = rows;
   }
-  const calculatedMinHeight = minRows ? minRows * extractTypographyValues(size) : undefined;
+
+  const ref = useRef<HTMLInputElement>(null);
+  const composedRefs = useComposedRefs(forwardedRef, ref);
+
+  const { lineHeight } = useAutoResizeFont(ref, {
+    enabled: true,
+    fontScaling: false,
+    size,
+    maxRows,
+  });
+
+  const calculatedMinHeight = useMemo(() => {
+    return minRows && lineHeight ? minRows * lineHeight : undefined;
+  }, [minRows, lineHeight]);
 
   return (
     <Input
       size={size}
-      minHeight={!isWeb ? calculatedMinHeight : undefined}
-      {...props}
+      rows={!isWeb ? (rows ?? maxRows) : rows}
+      multiline
       maxRows={maxRows}
       minRows={minRows}
-      fontScaling={false}
-      autoResize
-      rows={!isWeb ? (rows ?? maxRows) : rows}
-      whiteSpace="pre-wrap"
-      ref={ref}
+      minHeight={!isWeb ? calculatedMinHeight : undefined}
+      ref={composedRefs}
+      {...props}
     />
   );
 });

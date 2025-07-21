@@ -111,8 +111,8 @@ export function useAutoResizeFont(
         }
 
         element.style.fontSize = currentSize >= initialFontSize ? '' : `${currentSize}px`;
-      } else {
-        element.style.fontSize = '';
+      } else if (isElementOverflowing(element) && element.scrollWidth > element.clientWidth) {
+        element.style.wordBreak = 'break-all';
       }
 
       if (element.scrollHeight > element.clientHeight) {

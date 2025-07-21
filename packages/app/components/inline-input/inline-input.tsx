@@ -62,6 +62,7 @@ const InlineInputBase = forwardRef<HTMLInputElement, InputProps>(function Inline
         onChangeText={setText}
         size={size}
         rows={!isWeb ? (rows ?? maxRows) : rows}
+        multiline
         maxRows={maxRows}
         minRows={minRows}
         minHeight={!isWeb ? calculatedMinHeight : undefined}
