@@ -7,6 +7,9 @@
   "sideEffects": [
     "*.css"
   ],
+  "scripts": {
+    "test": "npx vitest --config vitest.config.ts"
+  },
   "dependencies": {
     "@app/config": "workspace:*",
     "@app/icons": "workspace:*",
@@ -38,6 +41,7 @@
   },
   "devDependencies": {
     "@app/typescript-config": "workspace:*",
+    "@tamagui/vite-plugin": "^1.132.11",
     "@types/react": "*",
     "@types/react-native": "*",
     "@types/react-native-get-random-values": "^1",

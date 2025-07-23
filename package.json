@@ -36,5 +36,11 @@
   "engines": {
     "node": ">=20.11.0"
   },
-  "packageManager": "yarn@4.9.2"
+  "packageManager": "yarn@4.9.2",
+  "dependencies": {
+    "@tamagui/vite-plugin": "^1.132.11",
+    "@vitejs/plugin-react-swc": "^3.11.0",
+    "react-test-renderer": "19.0.0",
+    "vite-tsconfig-paths": "^5.1.4"
+  }
 }
