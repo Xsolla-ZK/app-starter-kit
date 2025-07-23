@@ -34,6 +34,9 @@ import Animated, {
   withSpring,
 } from 'react-native-reanimated';
 import { XSollaZKDiamond } from '../../components/icons/xsolla-zk-diamond';
+import { TextArea } from '../../components/textarea';
+import { PasswordField } from '../../components/password-field';
+import { InlineInput } from '../../components/inline-input';
 
 const contentBlank =
   'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis imperdiet nibh. In nunc eros, fermentum at massa id, egestas pulvinar lorem. Morbi nisi orci, feugiat in gravida et, efficitur ac metus. Nam euismod, magna eget cursus pretium, risus metus rutrum diam, nec hendrerit risus elit nec risus. Vivamus sed lorem mollis, malesuada tellus quis, condimentum nulla. Mauris ornare leo eget volutpat consectetur. Duis sed mattis nisi. Vivamus id mi tincidunt, consequat enim et, ultrices magna. Mauris porttitor ornare porta. Maecenas maximus dignissim ipsum, sodales ultricies felis auctor sed. Aliquam convallis efficitur quam, quis faucibus justo rutrum scelerisque.';
@@ -148,9 +151,9 @@ function TabsStory() {
         <Tabs.Content key={tab.content} value={tab.value}>
           <Stack padding="$300">
             <Typography preset="display.500.accent">{tab.content}</Typography>
-          </Stack>
+          </Stack>     
         </Tabs.Content>
-      ))}
+      ))}   
     </Tabs>
   );
 }
@@ -269,7 +272,14 @@ export default function HomeScreen() {
         </Chips>
         <CellStory size="large" width="100%" withBoard />
         <AccordionStory />
-        <TabsStory />
+        <ContentStack />
+         <Stack width="100%" gap={30}>  
+          <TextArea  rows={5} />
+          <TextArea  minRows={3} maxRows={4} />
+          <InlineInput minRows={2} maxRows={5} /> 
+          <InlineInput rows={5} />
+          <PasswordField/>
+       </Stack>
       </Stack>
     </ScrollView>
   );
