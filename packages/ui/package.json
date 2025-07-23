@@ -17,6 +17,7 @@
     "watch": "tamagui-build --skip-types --watch"
   },
   "dependencies": {
+    "@tamagui/animate-presence": "1.127.2",
     "@tamagui/image-next": "1.127.2",
     "@tamagui/portal": "1.127.2",
     "@tamagui/scroll-view": "1.127.2",
@@ -29,7 +30,6 @@
     "@tamagui/build": "1.127.2",
     "@types/react": "*",
     "@types/react-native": "*",
-    "eslint": "^9.29.0",
     "react-native": "*",
     "typescript": "5.8.3"
   }

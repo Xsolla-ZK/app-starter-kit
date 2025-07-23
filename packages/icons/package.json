@@ -40,53 +40,17 @@
       "require": "./dist/cjs/index.cjs",
       "default": "./dist/esm/index.mjs"
     },
-    "./icons/Bow": {
-      "import": "./dist/esm/icons/Bow.mjs",
-      "require": "./dist/cjs/icons/Bow.cjs"
-    },
-    "./icons/Breastplate": {
-      "import": "./dist/esm/icons/Breastplate.mjs",
-      "require": "./dist/cjs/icons/Breastplate.cjs"
-    },
-    "./icons/Crossbow": {
-      "import": "./dist/esm/icons/Crossbow.mjs",
-      "require": "./dist/cjs/icons/Crossbow.cjs"
-    },
     "./icons/Discord": {
       "import": "./dist/esm/icons/Discord.mjs",
       "require": "./dist/cjs/icons/Discord.cjs"
-    },
-    "./icons/KiteShield": {
-      "import": "./dist/esm/icons/KiteShield.mjs",
-      "require": "./dist/cjs/icons/KiteShield.cjs"
-    },
-    "./icons/LeatherHelm": {
-      "import": "./dist/esm/icons/LeatherHelm.mjs",
-      "require": "./dist/cjs/icons/LeatherHelm.cjs"
     },
     "./icons/Linkedin": {
       "import": "./dist/esm/icons/Linkedin.mjs",
       "require": "./dist/cjs/icons/Linkedin.cjs"
     },
-    "./icons/LogoMonoLinkedin": {
-      "import": "./dist/esm/icons/LogoMonoLinkedin.mjs",
-      "require": "./dist/cjs/icons/LogoMonoLinkedin.cjs"
-    },
-    "./icons/Reddit": {
-      "import": "./dist/esm/icons/Reddit.mjs",
-      "require": "./dist/cjs/icons/Reddit.cjs"
-    },
-    "./icons/TowerShield": {
-      "import": "./dist/esm/icons/TowerShield.mjs",
-      "require": "./dist/cjs/icons/TowerShield.cjs"
-    },
     "./icons/XTwitter": {
       "import": "./dist/esm/icons/XTwitter.mjs",
       "require": "./dist/cjs/icons/XTwitter.cjs"
-    },
-    "./icons/Youtube": {
-      "import": "./dist/esm/icons/Youtube.mjs",
-      "require": "./dist/cjs/icons/Youtube.cjs"
     }
   }
 }

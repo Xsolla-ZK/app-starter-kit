@@ -13,7 +13,8 @@
     "watch": "tamagui-build --skip-types --watch",
     "clean": "tamagui-build clean",
     "clean:build": "tamagui-build clean:build",
-    "generate:tokens": "xzkui-tokens generate -t tamagui -i ./raw-tokens -o ./src/tokens -p"
+    "generate:tokens": "xzkui-tokens generate -t tamagui -i ./raw-tokens -o ./src/tokens -p",
+    "generate:tokens:remote": "xzkui-tokens generate -t tamagui -s https://github.com/Xsolla-ZK/Design-Tokens.git -i main -o ./src/tokens -p"
   },
   "dependencies": {
     "@xsolla-zk/config": "latest",

@@ -61,9 +61,11 @@ export function Modal({
                     </NavBar.Title>
                   </NavBar.Center>
                   <NavBar.EndSlot>
-                    <RichIcon size="$300" pressable onPress={() => rest.onOpenChange?.(false)}>
-                      <RichIcon.Icon icon={Cross} />
-                    </RichIcon>
+                    <Dialog.Close asChild>
+                      <RichIcon size="$300" pressable>
+                        <RichIcon.Icon icon={Cross} />
+                      </RichIcon>
+                    </Dialog.Close>
                   </NavBar.EndSlot>
                 </NavBar>
               </Dialog.Sheet.Header>
@@ -120,9 +122,11 @@ export function Modal({
                   </Dialog.Title>
                 </NavBar.Center>
                 <NavBar.EndSlot>
-                  <RichIcon size="$300" pressable onPress={() => rest.onOpenChange?.(false)}>
-                    <RichIcon.Icon icon={Cross} />
-                  </RichIcon>
+                  <Dialog.Close asChild>
+                    <RichIcon size="$300" pressable>
+                      <RichIcon.Icon icon={Cross} />
+                    </RichIcon>
+                  </Dialog.Close>
                 </NavBar.EndSlot>
               </NavBar>
             </Dialog.Header>

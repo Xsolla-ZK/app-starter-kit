@@ -30,28 +30,9 @@ export default () => {
     typescript: {
       ignoreBuildErrors: true,
     },
-    transpilePackages: [
-      'react-native',
-      'react-native-web',
-      'solito',
-      'react-native-reanimated',
-      '@shopify/react-native-skia',
-    ],
+    transpilePackages: ['react-native', 'react-native-web', 'solito', 'react-native-reanimated'],
     experimental: {
       scrollRestoration: true,
-    },
-    webpack: (config) => {
-      config.resolve.alias = {
-        ...config.resolve.alias,
-        // 3. Suppress reanimated module warning
-        // This assumes Reanimated is installed, if not you can use false.
-        // 'react-native-reanimated/package.json': import.meta.resolve(
-        //   'react-native-reanimated/package.json',
-        // ),
-        // 'react-native-reanimated': import.meta.resolve('react-native-reanimated'),
-        'react-native/Libraries/Image/AssetRegistry': false,
-      };
-      return config;
     },
   };
 

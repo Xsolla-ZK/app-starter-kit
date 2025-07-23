@@ -1,6 +1,11 @@
 module.exports = (api) => {
   api.cache(true);
   return {
+    ignore: [
+      // speeds up compile
+      '**/@tamagui/**/dist/**',
+      '**/@xsolla-zk/**/dist/**',
+    ],
     presets: [
       ['babel-preset-expo', { jsxRuntime: 'automatic', unstable_transformImportMeta: true }],
     ],
@@ -23,7 +28,7 @@ module.exports = (api) => {
             [
               '@tamagui/babel-plugin',
               {
-                components: ['@app/ui', '@xsolla-zk/react'],
+                components: ['@app/ui'],
                 config: '../../packages/config/src/tamagui.config.ts',
                 logTimings: true,
                 disableExtraction: process.env.NODE_ENV === 'development',

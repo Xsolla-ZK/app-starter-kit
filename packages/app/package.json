@@ -7,45 +7,19 @@
   "sideEffects": [
     "*.css"
   ],
-  "scripts": {
-    "test": "npx vitest --config vitest.config.ts"
-  },
   "dependencies": {
     "@app/config": "workspace:*",
     "@app/icons": "workspace:*",
     "@app/ui": "workspace:*",
     "@app/utils": "workspace:*",
-    "@react-native-async-storage/async-storage": "2.1.2",
-    "@react-native-community/netinfo": "11.4.1",
-    "@react-three/drei": "^10.3.0",
-    "@react-three/fiber": "^9.0.0",
-    "@reown/appkit-wagmi-react-native": "^1.2.5",
-    "@shopify/react-native-skia": "v2.0.0-next.4",
-    "@simplewebauthn/browser": "^13.1.0",
-    "@simplewebauthn/server": "^13.1.1",
-    "@tamagui/animations-react-native": "1.127.2",
     "@tanstack/react-query": "^5.80.7",
-    "@wagmi/core": "^2.17.3",
-    "@walletconnect/react-native-compat": "^2.21.4",
     "@xsolla-zk/icons": "latest",
-    "expo-application": "~6.1.4",
-    "figma-squircle": "^1.1.0",
-    "isows": "^1.0.7",
-    "react-native-get-random-values": "~1.11.0",
-    "react-native-modal": "^14.0.0-rc.1",
-    "react-native-svg": "15.11.2",
-    "solito": "patch:solito@npm%3A4.4.1#~/.yarn/patches/solito-npm-4.4.1-976dc5859c.patch",
-    "viem": "2.x",
-    "wagmi": "^2.15.6",
-    "zksync-sso": "^0.3.3"
+    "solito": "patch:solito@npm%3A4.4.1#~/.yarn/patches/solito-npm-4.4.1-976dc5859c.patch"
   },
   "devDependencies": {
     "@app/typescript-config": "workspace:*",
-    "@tamagui/vite-plugin": "^1.132.11",
     "@types/react": "*",
-    "@types/react-native": "*",
-    "@types/react-native-get-random-values": "^1",
-    "pino-pretty": "^7.6.0"
+    "@types/react-native": "*"
   },
   "resolutions": {
     "next": "^15.3.4"

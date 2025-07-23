@@ -1448,6 +1448,17 @@ export const toast = {
     },
   },
 };
+export const tooltip = {
+  frame: {
+    borderRadius: '$radius.300',
+    minHeight: '$size.250',
+    padding: '$space.150',
+    gap: '$space.50',
+  },
+  label: {
+    typography: 'compact.200.default',
+  },
+};
 export const components = {
   accordion,
   badge,
@@ -1484,4 +1495,5 @@ export const components = {
   tabBar,
   tab,
   toast,
+  tooltip,
 };

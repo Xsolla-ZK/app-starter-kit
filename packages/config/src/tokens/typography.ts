@@ -4,9 +4,9 @@
  */
 
 export const typography = {
-  'font.display': 'Sharp Grotesk',
-  'font.text': 'Sharp Grotesk',
-  'font.compact': 'Sharp Grotesk',
+  'font.display': 'Onest',
+  'font.text': 'Onest',
+  'font.compact': 'Onest',
   'font-size.150': 10,
   'font-size.200': 12,
   'font-size.250': 14,
@@ -60,12 +60,12 @@ export const typography = {
   'line-height.compact.800': 64,
   'line-height.compact.900': 76,
   'font-weight.display.light': 100,
-  'font-weight.display.default': 400,
-  'font-weight.display.accent': 500,
+  'font-weight.display.default': 500,
+  'font-weight.display.accent': 600,
   'font-weight.text.light': 100,
-  'font-weight.text.default': 400,
-  'font-weight.text.accent': 500,
+  'font-weight.text.default': 500,
+  'font-weight.text.accent': 600,
   'font-weight.compact.light': 100,
-  'font-weight.compact.default': 400,
-  'font-weight.compact.accent': 500,
+  'font-weight.compact.default': 500,
+  'font-weight.compact.accent': 600,
 };

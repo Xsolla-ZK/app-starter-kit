@@ -102,9 +102,9 @@
   --c-platform-layout--content-compensation--3479: 16px;
   --c-platform-layout--content-compensation--3451: 16px;
   --c-platform-layout--content-compensation--3828: 16px;
-  --c-typography-font--display: Sharp Grotesk;
-  --c-typography-font--text: Sharp Grotesk;
-  --c-typography-font--compact: Sharp Grotesk;
+  --c-typography-font--display: Onest;
+  --c-typography-font--text: Onest;
+  --c-typography-font--compact: Onest;
   --c-typography-font-size--150: 10px;
   --c-typography-font-size--200: 12px;
   --c-typography-font-size--250: 14px;
@@ -158,18 +158,18 @@
   --c-typography-line-height--compact--800: 64px;
   --c-typography-line-height--compact--900: 76px;
   --c-typography-font-weight--display--light: 100px;
-  --c-typography-font-weight--display--defaul116: 400px;
-  --c-typography-font-weight--display--accent: 500px;
+  --c-typography-font-weight--display--defaul116: 500px;
+  --c-typography-font-weight--display--accent: 600px;
   --c-typography-font-weight--text--light: 100px;
-  --c-typography-font-weight--text--default: 400px;
-  --c-typography-font-weight--text--accent: 500px;
+  --c-typography-font-weight--text--default: 500px;
+  --c-typography-font-weight--text--accent: 600px;
   --c-typography-font-weight--compact--light: 100px;
-  --c-typography-font-weight--compact--defaul116: 400px;
-  --c-typography-font-weight--compact--accent: 500px;
+  --c-typography-font-weight--compact--defaul116: 500px;
+  --c-typography-font-weight--compact--accent: 600px;
 }
 :root .font_display,
 :root .t_lang-display-default .font_display {
-  --f-family: Sharp Grotesk;
+  --f-family: Onest;
   --f-size-350: 18px;
   --f-size-400: 22px;
   --f-size-450: 28px;
@@ -184,14 +184,14 @@
   --f-lineHeight-600: 42px;
   --f-lineHeight-650: 48px;
   --f-lineHeight-700: 56px;
-  --f-weight-default: 400;
-  --f-weight-numeric: 400;
-  --f-weight-accent: 500;
-  --f-weight-accent-numeric: 500;
+  --f-weight-default: 500;
+  --f-weight-numeric: 500;
+  --f-weight-accent: 600;
+  --f-weight-accent-numeric: 600;
 }
 :root .font_text,
 :root .t_lang-text-default .font_text {
-  --f-family: Sharp Grotesk;
+  --f-family: Onest;
   --f-size-150: 10px;
   --f-size-200: 12px;
   --f-size-250: 14px;
@@ -204,14 +204,14 @@
   --f-lineHeight-300: 22px;
   --f-lineHeight-350: 24px;
   --f-lineHeight-400: 30px;
-  --f-weight-default: 400;
-  --f-weight-numeric: 400;
-  --f-weight-accent: 500;
-  --f-weight-accent-numeric: 500;
+  --f-weight-default: 500;
+  --f-weight-numeric: 500;
+  --f-weight-accent: 600;
+  --f-weight-accent-numeric: 600;
 }
 :root .font_compact,
 :root .t_lang-compact-default .font_compact {
-  --f-family: Sharp Grotesk;
+  --f-family: Onest;
   --f-size-150: 10px;
   --f-size-200: 12px;
   --f-size-250: 14px;
@@ -224,10 +224,10 @@
   --f-lineHeight-300: 18px;
   --f-lineHeight-350: 22px;
   --f-lineHeight-400: 26px;
-  --f-weight-default: 400;
-  --f-weight-numeric: 400;
-  --f-weight-accent: 500;
-  --f-weight-accent-numeric: 500;
+  --f-weight-default: 500;
+  --f-weight-numeric: 500;
+  --f-weight-accent: 600;
+  --f-weight-accent-numeric: 600;
 }
 :root.t_dark .t_light,
 :root.t_dark .t_light .t_dark .t_light,
@@ -2519,28 +2519,24 @@
     --outlineColor: rgba(157, 208, 6, 0.16);
   }
 }
-:root.t_dark .t_light .t_SliderKnob,
 :root.t_dark .t_light .t_active_Switch,
-:root.t_dark .t_light .t_dark .t_light .t_SliderKnob,
 :root.t_dark .t_light .t_dark .t_light .t_active_Switch,
-:root.t_light .t_SliderKnob,
 :root.t_light .t_active_Switch,
-:root.t_light .t_dark .t_light .t_SliderKnob,
 :root.t_light .t_dark .t_light .t_active_Switch,
 .tm_xxt {
   --background: #c9f938;
   --borderColor: #9dd006;
+  --outlineColor: rgba(157, 208, 6, 0.16);
 }
 @media (prefers-color-scheme: light) {
   body {
     background: var(--background);
   }
-  .t_SliderKnob,
   .t_active_Switch,
-  .t_dark .t_light .t_SliderKnob,
   .t_dark .t_light .t_active_Switch {
     --background: #c9f938;
     --borderColor: #9dd006;
+    --outlineColor: rgba(157, 208, 6, 0.16);
   }
 }
 :root.t_dark .t_Switch,
@@ -2563,14 +2559,48 @@
     --outlineColor: rgba(87, 106, 56, 0.12);
   }
 }
-:root.t_dark .t_SliderKnob,
 :root.t_dark .t_active_Switch,
-:root.t_dark .t_light .t_dark .t_SliderKnob,
 :root.t_dark .t_light .t_dark .t_active_Switch,
-:root.t_light .t_dark .t_SliderKnob,
 :root.t_light .t_dark .t_active_Switch,
-:root.t_light .t_dark .t_light .t_dark .t_SliderKnob,
 :root.t_light .t_dark .t_light .t_dark .t_active_Switch,
+.tm_xxt {
+  --background: #a9f927;
+  --borderColor: #576a38;
+  --outlineColor: rgba(87, 106, 56, 0.12);
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background: var(--background);
+  }
+  .t_active_Switch,
+  .t_light .t_dark .t_active_Switch {
+    --background: #a9f927;
+    --borderColor: #576a38;
+    --outlineColor: rgba(87, 106, 56, 0.12);
+  }
+}
+:root.t_dark .t_light .t_SliderKnob,
+:root.t_dark .t_light .t_dark .t_light .t_SliderKnob,
+:root.t_light .t_SliderKnob,
+:root.t_light .t_dark .t_light .t_SliderKnob,
+.tm_xxt {
+  --background: #c9f938;
+  --borderColor: #9dd006;
+}
+@media (prefers-color-scheme: light) {
+  body {
+    background: var(--background);
+  }
+  .t_SliderKnob,
+  .t_dark .t_light .t_SliderKnob {
+    --background: #c9f938;
+    --borderColor: #9dd006;
+  }
+}
+:root.t_dark .t_SliderKnob,
+:root.t_dark .t_light .t_dark .t_SliderKnob,
+:root.t_light .t_dark .t_SliderKnob,
+:root.t_light .t_dark .t_light .t_dark .t_SliderKnob,
 .tm_xxt {
   --background: #a9f927;
   --borderColor: #576a38;
@@ -2580,9 +2610,7 @@
     background: var(--background);
   }
   .t_SliderKnob,
-  .t_active_Switch,
-  .t_light .t_dark .t_SliderKnob,
-  .t_light .t_dark .t_active_Switch {
+  .t_light .t_dark .t_SliderKnob {
     --background: #a9f927;
     --borderColor: #576a38;
   }

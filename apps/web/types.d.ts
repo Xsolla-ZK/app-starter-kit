@@ -3,7 +3,7 @@ import type { config, projectComponentsConfig } from '@app/config';
 type ComponentsConfig = typeof projectComponentsConfig;
 type Conf = typeof config;
 
-declare module '@xsolla-zk/react' {
+declare module '@app/ui' {
   interface ComponentsCustomConfig extends ComponentsConfig {}
   interface TamaguiCustomConfig extends Conf {}
 

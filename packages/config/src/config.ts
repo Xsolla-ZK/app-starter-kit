@@ -1,24 +1,17 @@
-import type { CreateTamaguiProps } from '@tamagui/core';
-import { settings, sharedConfig } from '@xsolla-zk/config';
+import { settings, shorthands } from '@xsolla-zk/config';
+import type { CreateTamaguiProps } from '@xsolla-zk/react';
+import { animations } from './animations';
 import { themes } from './themes';
 import { fonts } from './tokens/fonts';
 import { media } from './tokens/media/web';
 import { web } from './tokens/platform';
 import { tokens } from './tokens/tokens';
 import { typography } from './tokens/typography';
-// import { sharpGrotesk } from './custom-fonts';
-
-// const customFonts = createCustomFont(fonts, {
-//   display: {
-//     family: sharpGrotesk.style.fontFamily,
-//   },
-//   text: {
-//     family: onest.style.fontFamily,
-//   }
-// })
 
 export const tokensConfig = {
-  ...sharedConfig,
+  shorthands,
+  // animations: baseAnimations,
+  animations,
   fonts,
   themes,
   tokens: {

@@ -1,219 +1,261 @@
-# Turborepo starter
+# Xsolla ZK - App Starter Kit
 
-This Turborepo starter is maintained by the Turborepo core team.
+This is a **Turborepo monorepo** with the following structure:
 
-## Using this example
+### Apps
+- **`apps/native/`** - React Native application with Expo Router (iOS/Android)
+- **`apps/web/`** - Next.js web application (main frontend)
 
-Run the following command:
+### Packages
+- **`packages/app/`** - Core application components and business logic
+- **`packages/config/`** - Tamagui configuration and design tokens
+- **`packages/icons/`** - SVG icon components
+- **`packages/ui/`** - Reusable UI components based on @xsolla-zk/react (modals, toasts, etc.)
+- **`packages/utils/`** - Utility functions
+- **`packages/typescript-config/`** - Shared TypeScript configurations
 
-```sh
-npx create-turbo@latest
+## 🛠️ Tech Stack
+
+### Cross-Platform Development
+- **Solito** - Navigation between React Native and Next.js
+- **Expo Router** - File-based routing with type safety
+- **Tamagui** - Universal UI system
+
+### Frontend (UI)
+- **@xsolla-zk/react** - Xsolla ZK React UI components
+- **Next.js 15** - React framework with App Router
+- **React 19** - UI library
+- **TypeScript** - Type safety
+- **React Native Web** - React Native support in web
+
+### Mobile Development
+- **Expo SDK 53** - React Native development platform
+- **React Native** - Mobile development framework
+- **Expo Dev Client** - Custom development environment
+
+### Development Tools
+- **Turborepo** - Monorepo build system
+- **Biome** - Code linting and formatting
+- **Yarn 4.9.2** - Package manager
+- **Docker** - Containerization
+
+## 📦 Installation
+
+### Prerequisites
+- Node.js >= 20.11.0
+- Yarn 4.9.2
+- Docker (optional, for containerized deployment)
+- Expo CLI (for mobile development)
+- iOS Simulator / Android Studio (for mobile development)
+
+### Setup
+
+1. **Clone the repository**
+   ```bash
+   git clone git@github.com:Xsolla-ZK/app-starter-kit.git
+   cd app-starter-kit
+   ```
+
+2. **Install dependencies**
+   ```bash
+   yarn install
+   ```
+
+3. **Start development server**
+
+   **Web application:**
+   ```bash
+   yarn web
+   ```
+   The application will be available at `http://localhost:3000`
+
+   **Native application:**
+   ```bash
+   yarn native
+   ```
+
+## 🚀 Available Scripts
+
+### Web Development
+- `yarn web` - Start web app in development mode
+- `yarn web:extract` - Start with design token extraction enabled
+- `yarn web:prod` - Build web app for production
+- `yarn web:prod:start` - Start production build
+
+### Mobile Development
+- `yarn native` - Start Expo Dev Server
+- `yarn ios` - Start iOS simulator (macOS)
+- `yarn android` - Start Android emulator
+- `yarn native:prebuild` - Prebuild native files
+
+### General Commands
+- `yarn build` - Build all packages (excluding web)
+- `yarn lint` - Run Biome linter
+- `yarn lint:fix` - Fix linting issues automatically
+
+## 📱 Mobile Development
+
+### Expo Configuration
+The native application uses Expo with the following features:
+- **Expo Router** - File-based routing with type safety
+- **Expo Dev Client** - Custom development environment
+- **Universal platforms** - iOS, Android, Web
+
+### Running on Devices
+
+**iOS (requires macOS):**
+```bash
+yarn ios
 ```
 
-## What's inside?
-
-This Turborepo includes the following packages/apps:
-
-### Apps and Packages
-
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@app/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@app/typescript-config`: `tsconfig.json`s used throughout the monorepo
-
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Build
-
-To build all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm build
+**Android:**
+```bash
+yarn android
 ```
 
-### Develop
-
-To develop all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm dev
+**QR code for physical devices:**
+```bash
+yarn native
+# Scan QR code in Expo Go app
 ```
 
-### Remote Caching
+## 🐳 Docker Deployment
 
-> [!TIP]
-> Vercel Remote Cache is free for all plans. Get started today at [vercel.com](https://vercel.com/signup?/signup?utm_source=remote-cache-sdk&utm_campaign=free_remote_cache).
-
-Turborepo can use a technique known as [Remote Caching](https://turborepo.com/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup?utm_source=turborepo-examples), then enter the following commands:
-
-```
-cd my-turborepo
-npx turbo login
+### Build Docker Image
+```bash
+docker build -t app-starter-kit .
 ```
 
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
-
-```
-npx turbo link
+### Run Container
+```bash
+docker run -p 3000:3000 app-starter-kit
 ```
 
-## Useful Links
+**Note:** Docker configuration is optimized for web application only.
 
-Learn more about the power of Turborepo:
+## 🏗️ Project Structure Details
 
-- [Tasks](https://turborepo.com/docs/crafting-your-repository/running-tasks)
-- [Caching](https://turborepo.com/docs/crafting-your-repository/caching)
-- [Remote Caching](https://turborepo.com/docs/core-concepts/remote-caching)
-- [Filtering](https://turborepo.com/docs/crafting-your-repository/running-tasks#using-filters)
-- [Configuration Options](https://turborepo.com/docs/reference/configuration)
-- [CLI Usage](https://turborepo.com/docs/reference/command-line-reference)
-
-На основе предоставленных файлов, вот единое описание компонента `InlineInput` в формате Markdown.
-
------
-
-# Описание Компонента `InlineInput`
-
-`InlineInput` — это кастомизированный компонент для ввода текста. Его основное предназначение — выглядеть как "встроенный" элемент интерфейса.
-
------
-
-## Ключевые Характеристики
-
-- **Автоматическое изменение размера шрифта**: Ключевая особенность компонента — способность динамически изменять размер шрифта для вмещения вводимого текста. Эта логика реализована в хуке `useAutoResizeFont`.
-- **Многострочный ввод**: Компонент по умолчанию является многострочным (`multiline`). Его высота может динамически изменяться в зависимости от содержимого.
-- **Управление высотой**: Высоту поля можно контролировать с помощью следующих свойств:
-  - `rows`: Устанавливает фиксированное количество строк, задавая одинаковые значения для `minRows` и `maxRows`.
-  - `minRows` и `maxRows`: Задают минимальное и максимальное количество строк, позволяя полю ввода расти по мере добавления текста до определенного предела. Если `minRows` больше `maxRows`, их значения меняются местами.
-- **Компонуемый интерфейс (Compound Components)**: `InlineInput` использует статичные свойства для добавления дочерних элементов в слоты, что делает его более гибким.
-  - `InlineInput.Props`: Компонент-обертка (`InputContext.Provider`), который необходимо использовать при добавлении слотов.
-  - `InlineInput.StartSlot`: Слот (`InputStartSlot`) для добавления иконок или других элементов в начало поля ввода.
-  - `InlineInput.EndSlot`: Слот (`InputEndSlot`) для добавления элементов в конец поля ввода.
-- **Стилизация через варианты**: Внешний вид настраивается через свойство `size`. Это свойство применяет предопределенные стили из конфигурации компонентов. Типы для размеров (`InlineInputSizes`) определены в `inline-input.types.ts`.
-
------
-
-## Структура и Свойства (Props)
-
-Компонент `InlineInput` является оберткой над базовым компонентом `Input` и наследует его свойства, а также все стандартные свойства `TextInput`. Основные кастомные свойства определены как варианты в файле стилей и обрабатываются в файле компонента.
-
-| Свойство  | Тип                      | По умолчанию | Описание                                                                                                   |
-| :-------- | :----------------------- | :----------- | :--------------------------------------------------------------------------------------------------------- |
-| `size`    | `InlineInputSizes` | `'$500'` | Определяет набор предопределенных стилей (размер шрифта, высота и т.д.) из конфигурации.       |
-| `rows`    | `number`                 | `undefined`  | Устанавливает фиксированное количество отображаемых строк.                                         |
-| `minRows` | `number`                 | `undefined`  | Минимальное количество строк для отображения.                                                    |
-| `maxRows` | `number`                 | `undefined`  | Максимальное количество строк, до которого поле может расширяться.                               |
-| `disabled`| `boolean`                | `undefined`  | Переводит компонент в неактивное состояние. Определен как вариант стилизации.                      |
-
------
-
-## Принцип Работы
-
-На платформах, отличных от Web, `InlineInput` использует скрытый компонент `<Text>` для предварительного вычисления размеров текста. Это позволяет точно определить необходимую высоту и размер шрифта перед отрисовкой основного поля ввода `Input`. Ссылка на нативный элемент передается с помощью `forwardRef` и `useComposedRefs` для взаимодействия с DOM-элементом или нативным компонентом.
-
-## Пример Использования
-
-```jsx
-'use client';
-
-import { RichIcon, ScreenStack } from '@app/ui';
-import { Eye } from '@xsolla-zk/icons';
-import { InlineInput } from '../../components/inline-input';
-import { Input } from '../../components/input';
-import { PasswordField } from '../../components/password-field';
-
-export default function HomeScreen() {
-  return (
-    <ScreenStack gap="$space.200">
-      <InlineInput size="$600" minRows={1} maxRows={2}>
-        <Input.StartSlot>
-          <RichIcon pressable shape="squircle" size="$200" aria-label="toggle password visibility">
-            <RichIcon.Icon icon={Eye} />
-          </RichIcon>
-        </Input.StartSlot>
-        <Input.EndSlot>
-          <RichIcon pressable shape="squircle" size="$200" aria-label="toggle password visibility">
-            <RichIcon.Icon icon={Eye} />
-          </RichIcon>
-        </Input.EndSlot>
-      </InlineInput>
-
-      <InlineInput size="$600" rows={4}>
-        <Input.StartSlot>
-          <RichIcon pressable shape="squircle" size="$200" aria-label="toggle password visibility">
-            <RichIcon.Icon icon={Eye} />
-          </RichIcon>
-        </Input.StartSlot>
-        <Input.EndSlot>
-          <RichIcon pressable shape="squircle" size="$200" aria-label="toggle password visibility">
-            <RichIcon.Icon icon={Eye} />
-          </RichIcon>
-        </Input.EndSlot>
-      </InlineInput>
-    </ScreenStack>
-  );
-}
+```
+app-starter-kit/
+├── apps/
+│   ├── native/                 # Expo React Native application
+│   │   ├── app/               # Expo Router pages
+│   │   ├── assets/            # Static resources (icons, splash)
+│   │   ├── app.json           # Expo configuration
+│   │   └── scripts/           # Build scripts
+│   └── web/                   # Next.js web application
+│       ├── app/               # App Router pages
+│       ├── src/               # Source code
+│       └── public/            # Static assets
+├── packages/
+│   ├── app/                   # Core application logic
+│   │   ├── components/        # React components
+│   │   ├── features/          # Feature-specific code
+│   │   ├── layouts/           # Page layouts
+│   │   └── provider/          # Context providers
+│   ├── config/               # Tamagui configuration
+│   │   ├── src/              # Configuration source
+│   │   └── raw-tokens/       # Design tokens
+│   ├── icons/                # SVG icon components
+│   ├── ui/                   # Reusable UI components
+│   ├── utils/                # Utility functions
+│   └── typescript-config/    # Shared TypeScript configurations
+├── biome.json                # Biome configuration
+├── turbo.json                # Turborepo configuration
+├── package.json              # Root package.json
+└── Dockerfile               # Docker configuration
 ```
 
-# Описание Компонента `TextArea`
+## 🔄 Development Workflow
 
-`TextArea` — это кастомизированный компонент, предназначенный для многострочного ввода текста. Он построен как обёртка над базовым компонентом `Input` и использует его возможности.
+1. **Making Changes**: Edit files in relevant packages
+2. **Building**: Run `yarn build` to build all packages
+3. **Testing**:
+   - Web: `yarn web`
+   - Mobile: `yarn native`
+4. **Linting**: Run `yarn lint:fix` before committing
 
------
+### Cross-Platform Development
+Thanks to **Solito**, navigation and component code can be shared between web and mobile platforms:
+- Shared components in `packages/app/`
+- Platform-specific logic in respective applications
+- Unified design system through Tamagui
 
-## Ключевые Характеристики
+## 🌐 Deployment
 
-- **Многострочный Ввод**: Компонент по умолчанию является многострочным (`multiline`), что делает его идеальным для полей ввода комментариев, описаний и других объемных текстов.
-- **Динамическая Высота**: Высота поля ввода может динамически изменяться в зависимости от количества вводимого текста. Это поведение контролируется с помощью следующих свойств:
-  - `rows`: Устанавливает фиксированное количество строк, задавая одинаковые значения для `minRows` и `maxRows`.
-  - `minRows` и `maxRows`: Задают минимальное и максимальное количество строк, позволяя полю ввода расти до определенного предела. Если `minRows` больше `maxRows`, их значения меняются местами для корректной работы.
-- **Стабильный Размер Шрифта**: В отличие от `InlineInput`, данный компонент **не изменяет** размер шрифта (`fontScaling: false`). Он использует хук `useAutoResizeFont` только для получения `lineHeight` с целью корректного вычисления высоты компонента на основе количества строк.
-- **Компонуемый интерфейс (Compound Components)**: `TextArea` использует статичные свойства для добавления дочерних элементов в слоты, что делает его более гибким.
-  - `TextArea.Props`: Компонент-обертка (`InputContext.Provider`), который необходимо использовать при добавлении слотов.
-  - `TextArea.StartSlot`: Слот (`InputStartSlot`) для добавления иконок или других элементов в начало поля ввода.
-  - `TextArea.EndSlot`: Слот (`InputEndSlot`) для добавления элементов в конец поля ввода.
-
------
-
-## Свойства (Props)
-
-Компонент `TextArea` является `forwardRef` компонентом, который принимает все свойства базового компонента `Input` (`InputProps`), а также следующие специфичные свойства для управления его поведением.
-
-| Свойство | Тип | По умолчанию | Описание |
-| :--- | :--- | :--- | :--- |
-| `size` | `string` | `'$500'` | Определяет набор предопределенных стилей (размер шрифта, высота и т.д.). |
-| `rows` | `number` | `undefined` | Устанавливает фиксированное количество отображаемых строк. |
-| `minRows` | `number` | `undefined` | Минимальное количество строк для отображения. |
-| `maxRows` | `number` | `undefined` | Максимальное количество строк, до которого поле может расширяться. |
-
------
-
-## Принцип Работы
-
-`TextArea` передает большинство своих свойств напрямую в компонент `Input`. Для платформ, отличных от Web, он предварительно вычисляет минимальную высоту (`calculatedMinHeight`) на основе `minRows` и `lineHeight`, чтобы гарантировать корректное отображение с самого начала. Передача `ref` к внутреннему элементу осуществляется с помощью `forwardRef` и `useComposedRefs`.
-
-## Пример Использования
-
-```jsx
-'use client';
-
-import { RichIcon, ScreenStack } from '@app/ui';
-import { Eye } from '@xsolla-zk/icons';
-import { InlineInput } from '../../components/inline-input';
-import { Input } from '../../components/input';
-import { PasswordField } from '../../components/password-field';
-
-export default function HomeScreen() {
-  return (
-    <ScreenStack gap="$space.200">
-      <TextArea minRows={2} maxRows={5} />
-      <TextArea rows={2}/>
-    </ScreenStack>
-  );
-}
+### Production Build (Web)
+```bash
+yarn web:prod
+yarn web:prod:start
 ```
+
+### Docker Production
+```bash
+docker build -t app-starter-kit .
+docker run -p 3000:3000 app-starter-kit
+```
+
+### Mobile Deployment
+```bash
+# Prebuild native files
+yarn native:prebuild
+
+# Build for iOS (requires macOS and Xcode)
+yarn ios
+
+# Build for Android
+yarn android
+```
+
+## ⚙️ Configuration
+
+### Biome
+The project uses Biome for linting and formatting with strict rules:
+- TypeScript strict typing
+- React hooks validation
+- Automatic import fixing
+- Consistent code formatting
+
+### Tamagui
+Universal design system with:
+- Cross-platform components
+- Design tokens
+- Theming (light/dark themes)
+- Performance optimization
+
+## 🔗 Related Links
+
+- [XSolla-ZK UI KIT](https://ui-kit.xsollazk.com)
+- [Tamagui Documentation](https://tamagui.dev)
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Expo Documentation](https://docs.expo.dev)
+- [Solito Documentation](https://solito.dev)
+- [Turborepo Documentation](https://turbo.build/repo/docs)
+- [Biome Documentation](https://biomejs.dev)
+- [Xsolla ZK Explorer](https://x.la/explorer)
+
+## 🐛 Troubleshooting
+
+### Common Issues
+
+**Metro bundler errors:**
+```bash
+yarn native --clear-cache
+```
+
+**TypeScript errors:**
+```bash
+yarn build
+```
+
+**Xcode environment (iOS):**
+```bash
+cd apps/native && yarn fix-xcode-env
+```
+
+**Docker issues:**
+Make sure you have sufficient Docker resources (RAM >= 4GB)
+
+### Debugging
+- Web application: Use React DevTools
+- Native: Use Expo DevTools and React Native Debugger

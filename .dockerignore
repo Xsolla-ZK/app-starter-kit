@@ -48,3 +48,10 @@ scripts
 .githooks
 .cursorignore
 .gitconfig
+
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions

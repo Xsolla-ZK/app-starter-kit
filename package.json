@@ -1,5 +1,6 @@
 {
-  "name": "turborepo-next",
+  "name": "@xsolla-zk/app-starter-kit",
+  "version": "0.0.1",
   "private": true,
   "workspaces": [
     "./apps/*",
@@ -10,37 +11,24 @@
     "native:prebuild": "cd apps/native && yarn prebuild",
     "ios": "cd apps/native && yarn ios",
     "android": "cd apps/native && yarn android",
-    "build": "yarn workspaces foreach --all --exclude web run build",
+    "build": "yarn workspaces foreach --all --exclude web --exclude extension run build",
+    "build:extension": "yarn workspace extension build",
     "web": "yarn build && cd apps/web && yarn dev",
     "web:extract": "DISABLE_EXTRACTION=false yarn workspace web dev",
     "web:prod": "yarn workspace web build",
     "web:prod:start": "yarn workspace web start",
     "lint": "biome check .",
-    "lint:fix": "biome check --write .",
-    "test": "turbo run test"
+    "lint:fix": "biome check --write ."
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.0.5",
-    "@testing-library/jest-dom": "^6.6.3",
-    "@testing-library/react": "^16.3.0",
-    "@testing-library/react-native": "^13.2.0",
+    "@biomejs/biome": "2.1.1",
     "@types/node": "^22.15.3",
-    "@vitejs/plugin-react": "^4.7.0",
-    "@vitest/ui": "^3.2.4",
-    "jsdom": "^26.1.0",
-    "react-native": "^0.80.1",
+    "cross-env": "^7.0.3",
     "turbo": "^2.5.4",
-    "typescript": "5.8.3",
-    "vitest": "^3.2.4"
+    "typescript": "5.8.3"
   },
   "engines": {
     "node": ">=20.11.0"
   },
-  "packageManager": "yarn@4.9.2",
-  "dependencies": {
-    "@tamagui/vite-plugin": "^1.132.11",
-    "@vitejs/plugin-react-swc": "^3.11.0",
-    "react-test-renderer": "19.0.0",
-    "vite-tsconfig-paths": "^5.1.4"
-  }
+  "packageManager": "yarn@4.9.2"
 }

@@ -9,7 +9,7 @@ import { type ReactNode, useRef } from 'react';
 import { StyleSheet } from 'react-native';
 
 export function NextTamaguiProvider({ children }: { children: ReactNode }) {
-  const [_theme, setTheme] = useRootTheme();
+  const [theme, setTheme] = useRootTheme();
   const injected = useRef(false);
 
   useServerInsertedHTML(() => {
@@ -35,12 +35,13 @@ export function NextTamaguiProvider({ children }: { children: ReactNode }) {
   return (
     <NextThemeProvider
       skipNextHead
-      forcedTheme="dark"
       onChangeTheme={(next) => {
         setTheme(next as ColorScheme);
       }}
     >
-      <Provider config={config}>{children}</Provider>
+      <Provider config={config} defaultTheme={theme ?? 'light'}>
+        {children}
+      </Provider>
     </NextThemeProvider>
   );
 }

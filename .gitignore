@@ -8,6 +8,8 @@ dist
 !.yarn/sdks
 !.yarn/versions
 
+**/release/*
+
 # expo
 **/.expo/*
 
@@ -47,3 +49,4 @@ thumbs.db
 
 # turbo build log
 **/.turbo/*
+/backpack/sdk/archive/

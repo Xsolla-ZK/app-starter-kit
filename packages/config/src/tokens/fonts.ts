@@ -5,7 +5,7 @@
 
 export const fonts = {
   display: {
-    family: 'Sharp Grotesk',
+    family: 'Onest',
     size: {
       '350': 18,
       '400': 22,
@@ -25,14 +25,14 @@ export const fonts = {
       '700': 56,
     },
     weight: {
-      default: '400',
-      numeric: '400',
-      accent: '500',
-      'accent-numeric': '500',
+      default: '500',
+      numeric: '500',
+      accent: '600',
+      'accent-numeric': '600',
     },
   },
   text: {
-    family: 'Sharp Grotesk',
+    family: 'Onest',
     size: {
       '150': 10,
       '200': 12,
@@ -50,14 +50,14 @@ export const fonts = {
       '400': 30,
     },
     weight: {
-      default: '400',
-      numeric: '400',
-      accent: '500',
-      'accent-numeric': '500',
+      default: '500',
+      numeric: '500',
+      accent: '600',
+      'accent-numeric': '600',
     },
   },
   compact: {
-    family: 'Sharp Grotesk',
+    family: 'Onest',
     size: {
       '150': 10,
       '200': 12,
@@ -75,10 +75,10 @@ export const fonts = {
       '400': 26,
     },
     weight: {
-      default: '400',
-      numeric: '400',
-      accent: '500',
-      'accent-numeric': '500',
+      default: '500',
+      numeric: '500',
+      accent: '600',
+      'accent-numeric': '600',
     },
   },
 };
