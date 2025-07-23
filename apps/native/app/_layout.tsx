@@ -1,6 +1,7 @@
 // import { NativeToast } from '@app/ui/src/NativeToast';
 
 import { config } from '@app/config';
+import { PortalProvider } from '@app/ui';
 import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
 import { Provider } from 'app/provider';
 // import { useFonts } from 'expo-font';
@@ -40,13 +41,13 @@ function RootLayoutNav() {
   const colorScheme = useColorScheme();
 
   return (
-    <Provider config={config}>
-      <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-        {/* <PortalProvider> */}
-        <Stack />
-        {/* </PortalProvider> */}
-        {/* <NativeToast /> */}
-      </ThemeProvider>
-    </Provider>
+    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
+      <PortalProvider>
+        <Provider config={config}>
+          <Stack />
+        </Provider>
+      </PortalProvider>
+      {/* <NativeToast /> */}
+    </ThemeProvider>
   );
 }

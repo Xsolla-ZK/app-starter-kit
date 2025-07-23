@@ -9,7 +9,8 @@
     "ios": "yarn fix-xcode-env && npx expo run:ios",
     "eject": "npx expo eject",
     "fix-xcode-env": "node scripts/fix-xcode-env.mjs",
-    "prebuild": "yarn expo prebuild"
+    "prebuild": "yarn expo prebuild",
+    "test": "vitest run --passWithNoTests"
   },
   "dependencies": {
     "@app/ui": "0.0.1",

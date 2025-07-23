@@ -16,13 +16,22 @@
     "web:prod": "yarn workspace web build",
     "web:prod:start": "yarn workspace web start",
     "lint": "biome check .",
-    "lint:fix": "biome check --write ."
+    "lint:fix": "biome check --write .",
+    "test": "turbo run test"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.0.5",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/react-native": "^13.2.0",
     "@types/node": "^22.15.3",
+    "@vitejs/plugin-react": "^4.7.0",
+    "@vitest/ui": "^3.2.4",
+    "jsdom": "^26.1.0",
+    "react-native": "^0.80.1",
     "turbo": "^2.5.4",
-    "typescript": "5.8.3"
+    "typescript": "5.8.3",
+    "vitest": "^3.2.4"
   },
   "engines": {
     "node": ">=20.11.0"
