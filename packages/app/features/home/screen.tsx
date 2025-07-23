@@ -1,7 +1,12 @@
 'use client';
 
-import { Button, ScreenStack, useNotificationController } from '@app/ui';
+import { Button, RichIcon, ScreenStack, useNotificationController } from '@app/ui';
+import { Eye } from '@xsolla-zk/icons';
 import { ButtonText } from '../../components/button/button.styled';
+import { InlineInput } from '../../components/inline-input';
+import { Input } from '../../components/input';
+import { PasswordField } from '../../components/password-field';
+import { TextArea } from '../../components/textarea';
 
 export default function HomeScreen() {
   const { show } = useNotificationController(); // 2. Получаем функцию show
@@ -15,12 +20,7 @@ export default function HomeScreen() {
 
   return (
     <ScreenStack gap="$space.200" padding="$space.200">
-      {/* 3. Добавляем кнопку для вызова уведомления */}
-      <Button onPress={handlePress}>
-        <ButtonText>Проверить уведомление</ButtonText>
-      </Button>
-
-      {/* <TextArea minRows={1} maxRows={3} />
+      <TextArea minRows={1} maxRows={3} />
       <TextArea minRows={2} maxRows={5} />
 
       <InlineInput size="$600" minRows={1} maxRows={2}>
@@ -48,7 +48,11 @@ export default function HomeScreen() {
           </RichIcon>
         </Input.EndSlot>
       </InlineInput>
-      <PasswordField /> */}
+      <PasswordField />
+      {/* 3. Добавляем кнопку для вызова уведомления */}
+      <Button onPress={handlePress}>
+        <ButtonText>Проверить уведомление</ButtonText>
+      </Button>
     </ScreenStack>
   );
 }
