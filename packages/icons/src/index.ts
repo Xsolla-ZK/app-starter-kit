@@ -1,3 +1,12 @@
+export { Bow } from "./icons/bow";
+export { Breastplate } from "./icons/breastplate";
+export { Crossbow } from "./icons/crossbow";
 export { Discord } from "./icons/discord";
+export { KiteShield } from "./icons/kite-shield";
+export { LeatherHelm } from "./icons/leather-helm";
 export { Linkedin } from "./icons/linkedin";
+export { LogoMonoLinkedin } from "./icons/logo-mono_Linkedin";
+export { Reddit } from "./icons/reddit";
+export { TowerShield } from "./icons/tower-shield";
 export { XTwitter } from "./icons/x-twitter";
+export { Youtube } from "./icons/youtube";
