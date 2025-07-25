@@ -223,29 +223,38 @@ function AccordionStory() {
 }
 
 export default function HomeScreen() {
-  const { show } = useNotificationController(); // 2. Получаем функцию show
-  console.log('useNotificationController()', useNotificationController());
+  const { show } = useNotificationController();
   const handlePress = () => {
     show('Тест 1', {
       id: '1',
       title: 'Порно весело, задорно',
       description: 'Уведомление успешно вызвано!',
-      viewportName: 'toast', // Указываем, в какой зоне его показать
+      viewportName: 'toast',
     });
     show('Тест 2', {
       id: '2',
       description: 'Уведомление успешно вызвано!',
-      viewportName: 'toast', // Указываем, в какой зоне его показать
+      viewportName: 'toast',
     });
     show('Тест 3', {
       id: '3',
       description: 'Уведомление успешно вызвано!',
-      viewportName: 'toast', // Указываем, в какой зоне его показать
+      viewportName: 'toast',
     });
     show('Тест 4', {
       id: '4',
       description: 'Уведомление успешно вызвано!',
-      viewportName: 'toast', // Указываем, в какой зоне его показать
+      viewportName: 'toast',
+    });
+    show('Тест 5', {
+      id: '3',
+      description: 'Уведомление успешно вызвано!',
+      viewportName: 'toast',
+    });
+    show('Тест 6', {
+      id: '4',
+      description: 'Уведомление успешно вызвано!',
+      viewportName: 'toast',
     });
   };
   return (
