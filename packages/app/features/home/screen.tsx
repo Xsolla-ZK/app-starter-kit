@@ -34,9 +34,10 @@ import Animated, {
   withSpring,
 } from 'react-native-reanimated';
 import { XSollaZKDiamond } from '../../components/icons/xsolla-zk-diamond';
-import { TextArea } from '../../components/textarea';
-import { PasswordField } from '../../components/password-field';
 import { InlineInput } from '../../components/inline-input';
+import { useNotificationController } from '../../components/notification';
+import { PasswordField } from '../../components/password-field';
+import { TextArea } from '../../components/textarea';
 
 const contentBlank =
   'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis imperdiet nibh. In nunc eros, fermentum at massa id, egestas pulvinar lorem. Morbi nisi orci, feugiat in gravida et, efficitur ac metus. Nam euismod, magna eget cursus pretium, risus metus rutrum diam, nec hendrerit risus elit nec risus. Vivamus sed lorem mollis, malesuada tellus quis, condimentum nulla. Mauris ornare leo eget volutpat consectetur. Duis sed mattis nisi. Vivamus id mi tincidunt, consequat enim et, ultrices magna. Mauris porttitor ornare porta. Maecenas maximus dignissim ipsum, sodales ultricies felis auctor sed. Aliquam convallis efficitur quam, quis faucibus justo rutrum scelerisque.';
@@ -151,9 +152,9 @@ function TabsStory() {
         <Tabs.Content key={tab.content} value={tab.value}>
           <Stack padding="$300">
             <Typography preset="display.500.accent">{tab.content}</Typography>
-          </Stack>     
+          </Stack>
         </Tabs.Content>
-      ))}   
+      ))}
     </Tabs>
   );
 }
@@ -222,6 +223,31 @@ function AccordionStory() {
 }
 
 export default function HomeScreen() {
+  const { show } = useNotificationController(); // 2. Получаем функцию show
+  console.log('useNotificationController()', useNotificationController());
+  const handlePress = () => {
+    show('Тест 1', {
+      id: '1',
+      title: 'Порно весело, задорно',
+      description: 'Уведомление успешно вызвано!',
+      viewportName: 'toast', // Указываем, в какой зоне его показать
+    });
+    show('Тест 2', {
+      id: '2',
+      description: 'Уведомление успешно вызвано!',
+      viewportName: 'toast', // Указываем, в какой зоне его показать
+    });
+    show('Тест 3', {
+      id: '3',
+      description: 'Уведомление успешно вызвано!',
+      viewportName: 'toast', // Указываем, в какой зоне его показать
+    });
+    show('Тест 4', {
+      id: '4',
+      description: 'Уведомление успешно вызвано!',
+      viewportName: 'toast', // Указываем, в какой зоне его показать
+    });
+  };
   return (
     <ScrollView paddingVertical="$space.350">
       <Stack flex={1} justifyContent="flex-end">
@@ -273,13 +299,14 @@ export default function HomeScreen() {
         <CellStory size="large" width="100%" withBoard />
         <AccordionStory />
         <ContentStack />
-         <Stack width="100%" gap={30}>  
-          <TextArea  rows={5} />
-          <TextArea  minRows={3} maxRows={4} />
-          <InlineInput minRows={2} maxRows={5} /> 
+        <Stack width="100%" gap={30}>
+          <TextArea rows={5} />
+          <TextArea minRows={3} maxRows={4} />
+          <InlineInput minRows={2} maxRows={5} />
           <InlineInput rows={5} />
-          <PasswordField/>
-       </Stack>
+          <Button onPress={handlePress} />
+          <PasswordField />
+        </Stack>
       </Stack>
     </ScrollView>
   );

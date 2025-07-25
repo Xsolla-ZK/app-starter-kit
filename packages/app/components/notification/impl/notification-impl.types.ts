@@ -32,7 +32,7 @@ export type NotificationExtraProps = {
   /**
    * The title of the notification.
    */
-  title: string;
+  title?: string;
   /**
    * The description of the notification.
    */

@@ -1,3 +1,4 @@
+/* eslint-disable max-lines */
 import { useIsPresent } from '@tamagui/animate-presence';
 import { useComposedRefs } from '@tamagui/compose-refs';
 import { isWeb } from '@tamagui/constants';
@@ -13,13 +14,17 @@ import {
 import { Dismissable } from '@tamagui/dismissable';
 import { composeEventHandlers } from '@tamagui/helpers';
 import { PortalItem } from '@tamagui/portal';
-import { NOTIFICATION_VIEWPORT_PAUSE, NOTIFICATION_VIEWPORT_RESUME } from '@xsolla-zk/constants';
+import {
+  NOTIFICATION_CONTEXT,
+  NOTIFICATION_VIEWPORT_PAUSE,
+  NOTIFICATION_VIEWPORT_RESUME,
+} from '@xsolla-zk/constants';
 import { forwardRef, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import type { Animated, PanResponderGestureState } from 'react-native';
 import { PanResponder } from 'react-native';
 import { NotificationAnnounce } from '../announce/notification-announce';
 import type { NotificationScopedProps, NotificationSizes } from '../notification.types';
-import { useNotificationProviderContext } from '../provider/notification-provider';
+import { Collection, useNotificationProviderContext } from '../provider/notification-provider';
 import type { SwipeDirection } from '../provider/notification-provider.types';
 import { NotificationImplFrame } from './notification-impl.styled';
 import type { NotificationImplProps } from './notification-impl.types';
@@ -48,21 +53,16 @@ const NotificationImpl = forwardRef<TamaguiElement, NotificationImplProps>(
       onSwipeCancel,
       onSwipeEnd,
       viewportName = 'default',
-      children,
       ...toastProps
     } = props;
-    console.log('children', children);
     const isPresent = useIsPresent();
     const context = useNotificationProviderContext(__scopeNotification);
-    console.log('context', context);
     const [node, setNode] = useState<TamaguiElement | null>(null);
-    console.log('node', node);
     const composedRefs = useComposedRefs(forwardedRef, setNode);
     const duration = durationProp || context.duration;
     const closeTimerStartTimeRef = useRef(0);
     const closeTimerRemainingTimeRef = useRef(duration);
-    const closeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-
+    const closeTimerRef = useRef(0);
     const { onNotificationAdd, onNotificationRemove } = context;
 
     const viewport = useMemo(
@@ -72,8 +72,11 @@ const NotificationImpl = forwardRef<TamaguiElement, NotificationImplProps>(
 
     const handleClose = useEvent(() => {
       if (!isPresent) {
+        // already removed from the react tree
         return;
       }
+      // focus viewport if focus is within toast to read the remaining toast
+      // count to SR users and ensure focus isn't lost
       if (isWeb) {
         const isFocusInNotification = (node as HTMLDivElement)?.contains(document.activeElement);
         if (isFocusInNotification) viewport?.focus();
@@ -84,9 +87,9 @@ const NotificationImpl = forwardRef<TamaguiElement, NotificationImplProps>(
     const startTimer = useCallback(
       (duration: number) => {
         if (!duration || duration === Number.POSITIVE_INFINITY) return;
-        if (closeTimerRef.current) clearTimeout(closeTimerRef.current);
-        closeTimerStartTimeRef.current = Date.now();
-        closeTimerRef.current = setTimeout(handleClose, duration);
+        clearTimeout(closeTimerRef.current);
+        closeTimerStartTimeRef.current = new Date().getTime();
+        closeTimerRef.current = setTimeout(handleClose, duration) as unknown as number;
       },
       [handleClose],
     );
@@ -97,26 +100,28 @@ const NotificationImpl = forwardRef<TamaguiElement, NotificationImplProps>(
     }, [onResume, startTimer]);
 
     const handlePause = useCallback(() => {
-      if (closeTimerRef.current) {
-        const elapsedTime = Date.now() - closeTimerStartTimeRef.current;
-        closeTimerRemainingTimeRef.current -= elapsedTime;
-        clearTimeout(closeTimerRef.current);
-        closeTimerRef.current = null;
-        onPause?.();
-      }
+      const elapsedTime = new Date().getTime() - closeTimerStartTimeRef.current;
+      closeTimerRemainingTimeRef.current = closeTimerRemainingTimeRef.current - elapsedTime;
+      window.clearTimeout(closeTimerRef.current);
+      onPause?.();
     }, [onPause]);
 
     useEffect(() => {
-      if (!isWeb || !viewport) return;
+      if (!isWeb) return;
 
-      viewport.addEventListener(NOTIFICATION_VIEWPORT_PAUSE, handlePause);
-      viewport.addEventListener(NOTIFICATION_VIEWPORT_RESUME, handleResume);
-      return () => {
-        viewport.removeEventListener(NOTIFICATION_VIEWPORT_PAUSE, handlePause);
-        viewport.removeEventListener(NOTIFICATION_VIEWPORT_RESUME, handleResume);
-      };
-    }, [viewport, handlePause, handleResume]);
+      if (viewport) {
+        viewport.addEventListener(NOTIFICATION_VIEWPORT_PAUSE, handlePause);
+        viewport.addEventListener(NOTIFICATION_VIEWPORT_RESUME, handleResume);
+        return () => {
+          viewport.removeEventListener(NOTIFICATION_VIEWPORT_PAUSE, handlePause);
+          viewport.removeEventListener(NOTIFICATION_VIEWPORT_RESUME, handleResume);
+        };
+      }
+    }, [viewport, duration, onPause, onResume, startTimer]);
 
+    // start timer when toast opens or duration changes.
+    // we include `open` in deps because closed !== unmounted when animating
+    // so it could reopen before being completely unmounted
     useEffect(() => {
       if (open && !context.isClosePausedRef.current) {
         startTimer(duration);
@@ -141,15 +146,19 @@ const NotificationImpl = forwardRef<TamaguiElement, NotificationImplProps>(
     }
 
     const { useAnimatedNumber, useAnimatedNumberStyle } = animationDriver;
+
     const animatedNumber = useAnimatedNumber(0);
 
     // @ts-ignore: temp until reanimated useAnimatedNumber fix
-    const AnimatedView = (animationDriver.NumberView ??
+    const AnimatedView = (animationDriver['NumberView'] ??
       animationDriver.View ??
       Stack) as typeof Animated.View;
+
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     const animatedStyles = useAnimatedNumberStyle(animatedNumber, (val) => {
       'worklet';
       return {
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
         transform: [isHorizontalSwipe ? { translateX: val } : { translateY: val }],
       };
     });
@@ -165,15 +174,16 @@ const NotificationImpl = forwardRef<TamaguiElement, NotificationImplProps>(
             }
             return false;
           },
-          onPanResponderGrant: () => {
+          onPanResponderGrant: (e) => {
             if (!isWeb) {
               handlePause?.();
             }
           },
           onPanResponderMove: (e, gesture) => {
             const { x, y } = getGestureDistance(context.swipeDirection, gesture);
+            const delta = { x, y };
             animatedNumber.setValue(isHorizontalSwipe ? x : y, { type: 'direct' });
-            if (isDeltaInDirection({ x, y }, context.swipeDirection, context.swipeThreshold)) {
+            if (isDeltaInDirection(delta, context.swipeDirection, context.swipeThreshold)) {
               onSwipeEnd?.(e);
             }
             onSwipeMove?.(e);
@@ -201,6 +211,7 @@ const NotificationImpl = forwardRef<TamaguiElement, NotificationImplProps>(
         {announceTextContent && (
           <NotificationAnnounce
             __scopeNotification={__scopeNotification}
+            // Notifications are always role=status to avoid stuttering issues with role=alert in SRs.
             role="status"
             aria-live={type === 'foreground' ? 'assertive' : 'polite'}
             aria-atomic
@@ -214,9 +225,12 @@ const NotificationImpl = forwardRef<TamaguiElement, NotificationImplProps>(
             key={props.id}
             scope={__scopeNotification}
             size={toastProps.size}
-            onClose={handleClose}
+            onClose={() => {
+              handleClose();
+            }}
           >
             <Dismissable
+              // asChild
               onEscapeKeyDown={composeEventHandlers(onEscapeKeyDown, () => {
                 if (!context.isFocusedNotificationEscapeKeyDownRef.current) {
                   handleClose();
@@ -229,30 +243,33 @@ const NotificationImpl = forwardRef<TamaguiElement, NotificationImplProps>(
                   {...panResponder?.panHandlers}
                   style={[{ margin: 'auto', maxWidth: '100%' }, animatedStyles]}
                 >
-                  <NotificationImplFrame
-                    ref={composedRefs}
-                    role="status"
-                    aria-live="off"
-                    aria-atomic
-                    data-state={open ? 'open' : 'closed'}
-                    data-swipe-direction={context.swipeDirection}
-                    pointerEvents="auto"
-                    touchAction="none"
-                    userSelect="none"
-                    {...toastProps}
-                    {...(isWeb && {
-                      onKeyDown: composeEventHandlers(props.onKeyDown, (event) => {
-                        if (event.key !== 'Escape') return;
-                        onEscapeKeyDown?.(event);
-                        if (!event.defaultPrevented) {
-                          context.isFocusedNotificationEscapeKeyDownRef.current = true;
-                          handleClose();
-                        }
-                      }),
-                    })}
+                  <Collection.ItemSlot
+                    __scopeCollection={__scopeNotification || NOTIFICATION_CONTEXT}
                   >
-                    {children}
-                  </NotificationImplFrame>
+                    <NotificationImplFrame
+                      // Ensure toasts are announced as status list or status when focused
+                      role="status"
+                      aria-live="off"
+                      aria-atomic
+                      data-state={open ? 'open' : 'closed'}
+                      data-swipe-direction={context.swipeDirection}
+                      pointerEvents="auto"
+                      touchAction="none"
+                      userSelect="none"
+                      {...toastProps}
+                      {...(isWeb && {
+                        onKeyDown: composeEventHandlers(props.onKeyDown, (event) => {
+                          if (event.key !== 'Escape') return;
+                          onEscapeKeyDown?.(event);
+                          onEscapeKeyDown?.(event);
+                          if (!event.defaultPrevented) {
+                            context.isFocusedNotificationEscapeKeyDownRef.current = true;
+                            handleClose();
+                          }
+                        }),
+                      })}
+                    />
+                  </Collection.ItemSlot>
                 </AnimatedView>
               </Theme>
             </Dismissable>
@@ -263,7 +280,7 @@ const NotificationImpl = forwardRef<TamaguiElement, NotificationImplProps>(
   },
 );
 
-// ... (вспомогательные функции)
+/* ---------------------------------------------------------------------------------------------- */
 
 function isDeltaInDirection(
   delta: { x: number; y: number },
@@ -301,6 +318,8 @@ function getAnnounceTextContent(container: HTMLElement) {
     }
   });
 
+  // We return a collection of text rather than a single concatenated string.
+  // This allows SR VO to naturally pause break between nodes while announcing.
   return textContent;
 }
 
@@ -317,12 +336,13 @@ function shouldGrantGestureMove(dir: SwipeDirection, { dx, dy }: PanResponderGes
   if ((dir === 'horizontal' || dir === 'right') && dx > GESTURE_GRANT_THRESHOLD) {
     return true;
   }
-  if ((dir === 'vertical' || dir === 'up') && dy < -GESTURE_GRANT_THRESHOLD) {
+  if ((dir === 'vertical' || dir === 'up') && dy > -GESTURE_GRANT_THRESHOLD) {
     return true;
   }
-  if ((dir === 'vertical' || dir === 'down') && dy > GESTURE_GRANT_THRESHOLD) {
+  if ((dir === 'vertical' || dir === 'down') && dy < GESTURE_GRANT_THRESHOLD) {
     return true;
   }
+
   return false;
 }
 
@@ -337,7 +357,10 @@ function getGestureDistance(dir: SwipeDirection, { dx, dy }: PanResponderGesture
   else if (dir === 'up') y = Math.min(0, dy);
   else if (dir === 'down') y = Math.max(0, dy);
 
-  return { x, y };
+  return {
+    x,
+    y,
+  };
 }
 
 export { NotificationImpl, useNotificationInteractiveContext };

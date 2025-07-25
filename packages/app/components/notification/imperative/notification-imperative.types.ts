@@ -59,6 +59,11 @@ export interface NotificationData extends ShowOptions {
   title: string;
 
   /**
+   * The title of the notification.
+   */
+  description?: string;
+
+  /**
    * A boolean flag indicating if the notification was handled by a native API.
    */
   isHandledNatively: boolean;
@@ -67,13 +72,19 @@ export interface NotificationData extends ShowOptions {
 }
 
 export interface NotificationContextI {
+  nativeNotification: NativeNotificationRef | null;
+
   /**
-   * Call it to show a new toast.
+   * Call it to show a new toast. If you're using native toasts, you can pass native options using \`burntOptions\` or \`notificationOptions\` depending on the native platform (mobile/web).
    */
   show: (title: string, options?: ShowOptions) => boolean;
 
   /**
-   * Call it to hide a specific toast by its ID.
+   * Call it to hide the currently displayed toast.
+   *
+   * _NOTE_: does not work on Android native toasts
+   *
+   * _NOTE_: hides the last toast on web notification toasts
    */
   hide: (notificationId: string) => void;
 

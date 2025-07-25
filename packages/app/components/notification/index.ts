@@ -12,7 +12,7 @@ import type { NotificationViewportProps } from './viewport/notification-viewport
 
 export {
   useNotificationController,
-  useNotifications,
+  useNotificationState,
 } from './imperative/notification-imperative';
 export { Notification } from './notification';
 export { NotificationProvider } from './provider/notification-provider';

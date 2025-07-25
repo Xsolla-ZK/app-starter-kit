@@ -7,33 +7,35 @@ import type {
   NotificationContextI,
   NotificationData,
   NotificationImperativeProviderProps,
-  ShowOptions,
 } from './notification-imperative.types';
 
-const ControllerContext = createContext<NotificationContextI>({
+const NotificationContext = createContext<NotificationContextI>({
+  nativeNotification: null,
   show: () => false,
   hide: () => {},
+  options: {},
 });
+const NotificationCurrentContext = createContext<NotificationData[]>([]);
 
-const NotificationsContext = createContext<NotificationData[]>([]);
+export const useNotificationController = () => useContext(NotificationContext);
 
-export const useNotificationController = () => useContext(ControllerContext);
-export const useNotifications = () => useContext(NotificationsContext);
+export const useNotificationState = () => useContext(NotificationCurrentContext);
 
 export const NotificationImperativeProvider = ({
   children,
   options,
   multiple,
-  onAdd,
-  onRemove,
 }: NotificationImperativeProviderProps) => {
   const counterRef = useRef(0);
+
   const [notifications, setNotifications] = useState<NotificationData[]>([]);
-  console.log('notifications', notifications);
-  const show = useCallback(
-    (title: string, showOptions?: ShowOptions) => {
-      console.log('show');
-      console.log('title', title);
+  console.log('notifications222', notifications);
+
+  const [lastNativeNotificationRef, setLastNativeNotificationRef] =
+    useState<NotificationContextI['nativeNotification']>(null);
+
+  const show = useCallback<NotificationContextI['show']>(
+    (title, showOptions) => {
       const native = showOptions?.native ?? options.native;
       const isWebNative = Array.isArray(native) ? native.includes('web') : native === 'web';
       const isMobileNative = Array.isArray(native)
@@ -62,7 +64,6 @@ export const NotificationImperativeProvider = ({
           nativeNotificationRef = nativeNotificationResult.nativeNotificationRef;
         }
       }
-
       counterRef.current++;
       const newNotification: NotificationData = {
         ...showOptions,
@@ -71,7 +72,7 @@ export const NotificationImperativeProvider = ({
         isHandledNatively,
         duration: showOptions?.duration ?? options.duration,
         viewportName: showOptions?.viewportName ?? 'default',
-        nativeNotificationRef, // <-- Сохраняем ссылку в объект уведомления
+        nativeNotificationRef,
       };
 
       setNotifications((prev) => {
@@ -82,32 +83,36 @@ export const NotificationImperativeProvider = ({
         return newQueue;
       });
 
-      onAdd();
       return true;
     },
-    [multiple, options.duration, options.native, onAdd],
+    [setNotifications, JSON.stringify(options.native || null)],
   );
 
   const hide = useCallback(
     (notificationId: string) => {
-      // Находим ref ПЕРЕД удалением уведомления из состояния
       const notificationToHide = notifications.find((n) => n.id === notificationId);
       notificationToHide?.nativeNotificationRef?.close();
 
       setNotifications((prev) => prev.filter((n) => n.id !== notificationId));
-      onRemove();
     },
-    [notifications, onRemove], // Добавляем notifications в зависимости
+    [notifications],
   );
 
-  const controllerValue = useMemo(() => ({ show, hide }), [show, hide]);
-  console.log('controllerValue', controllerValue);
-  console.log('notifications', notifications);
+  const contextValue = useMemo(
+    () => ({
+      show,
+      hide,
+      nativeNotification: lastNativeNotificationRef,
+      options,
+    }),
+    [show, hide, lastNativeNotificationRef, JSON.stringify(options || null)],
+  );
+
   return (
-    <ControllerContext.Provider value={controllerValue}>
-      <NotificationsContext.Provider value={notifications}>
+    <NotificationContext.Provider value={contextValue}>
+      <NotificationCurrentContext.Provider value={notifications}>
         {children}
-      </NotificationsContext.Provider>
-    </ControllerContext.Provider>
+      </NotificationCurrentContext.Provider>
+    </NotificationContext.Provider>
   );
 };

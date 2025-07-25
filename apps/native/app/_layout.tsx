@@ -1,15 +1,15 @@
 // import { NativeToast } from '@app/ui/src/NativeToast';
 
 import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
+import { NotificationProvider, NotificationViewport } from 'app/components/notification';
+import { CustomToasts } from 'app/components/toasts';
 import { MainLayout } from 'app/layouts/main';
 import { Provider } from 'app/provider';
-// import { useFonts } from 'expo-font';
 import { Stack } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { useEffect, useState } from 'react';
 import { useColorScheme } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-
 export const unstable_settings = {
   // Ensure that reloading on `/user` keeps a back button present.
   initialRouteName: 'Home',
@@ -72,9 +72,20 @@ function RootLayoutNav() {
     <Provider>
       <SafeAreaProvider>
         <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-          <MainLayout>
-            <Stack />
-          </MainLayout>
+          <NotificationProvider duration={10000} multiple={5}>
+            <MainLayout>
+              <Stack />
+            </MainLayout>
+            <CustomToasts />
+            {/* <CustomSnackBar /> */}
+            <NotificationViewport
+              name="toast"
+              top="50%"
+              left="50%"
+              transform={[{ translateX: '-50%' }, { translateY: '-50%' }]}
+            />
+            {/* <NotificationViewport name="snack-bar" bottom={0} right={0} /> */}
+          </NotificationProvider>
           {/* <NativeToast /> */}
         </ThemeProvider>
       </SafeAreaProvider>
