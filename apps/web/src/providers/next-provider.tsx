@@ -11,6 +11,7 @@ import {
   NotificationProvider,
   NotificationViewport,
 } from './../../../../packages/app/components/notification';
+import { CustomSnackBars } from '../../../../packages/app/components/snack-bars/snack-bars';
 import { CustomToasts } from '../../../../packages/app/components/toasts/toasts';
 
 export function NextTamaguiProvider({ children }: { children: ReactNode }) {
@@ -48,14 +49,19 @@ export function NextTamaguiProvider({ children }: { children: ReactNode }) {
         <NotificationProvider duration={5000}>
           {children}
           <CustomToasts />
-          {/* <CustomSnackBar /> */}
+          <CustomSnackBars />
           <NotificationViewport
             name="toast"
             top="50%"
             left="50%"
             transform={[{ translateX: '-50%' }, { translateY: '-50%' }]}
           />
-          {/* <NotificationViewport name="snack-bar" bottom={0} right={0} /> */}
+          <NotificationViewport
+            name="snack-bar"
+            top="50%"
+            left="50%"
+            transform={[{ translateX: '-50%' }, { translateY: '-50%' }]}
+          />
         </NotificationProvider>
       </Provider>
     </NextThemeProvider>

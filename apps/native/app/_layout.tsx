@@ -2,6 +2,7 @@
 
 import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
 import { NotificationProvider, NotificationViewport } from 'app/components/notification';
+import { CustomSnackBars } from 'app/components/snack-bars';
 import { CustomToasts } from 'app/components/toasts';
 import { MainLayout } from 'app/layouts/main';
 import { Provider } from 'app/provider';
@@ -77,14 +78,19 @@ function RootLayoutNav() {
               <Stack />
             </MainLayout>
             <CustomToasts />
-            {/* <CustomSnackBar /> */}
+            {/* <CustomSnackBars />r */}
             <NotificationViewport
               name="toast"
               top="50%"
               left="50%"
               transform={[{ translateX: '-50%' }, { translateY: '-50%' }]}
             />
-            {/* <NotificationViewport name="snack-bar" bottom={0} right={0} /> */}
+            {/* <NotificationViewport
+              name="snack-bar"
+              top="50%"
+              left="50%"
+              transform={[{ translateX: '-50%' }, { translateY: '-50%' }]}
+            /> */}
           </NotificationProvider>
           {/* <NativeToast /> */}
         </ThemeProvider>

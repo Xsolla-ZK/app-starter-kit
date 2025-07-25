@@ -26,6 +26,7 @@ import {
   Typography,
 } from '@app/ui';
 import { BankCard, ChevronDown, Plus } from '@xsolla-zk/icons';
+import { Notification } from '@xsolla-zk/react';
 import { useEffect } from 'react';
 import Animated, {
   useAnimatedStyle,
@@ -229,12 +230,15 @@ export default function HomeScreen() {
       id: '1',
       title: 'Порно весело, задорно',
       description: 'Уведомление успешно вызвано!',
-      viewportName: 'toast',
+      viewportName: 'snack-bar',
     });
     show('Тест 2', {
       id: '2',
       description: 'Уведомление успешно вызвано!',
-      viewportName: 'toast',
+      viewportName: 'snack-bar',
+      CustomData: {
+        status: 'success',
+      },
     });
     show('Тест 3', {
       id: '3',
@@ -313,7 +317,17 @@ export default function HomeScreen() {
           <TextArea minRows={3} maxRows={4} />
           <InlineInput minRows={2} maxRows={5} />
           <InlineInput rows={5} />
-          <Button onPress={handlePress} />
+
+          <Button
+            size="$200"
+            tone="neutral"
+            variant="secondary"
+            animation="medium"
+            onPress={handlePress}
+            tag="div"
+          >
+            <Button.Text>Notification</Button.Text>
+          </Button>
           <PasswordField />
         </Stack>
       </Stack>
