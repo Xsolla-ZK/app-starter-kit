@@ -29,7 +29,6 @@ export const NotificationImperativeProvider = ({
   const counterRef = useRef(0);
 
   const [notifications, setNotifications] = useState<NotificationData[]>([]);
-  console.log('notifications222', notifications);
 
   const [lastNativeNotificationRef, setLastNativeNotificationRef] =
     useState<NotificationContextI['nativeNotification']>(null);
