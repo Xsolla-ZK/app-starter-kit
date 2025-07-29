@@ -9,7 +9,9 @@ import {
   ContentStack,
   type GetProps,
   type IconProp,
+  InlineInput,
   List,
+  PasswordField,
   Pimple,
   PromoText,
   type PromoTextItemProps,
@@ -23,7 +25,10 @@ import {
   Tabs,
   type TamaguiComponent,
   Text,
+  TextArea,
+  Tooltip,
   Typography,
+  useNotificationController,
 } from '@app/ui';
 import { BankCard, ChevronDown, Plus } from '@xsolla-zk/icons';
 import { useEffect } from 'react';
@@ -33,6 +38,7 @@ import Animated, {
   withDelay,
   withSpring,
 } from 'react-native-reanimated';
+// import { Paragraph, Tooltip } from 'tamagui';
 import { XSollaZKDiamond } from '../../components/icons/xsolla-zk-diamond';
 
 const contentBlank =
@@ -219,6 +225,43 @@ function AccordionStory() {
 }
 
 export default function HomeScreen() {
+  const { show } = useNotificationController();
+  const handlePress = () => {
+    show('Тест 1', {
+      id: '1',
+      title: 'Порно весело, задорно',
+      description: 'Уведомление успешно вызвано!',
+      viewportName: 'snack-bar',
+    });
+    show('Тест 2', {
+      id: '2',
+      description: 'Уведомление успешно вызвано!',
+      viewportName: 'snack-bar',
+      CustomData: {
+        status: 'success',
+      },
+    });
+    show('Тест 3', {
+      id: '3',
+      description: 'Уведомление успешно вызвано!',
+      viewportName: 'toast',
+    });
+    show('Тест 4', {
+      id: '4',
+      description: 'Уведомление успешно вызвано!',
+      viewportName: 'toast',
+    });
+    show('Тест 5', {
+      id: '3',
+      description: 'Уведомление успешно вызвано!',
+      viewportName: 'toast',
+    });
+    show('Тест 6', {
+      id: '4',
+      description: 'Уведомление успешно вызвано!',
+      viewportName: 'toast',
+    });
+  };
   return (
     <ScrollView paddingVertical="$space.350">
       <Stack flex={1} justifyContent="flex-end">
@@ -269,7 +312,40 @@ export default function HomeScreen() {
         </Chips>
         <CellStory size="large" width="100%" withBoard />
         <AccordionStory />
-        <TabsStory />
+        <ContentStack />
+        <Stack width="100%" gap={30}>
+          <TextArea rows={5} />
+          <TextArea minRows={3} maxRows={4} />
+          <InlineInput minRows={2} maxRows={5} />
+          <InlineInput rows={5} />
+
+          <Button
+            size="$200"
+            tone="neutral"
+            variant="secondary"
+            animation="medium"
+            onPress={handlePress}
+            tag="div"
+          >
+            <Button.Text>Notification</Button.Text>
+          </Button>
+          <PasswordField />
+          <Tooltip offset={15} restMs={40} delay={40}>
+            <Tooltip.Trigger>
+              <SemanticText
+                variant="paragraphS"
+                color="$content.neutral-secondary"
+                textAlign="center"
+              >
+                Tooltip
+              </SemanticText>
+            </Tooltip.Trigger>
+
+            <Tooltip.Content>
+              <SemanticText>Tooltip Content Text</SemanticText>
+            </Tooltip.Content>
+          </Tooltip>
+        </Stack>
       </Stack>
     </ScrollView>
   );

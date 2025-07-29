@@ -1,6 +1,7 @@
 'use client';
 
 import { config } from '@app/config';
+import { CustomSnackBars, CustomToasts, NotificationProvider, NotificationViewport } from '@app/ui';
 import type { ColorScheme } from '@tamagui/next-theme';
 import { NextThemeProvider, useRootTheme } from '@tamagui/next-theme';
 import { Provider } from 'app/provider';
@@ -40,7 +41,23 @@ export function NextTamaguiProvider({ children }: { children: ReactNode }) {
       }}
     >
       <Provider config={config} defaultTheme={theme ?? 'light'}>
-        {children}
+        <NotificationProvider duration={5000}>
+          {children}
+          <CustomToasts />
+          <CustomSnackBars />
+          <NotificationViewport
+            name="toast"
+            top="50%"
+            left="50%"
+            transform={[{ translateX: '-50%' }, { translateY: '-50%' }]}
+          />
+          <NotificationViewport
+            name="snack-bar"
+            top="50%"
+            left="50%"
+            transform={[{ translateX: '-50%' }, { translateY: '-50%' }]}
+          />
+        </NotificationProvider>
       </Provider>
     </NextThemeProvider>
   );
