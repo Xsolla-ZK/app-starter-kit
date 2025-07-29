@@ -9,6 +9,7 @@ import {
   ContentStack,
   type GetProps,
   type IconProp,
+  InlineInput,
   List,
   PasswordField,
   Pimple,
@@ -37,7 +38,6 @@ import Animated, {
 } from 'react-native-reanimated';
 // import { Paragraph, Tooltip } from 'tamagui';
 import { XSollaZKDiamond } from '../../components/icons/xsolla-zk-diamond';
-import { InlineInput } from '../../components/inline-input';
 import { useNotificationController } from '../../components/notification';
 import { TextArea } from '../../components/textarea';
 

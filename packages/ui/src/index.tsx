@@ -5,6 +5,8 @@ export * from '@xsolla-zk/react';
 
 // local
 export * from './card/card';
+export { useAutoResizeFont } from './hooks/auto-resize-font';
+export { InlineInput } from './inline-input/inline-input';
 export { Input } from './input/input';
 export { Modal } from './modal/modal';
 export { PasswordField } from './password-field/password-field';
