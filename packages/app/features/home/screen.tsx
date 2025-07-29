@@ -10,6 +10,7 @@ import {
   type GetProps,
   type IconProp,
   List,
+  PasswordField,
   Pimple,
   PromoText,
   type PromoTextItemProps,
@@ -38,7 +39,6 @@ import Animated, {
 import { XSollaZKDiamond } from '../../components/icons/xsolla-zk-diamond';
 import { InlineInput } from '../../components/inline-input';
 import { useNotificationController } from '../../components/notification';
-import { PasswordField } from '../../components/password-field';
 import { TextArea } from '../../components/textarea';
 
 const contentBlank =

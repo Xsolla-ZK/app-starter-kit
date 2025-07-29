@@ -1,7 +1,6 @@
-import { type InputProps, RichIcon } from '@app/ui';
+import { Input, type InputProps, RichIcon } from '@app/ui';
 import { Cross, Eye, EyeSlash } from '@xsolla-zk/icons';
 import { forwardRef, useCallback, useEffect, useState } from 'react';
-import { Input } from '../input';
 
 export const PasswordField = forwardRef<HTMLInputElement, InputProps>(function PasswordField(
   { value, onChangeText, ...props },
