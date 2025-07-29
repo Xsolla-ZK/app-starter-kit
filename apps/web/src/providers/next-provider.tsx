@@ -1,18 +1,13 @@
 'use client';
 
 import { config } from '@app/config';
+import { CustomSnackBars, CustomToasts, NotificationProvider, NotificationViewport } from '@app/ui';
 import type { ColorScheme } from '@tamagui/next-theme';
 import { NextThemeProvider, useRootTheme } from '@tamagui/next-theme';
 import { Provider } from 'app/provider';
 import { useServerInsertedHTML } from 'next/navigation';
 import { type ReactNode, useRef } from 'react';
 import { StyleSheet } from 'react-native';
-import {
-  NotificationProvider,
-  NotificationViewport,
-} from './../../../../packages/app/components/notification';
-import { CustomSnackBars } from '../../../../packages/app/components/snack-bars/snack-bars';
-import { CustomToasts } from '../../../../packages/app/components/toasts/toasts';
 
 export function NextTamaguiProvider({ children }: { children: ReactNode }) {
   const [theme, setTheme] = useRootTheme();

@@ -25,8 +25,10 @@ import {
   Tabs,
   type TamaguiComponent,
   Text,
+  TextArea,
   Tooltip,
   Typography,
+  useNotificationController,
 } from '@app/ui';
 import { BankCard, ChevronDown, Plus } from '@xsolla-zk/icons';
 import { useEffect } from 'react';
@@ -38,8 +40,6 @@ import Animated, {
 } from 'react-native-reanimated';
 // import { Paragraph, Tooltip } from 'tamagui';
 import { XSollaZKDiamond } from '../../components/icons/xsolla-zk-diamond';
-import { useNotificationController } from '../../components/notification';
-import { TextArea } from '../../components/textarea';
 
 const contentBlank =
   'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis imperdiet nibh. In nunc eros, fermentum at massa id, egestas pulvinar lorem. Morbi nisi orci, feugiat in gravida et, efficitur ac metus. Nam euismod, magna eget cursus pretium, risus metus rutrum diam, nec hendrerit risus elit nec risus. Vivamus sed lorem mollis, malesuada tellus quis, condimentum nulla. Mauris ornare leo eget volutpat consectetur. Duis sed mattis nisi. Vivamus id mi tincidunt, consequat enim et, ultrices magna. Mauris porttitor ornare porta. Maecenas maximus dignissim ipsum, sodales ultricies felis auctor sed. Aliquam convallis efficitur quam, quis faucibus justo rutrum scelerisque.';

@@ -1,7 +1,8 @@
+import { Notification } from '@app/ui';
 import { Checkmark, Cross, Info, Plus, Warning } from '@xsolla-zk/icons';
 import type { ColorTokens, IconProp } from '@xsolla-zk/react';
 import { FlexButton, RichIcon, SnackBar } from '@xsolla-zk/react';
-import { Notification, useNotificationState } from '../notification';
+import { useNotificationState } from '../notification';
 
 const getIconData = (status?: 'success' | 'warning' | 'info' | unknown) => {
   if (status === 'success') {
