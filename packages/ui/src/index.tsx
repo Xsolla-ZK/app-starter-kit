@@ -11,3 +11,4 @@ export { CustomSnackBar } from './snack-bar/snack-bar';
 export * from './stacks/content-stack';
 export * from './stacks/screen-stack';
 export { CustomToast } from './toast/toast';
+export * from './tooltip/tooltip';
