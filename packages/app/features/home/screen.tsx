@@ -26,7 +26,6 @@ import {
   Typography,
 } from '@app/ui';
 import { BankCard, ChevronDown, Plus } from '@xsolla-zk/icons';
-import { Notification } from '@xsolla-zk/react';
 import { useEffect } from 'react';
 import Animated, {
   useAnimatedStyle,
@@ -34,11 +33,14 @@ import Animated, {
   withDelay,
   withSpring,
 } from 'react-native-reanimated';
+// import { Paragraph, Tooltip } from 'tamagui';
 import { XSollaZKDiamond } from '../../components/icons/xsolla-zk-diamond';
 import { InlineInput } from '../../components/inline-input';
 import { useNotificationController } from '../../components/notification';
 import { PasswordField } from '../../components/password-field';
 import { TextArea } from '../../components/textarea';
+
+import { Tooltip } from '../../components/tooltip/tooltip';
 
 const contentBlank =
   'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis imperdiet nibh. In nunc eros, fermentum at massa id, egestas pulvinar lorem. Morbi nisi orci, feugiat in gravida et, efficitur ac metus. Nam euismod, magna eget cursus pretium, risus metus rutrum diam, nec hendrerit risus elit nec risus. Vivamus sed lorem mollis, malesuada tellus quis, condimentum nulla. Mauris ornare leo eget volutpat consectetur. Duis sed mattis nisi. Vivamus id mi tincidunt, consequat enim et, ultrices magna. Mauris porttitor ornare porta. Maecenas maximus dignissim ipsum, sodales ultricies felis auctor sed. Aliquam convallis efficitur quam, quis faucibus justo rutrum scelerisque.';
@@ -329,6 +331,21 @@ export default function HomeScreen() {
             <Button.Text>Notification</Button.Text>
           </Button>
           <PasswordField />
+          <Tooltip offset={15} restMs={40} delay={40}>
+            <Tooltip.Trigger>
+              <SemanticText
+                variant="paragraphS"
+                color="$content.neutral-secondary"
+                textAlign="center"
+              >
+                Tooltip
+              </SemanticText>
+            </Tooltip.Trigger>
+
+            <Tooltip.Content>
+              <SemanticText>Tooltip Content Text</SemanticText>
+            </Tooltip.Content>
+          </Tooltip>
         </Stack>
       </Stack>
     </ScrollView>
