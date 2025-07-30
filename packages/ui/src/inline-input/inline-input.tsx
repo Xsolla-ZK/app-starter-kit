@@ -1,13 +1,7 @@
-import {
-  Input,
-  type InputProps,
-  isWeb,
-  useAutoResizeFont,
-  useComposedRefs,
-  withStaticProperties,
-} from '@app/ui';
+import { Input, type InputProps, isWeb, useComposedRefs, withStaticProperties } from '@app/ui';
 import { forwardRef, useMemo, useRef } from 'react';
 import { Text } from 'react-native';
+import { useAutoResizeFont } from '../../../app/components/hooks';
 import { InputContext, InputEndSlot, InputStartSlot } from '../input/input.styled';
 
 const InlineInputBase = forwardRef<HTMLInputElement, InputProps>(function InlineInputBase(

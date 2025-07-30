@@ -1,6 +1,6 @@
 import { Input, type InputProps, isWeb, useComposedRefs, withStaticProperties } from '@app/ui';
 import { forwardRef, useMemo, useRef } from 'react';
-import { useAutoResizeFont } from '../hooks';
+import { useAutoResizeFont } from '../../../app/components/hooks';
 import { InputContext, InputEndSlot, InputStartSlot } from '../input/input.styled';
 
 const TextAreaBase = forwardRef<HTMLInputElement, InputProps>(function InlineInputBase(

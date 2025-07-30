@@ -315,8 +315,8 @@ export default function HomeScreen() {
         <ContentStack />
         <Stack width="100%" gap={30}>
           <TextArea rows={5} />
-          <TextArea minRows={3} maxRows={4} />
-          <InlineInput minRows={2} maxRows={5} />
+          <TextArea minRows={2} maxRows={4} />
+          <InlineInput minRows={2} maxRows={3} />
           <InlineInput rows={5} />
 
           <Button
