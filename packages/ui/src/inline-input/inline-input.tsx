@@ -11,11 +11,6 @@ const InlineInputBase = forwardRef<HTMLInputElement, InputProps>(function Inline
   let minRows = propMinRows;
   let maxRows = propMaxRows;
 
-  if (typeof minRows === 'number' && typeof maxRows === 'number' && minRows > maxRows) {
-    console.warn('[InlineInput] `minRows` > `maxRows` — значения будут переупорядочены');
-    [minRows, maxRows] = [maxRows, minRows];
-  }
-
   if (rows) {
     minRows = rows;
     maxRows = rows;
