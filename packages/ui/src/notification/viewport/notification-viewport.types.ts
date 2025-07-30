@@ -28,6 +28,7 @@ export type NotificationViewportProps = NotificationViewportFrameProps & {
    * When true, uses a portal to render at the very top of the root TamaguiProvider.
    */
   portalToRoot?: boolean;
+  multipleNotifications: boolean;
 };
 
 export type FocusProxyElement = ComponentRef<typeof VisuallyHidden>;

@@ -1,3 +1,4 @@
+//fork tamagui and refactor
 import { AnimatePresence } from '@tamagui/animate-presence';
 import { useComposedRefs } from '@tamagui/compose-refs';
 import { isWeb, type TamaguiElement } from '@tamagui/core';
@@ -11,8 +12,9 @@ import {
   NOTIFICATION_VIEWPORT_RESUME,
 } from '@xsolla-zk/constants';
 import { forwardRef, memo, useCallback, useEffect, useRef } from 'react';
-import { NotificationPortal } from '../notification-portal';
 import { VisuallyHidden } from '../notification.styled';
+import type { NotificationScopedProps } from '../notification.types';
+import { NotificationPortal } from '../notification-portal';
 import {
   Collection,
   useCollection,
@@ -22,7 +24,6 @@ import {
   NotificationViewportFrame,
   NotificationViewportWrapperFrame,
 } from './notification-viewport.styled';
-import type { NotificationScopedProps } from '../notification.types';
 import type {
   FocusProxyElement,
   FocusProxyProps,
