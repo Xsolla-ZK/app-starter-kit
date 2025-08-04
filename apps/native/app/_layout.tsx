@@ -1,9 +1,13 @@
 // import { NativeToast } from '@app/ui/src/NativeToast';
 
+import {
+  CustomSnackBars,
+  CustomToast,
+  CustomToasts,
+  NotificationProvider,
+  NotificationViewport,
+} from '@app/ui';
 import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
-import { NotificationProvider, NotificationViewport } from 'app/components/notification';
-import { CustomSnackBars } from 'app/components/snack-bars';
-import { CustomToasts } from 'app/components/toasts';
 import { MainLayout } from 'app/layouts/main';
 import { Provider } from 'app/provider';
 import { Stack } from 'expo-router';
@@ -78,19 +82,20 @@ function RootLayoutNav() {
               <Stack />
             </MainLayout>
             <CustomToasts />
-            {/* <CustomSnackBars />r */}
+            <CustomToast />
+            {/* <CustomSnackBars /> */}
             <NotificationViewport
               name="toast"
               top="50%"
               left="50%"
               transform={[{ translateX: '-50%' }, { translateY: '-50%' }]}
             />
-            {/* <NotificationViewport
+            <NotificationViewport
               name="snack-bar"
               top="50%"
               left="50%"
               transform={[{ translateX: '-50%' }, { translateY: '-50%' }]}
-            /> */}
+            />
           </NotificationProvider>
           {/* <NativeToast /> */}
         </ThemeProvider>

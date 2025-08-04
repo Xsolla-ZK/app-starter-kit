@@ -229,7 +229,7 @@ export default function HomeScreen() {
   const handlePress = () => {
     show('Тест 1', {
       id: '1',
-      title: 'Порно весело, задорно',
+      title: 'Xsolla cупер сила',
       description: 'Уведомление успешно вызвано!',
       viewportName: 'snack-bar',
     });
@@ -260,6 +260,23 @@ export default function HomeScreen() {
       id: '4',
       description: 'Уведомление успешно вызвано!',
       viewportName: 'toast',
+    });
+  };
+
+  const handlePressSingleToast = () => {
+    show('Тест 6', {
+      id: '4',
+      description: 'Уведомление успешно вызвано!',
+      viewportName: 'toast',
+    });
+  };
+
+  const handlePressSingleSnackBar = () => {
+    show('Тест 1', {
+      id: '1',
+      title: 'Xsolla cупер сила',
+      description: 'Уведомление успешно вызвано!',
+      viewportName: 'snack-bar',
     });
   };
   return (
@@ -327,7 +344,27 @@ export default function HomeScreen() {
             onPress={handlePress}
             tag="div"
           >
-            <Button.Text>Notification</Button.Text>
+            <Button.Text>Notifications</Button.Text>
+          </Button>
+          <Button
+            size="$200"
+            tone="neutral"
+            variant="secondary"
+            animation="medium"
+            onPress={handlePressSingleToast}
+            tag="div"
+          >
+            <Button.Text>Toast</Button.Text>
+          </Button>
+          <Button
+            size="$200"
+            tone="neutral"
+            variant="secondary"
+            animation="medium"
+            onPress={handlePressSingleSnackBar}
+            tag="div"
+          >
+            <Button.Text>SnackBar</Button.Text>
           </Button>
           <PasswordField />
           <Tooltip offset={15} restMs={40} delay={40}>

@@ -1,15 +1,10 @@
 import { Checkmark, Cross, Info, Plus, Warning } from '@xsolla-zk/icons';
 import type { ColorTokens, IconProp } from '@xsolla-zk/react';
-import {
-  FlexButton,
-  Notification,
-  RichIcon,
-  SnackBar,
-  useNotificationState,
-} from '@xsolla-zk/react';
+import { FlexButton, RichIcon, SnackBar } from '@xsolla-zk/react';
+import { Notification, useNotificationState } from '../notification';
 
 export function CustomSnackBar() {
-  const currentNotification = useNotificationState();
+  const currentNotification = useNotificationState()?.[0];
 
   const getIcon = (): {
     icon: IconProp;

@@ -1,10 +1,11 @@
 import { Clock, ContentCopy } from '@xsolla-zk/icons';
 import type { IconProp } from '@xsolla-zk/react';
-import { Notification, RichIcon, Toast, useNotificationState } from '@xsolla-zk/react';
+import { RichIcon, Toast } from '@xsolla-zk/react';
+import { Notification, useNotificationState } from '../notification';
 
 export const CustomToast = () => {
-  const currentNotification = useNotificationState();
-
+  const currentNotification = useNotificationState()?.[0];
+  console.log('currentNotification', currentNotification);
   const getIcon = (): IconProp => {
     if (currentNotification?.customData?.type === 'copy') {
       return ContentCopy;
