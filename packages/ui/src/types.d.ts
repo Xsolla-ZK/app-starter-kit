@@ -4,4 +4,8 @@ export type Conf = typeof config;
 
 declare module '@xsolla-zk/react' {
   interface TamaguiCustomConfig extends Conf {}
+
+  // interface TypeOverride {
+  //   groupNames(): 'group-name';
+  // }
 }

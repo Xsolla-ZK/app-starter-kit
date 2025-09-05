@@ -1,14 +1,16 @@
 'use client';
 
+import { Discord } from '@app/icons';
 import {
   Accordion,
   Button,
   Cell,
   type CellProps,
   Chips,
+  type ColorType,
   ContentStack,
   type GetProps,
-  type IconProp,
+  type IconProps,
   List,
   Pimple,
   PromoText,
@@ -26,7 +28,7 @@ import {
   Typography,
 } from '@app/ui';
 import { BankCard, ChevronDown, Plus } from '@xsolla-zk/icons';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Animated, {
   useAnimatedStyle,
   useSharedValue,
@@ -41,8 +43,8 @@ const contentBlank =
 type TextItem = (
   | {
       type: 'icon';
-      icon: IconProp;
-      iconProps?: RichIconProps;
+      icon: IconProps;
+      iconProps?: RichIconProps & { backgroundColor?: ColorType };
     }
   | {
       type: 'text';
@@ -268,6 +270,10 @@ export default function HomeScreen() {
           ))}
         </Chips>
         <CellStory size="large" width="100%" withBoard />
+        <Button size="$700" tone="warning" variant="secondary">
+          <Button.Icon icon={Discord} />
+          <Button.Text>Button</Button.Text>
+        </Button>
         <AccordionStory />
         <TabsStory />
       </Stack>

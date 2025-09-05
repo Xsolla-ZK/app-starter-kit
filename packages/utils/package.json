@@ -14,7 +14,7 @@
   },
   "devDependencies": {
     "@app/typescript-config": "workspace:*",
-    "@tamagui/build": "1.127.2",
+    "@tamagui/build": "1.132.23",
     "typescript": "5.8.3"
   }
 }
