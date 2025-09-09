@@ -1,11 +1,6 @@
 module.exports = (api) => {
   api.cache(true);
   return {
-    ignore: [
-      // speeds up compile
-      '**/@tamagui/**/dist/**',
-      '**/@xsolla-zk/**/dist/**',
-    ],
     presets: [
       ['babel-preset-expo', { jsxRuntime: 'automatic', unstable_transformImportMeta: true }],
     ],
