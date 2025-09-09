@@ -1,11 +1,11 @@
-import type { config } from '@app/config';
-
-export type Conf = typeof config;
+import type { Config, ProjectComponentsConfig } from '@app/config';
 
 declare module '@xsolla-zk/react' {
-  interface TamaguiCustomConfig extends Conf {}
+  interface ComponentsCustomConfig extends ProjectComponentsConfig {}
+  interface TamaguiCustomConfig extends Config {}
 
+  // for group types:
   // interface TypeOverride {
-  //   groupNames(): 'group-name';
+  //   groupNames(): 'message'
   // }
 }

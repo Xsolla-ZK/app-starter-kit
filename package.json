@@ -7,10 +7,10 @@
     "./packages/*"
   ],
   "scripts": {
-    "native": "cd apps/native && yarn start",
-    "native:prebuild": "cd apps/native && yarn prebuild",
-    "ios": "cd apps/native && yarn ios",
-    "android": "cd apps/native && yarn android",
+    "native": "yarn build && cd apps/native && yarn start",
+    "native:prebuild": "yarn build && cd apps/native && yarn prebuild",
+    "ios": "yarn build && cd apps/native && yarn ios",
+    "android": "yarn build && cd apps/native && yarn android",
     "build": "yarn workspaces foreach --all --exclude web --exclude extension run build",
     "build:extension": "yarn workspace extension build",
     "web": "yarn build && cd apps/web && yarn dev",

@@ -3,6 +3,12 @@
   "compilerOptions": {
     "composite": true
   },
-  "include": ["app/**/*.ts", "app/**/*.tsx", ".expo/types/**/*.ts", "expo-env.d.ts"],
+  "include": [
+    "app/**/*.ts",
+    "app/**/*.tsx",
+    ".expo/types/**/*.ts",
+    "types/**/*.ts",
+    "expo-env.d.ts"
+  ],
   "references": []
 }

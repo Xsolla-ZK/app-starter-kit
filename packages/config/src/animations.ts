@@ -1,4 +1,5 @@
 import { createAnimations } from '@tamagui/animations-moti';
+import { defaultAnimationsConfig } from '@xsolla-zk/config';
 import { Easing } from 'react-native-reanimated';
 
 const easings = {
@@ -13,51 +14,7 @@ const easings = {
 };
 
 export const animations = createAnimations({
-  state: {
-    type: 'timing',
-    duration: 100,
-    easing: easings.easeOutQuad,
-  },
-  pop: {
-    type: 'timing',
-    duration: 100,
-    easing: easings.pop,
-  },
-  bounceIn: {
-    type: 'timing',
-    duration: 120,
-    easing: easings.bounceIn,
-  },
-  bounceOut: {
-    type: 'timing',
-    duration: 120,
-    easing: easings.bounceOut,
-  },
-  bounceReturn: {
-    type: 'timing',
-    duration: 240,
-    easing: easings.bounceReturn,
-  },
-  fade: {
-    type: 'timing',
-    duration: 120,
-    easing: easings.fade,
-  },
-  colorChange: {
-    type: 'timing',
-    duration: 120,
-    easing: easings.fade,
-  },
-  tabSwitch: {
-    type: 'timing',
-    duration: 450,
-    easing: easings.tabSwitch,
-  },
-  medium: {
-    type: 'timing',
-    duration: 300,
-    easing: easings.easeIn,
-  },
+  ...defaultAnimationsConfig,
   promoText: {
     type: 'spring',
     stiffness: 87370,

@@ -17,19 +17,16 @@
     "watch": "tamagui-build --skip-types --watch"
   },
   "dependencies": {
-    "@tamagui/animate-presence": "1.132.23",
     "@tamagui/image-next": "1.132.23",
-    "@tamagui/portal": "1.132.23",
-    "@tamagui/scroll-view": "1.132.23",
-    "@xsolla-zk/icons": "1.2.1",
-    "@xsolla-zk/react": "1.2.1"
+    "@xsolla-zk/icons": "1.2.3",
+    "@xsolla-zk/react": "1.2.3"
   },
   "devDependencies": {
     "@app/config": "workspace:*",
     "@app/typescript-config": "workspace:*",
     "@tamagui/build": "1.132.23",
-    "@types/react": "19.1.8",
-    "react-native": "0.80.0",
+    "@types/react": "^19.0.0",
+    "react-native": "0.79.6",
     "typescript": "5.8.3"
   }
 }

@@ -1,6 +1,4 @@
 export * from '@tamagui/image-next';
-export * from '@tamagui/portal';
-export * from '@tamagui/scroll-view';
 export * from '@xsolla-zk/react';
 // local
 export * from './card/card';

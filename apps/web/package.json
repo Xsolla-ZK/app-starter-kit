@@ -12,21 +12,21 @@
   },
   "dependencies": {
     "@tamagui/next-theme": "1.132.23",
-    "@xsolla-zk/icons": "1.2.1",
+    "@xsolla-zk/icons": "1.2.3",
     "app": "0.0.0",
     "next": "15.4.6",
-    "react": "19.1.0",
-    "react-dom": "19.1.0",
-    "react-native": "0.80.0",
-    "react-native-web": "0.20.0",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "react-native": "0.79.6",
+    "react-native-web": "^0.20.0",
     "solito": "patch:solito@npm%3A4.4.1#~/.yarn/patches/solito-npm-4.4.1-976dc5859c.patch"
   },
   "devDependencies": {
     "@app/typescript-config": "workspace:*",
     "@tamagui/next-plugin": "1.132.23",
     "@types/node": "^22.15.3",
-    "@types/react": "19.1.8",
-    "@types/react-dom": "19.1.6",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
     "typescript": "5.8.3",
     "webpack": "5.101.1"
   }

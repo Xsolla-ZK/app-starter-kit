@@ -1,11 +1,8 @@
-import type { config, projectComponentsConfig } from '@app/config';
-
-type ComponentsConfig = typeof projectComponentsConfig;
-type Conf = typeof config;
+import type { Config, ProjectComponentsConfig } from '@app/config';
 
 declare module '@app/ui' {
-  interface ComponentsCustomConfig extends ComponentsConfig {}
-  interface TamaguiCustomConfig extends Conf {}
+  interface ComponentsCustomConfig extends ProjectComponentsConfig {}
+  interface TamaguiCustomConfig extends Config {}
 
   // for group types:
   // interface TypeOverride {

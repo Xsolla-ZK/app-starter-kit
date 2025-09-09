@@ -3,9 +3,11 @@
 import '@tamagui/polyfill-dev';
 import '@xsolla-zk/react/reset.css';
 
-import { config } from '@app/config';
+import { config, initProjectComponentsConfig } from '@app/config';
 import { PortalProvider, TamaguiProvider, type TamaguiProviderProps } from '@app/ui';
 import { useColorScheme } from 'react-native';
+
+initProjectComponentsConfig();
 
 export function Provider({
   children,

@@ -19,13 +19,13 @@
     "generate": "xzkui-icons generate -i ./raw-icons -o ./src/icons"
   },
   "dependencies": {
-    "@tamagui/helpers-icon": "1.132.23"
+    "@xsolla-zk/ui-primitives": "1.2.3"
   },
   "devDependencies": {
     "@app/typescript-config": "workspace:*",
     "@tamagui/build": "1.132.23",
-    "@xsolla-zk/icons-generator": "1.2.1",
-    "react-native-svg": "15.8.0",
+    "@xsolla-zk/icons-generator": "1.2.3",
+    "react-native-svg": "15.11.2",
     "typescript": "5.8.3"
   },
   "exports": {

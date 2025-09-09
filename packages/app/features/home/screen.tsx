@@ -7,10 +7,10 @@ import {
   Cell,
   type CellProps,
   Chips,
-  type ColorType,
   ContentStack,
   type GetProps,
   type IconProps,
+  Image,
   List,
   Pimple,
   PromoText,
@@ -28,7 +28,7 @@ import {
   Typography,
 } from '@app/ui';
 import { BankCard, ChevronDown, Plus } from '@xsolla-zk/icons';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import Animated, {
   useAnimatedStyle,
   useSharedValue,
@@ -44,7 +44,7 @@ type TextItem = (
   | {
       type: 'icon';
       icon: IconProps;
-      iconProps?: RichIconProps & { backgroundColor?: ColorType };
+      iconProps?: RichIconProps;
     }
   | {
       type: 'text';
@@ -274,6 +274,27 @@ export default function HomeScreen() {
           <Button.Icon icon={Discord} />
           <Button.Text>Button</Button.Text>
         </Button>
+        <RichIcon
+          size="$500"
+          shape="leaf"
+          backgroundColor="$background.brand-high"
+          color="$content.on-brand"
+          image={(size) => (
+            <Image
+              src="https://whattofarm.io/assets/dex/tokens/200/wrapped-solana-sol-logo.webp"
+              width={size}
+              height={size}
+              objectFit="cover"
+              objectPosition="center"
+            />
+          )}
+          backdropProps={{
+            strokeWidth: 6,
+            stroke: '$border.brand-primary',
+          }}
+        >
+          <RichIcon.Icon icon={Plus} />
+        </RichIcon>
         <AccordionStory />
         <TabsStory />
       </Stack>

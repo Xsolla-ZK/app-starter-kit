@@ -17,12 +17,12 @@
     "generate:tokens:remote": "xzkui-tokens generate -t tamagui -s https://github.com/Xsolla-ZK/Design-Tokens.git -o ./src/tokens -p"
   },
   "dependencies": {
-    "@xsolla-zk/config": "1.2.1",
-    "@xsolla-zk/react": "1.2.1"
+    "@xsolla-zk/config": "1.2.3",
+    "@xsolla-zk/react": "1.2.3"
   },
   "devDependencies": {
     "@app/typescript-config": "workspace:*",
     "@tamagui/build": "1.132.23",
-    "@xsolla-zk/tokens": "1.2.1"
+    "@xsolla-zk/tokens": "1.2.3"
   }
 }
