@@ -4615,21 +4615,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@xsolla-zk/icons@npm:1.2.2":
-  version: 1.2.2
-  resolution: "@xsolla-zk/icons@npm:1.2.2"
-  dependencies:
-    "@tamagui/core": "npm:1.132.23"
-    "@xsolla-zk/ui-primitives": "npm:1.2.2"
-    react-native-svg: "npm:15.11.2"
-  peerDependencies:
-    "@tamagui/core": 1.132.23
-    "@xsolla-zk/ui-primitives": 1.2.2
-    react-native-svg: 15.11.2
-  checksum: 10/6af4eb2850120ac349a74d90b8cac7abf1232c79b5cb0811cab629c5db4c0fd8dbb1144298ac572c52ff61ead9d36f85e2ee064d1805b8be00e37b24e1928fa4
-  languageName: node
-  linkType: hard
-
 "@xsolla-zk/icons@npm:1.2.3":
   version: 1.2.3
   resolution: "@xsolla-zk/icons@npm:1.2.3"
@@ -4704,20 +4689,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@xsolla-zk/ui-primitives@npm:1.2.2":
-  version: 1.2.2
-  resolution: "@xsolla-zk/ui-primitives@npm:1.2.2"
-  dependencies:
-    "@tamagui/core": "npm:1.132.23"
-    "@xsolla-zk/ui-utils": "npm:1.2.2"
-    react-native-svg: "npm:15.11.2"
-  peerDependencies:
-    "@tamagui/core": 1.132.23
-    react-native-svg: 15.11.2
-  checksum: 10/645bd9b75da936cb12af9c13199cbb781a86584d8c75cbeb41890e71f9581553ee2ce239b75633812669117ad7834ce650d668c3143111d0794c5dbce8392b84
-  languageName: node
-  linkType: hard
-
 "@xsolla-zk/ui-primitives@npm:1.2.3":
   version: 1.2.3
   resolution: "@xsolla-zk/ui-primitives@npm:1.2.3"
@@ -4729,15 +4700,6 @@ __metadata:
     "@tamagui/core": 1.132.23
     react-native-svg: 15.11.2
   checksum: 10/e8bcd6c4d2446c3a2987bee6db6a7692834897409cc8cab7749458e193eeced0dafc381bdb2e434352489113c6227da7c085976e4401844394ff14733d48a41a
-  languageName: node
-  linkType: hard
-
-"@xsolla-zk/ui-utils@npm:1.2.2":
-  version: 1.2.2
-  resolution: "@xsolla-zk/ui-utils@npm:1.2.2"
-  dependencies:
-    "@tamagui/core": "npm:1.132.23"
-  checksum: 10/4484ca2db7d8645847fcae080fa5637ab26cd4874fe020018a1f9ddcba102f4bb87cdbf837c78d373ea999d323d24395c7b507d9ae05fcabc1e4ab0f2149c665
   languageName: node
   linkType: hard
 
@@ -9036,7 +8998,7 @@ __metadata:
     "@react-navigation/native": "npm:^7.1.6"
     "@tamagui/babel-plugin": "npm:1.132.23"
     "@types/react-native-get-random-values": "npm:^1"
-    "@xsolla-zk/icons": "npm:1.2.2"
+    "@xsolla-zk/icons": "npm:1.2.3"
     app: "npm:0.0.0"
     babel-plugin-module-resolver: "npm:^5.0.2"
     expo: "npm:^53.0.22"
@@ -11670,9 +11632,9 @@ __metadata:
   linkType: hard
 
 "undici@npm:^6.18.2 || ^7.0.0":
-  version: 7.15.0
-  resolution: "undici@npm:7.15.0"
-  checksum: 10/f48170c88c25d5fed0d7a3d6df9f1b6af97b530c8d799508af685ffa9913e75eb85394c0d3c0be2765548388fdd487e172da5659da8a1b052493cd809482fe06
+  version: 7.16.0
+  resolution: "undici@npm:7.16.0"
+  checksum: 10/2bb71672b23d3dc0f56f1b7fb6c936e4487a350db46eaafc03f2f9107f99cdf8e51ecdd32e589e2381ef47a64b6369cfb31f328b2c3ea663023aa47bc5258b9e
   languageName: node
   linkType: hard
 
