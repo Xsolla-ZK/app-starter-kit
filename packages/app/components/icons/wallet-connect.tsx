@@ -3,9 +3,9 @@ import { SvgThemed } from '@app/ui';
 import { memo } from 'react';
 import { Path } from 'react-native-svg';
 
-function Icon({ size = 56 }: IconProps) {
+function Icon({ size = 56, ...props }: IconProps) {
   return (
-    <SvgThemed viewBox="0 0 56 56" fill="none" size={size}>
+    <SvgThemed viewBox="0 0 56 56" fill="none" size={size} {...props}>
       <Path
         d="M1.66753 13.8302C3.1044 7.81089 7.81089 3.1044 13.8302 1.66753C23.1442 -0.555844 32.8557 -0.555844 42.1698 1.66753C48.1891 3.1044 52.8955 7.81089 54.3325 13.8302C56.5558 23.1442 56.5558 32.8557 54.3325 42.1698C52.8955 48.1891 48.1891 52.8955 42.1698 54.3325C32.8557 56.5558 23.1442 56.5558 13.8302 54.3325C7.81089 52.8955 3.1044 48.1891 1.66753 42.1698C-0.555844 32.8557 -0.555844 23.1442 1.66753 13.8302Z"
         fill="#3396FF"
