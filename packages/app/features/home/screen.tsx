@@ -9,7 +9,7 @@ import {
   Chips,
   ContentStack,
   type GetProps,
-  type IconProps,
+  type IconComponent,
   Image,
   List,
   Pimple,
@@ -43,7 +43,7 @@ const contentBlank =
 type TextItem = (
   | {
       type: 'icon';
-      icon: IconProps;
+      icon: IconComponent;
       iconProps?: RichIconProps;
     }
   | {

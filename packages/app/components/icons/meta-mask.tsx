@@ -1,12 +1,11 @@
-import type { RichIconSizes } from '@app/ui';
-import { getSafeTokenValue, type IconProp } from '@app/ui';
+import type { IconProps } from '@app/ui';
+import { SvgThemed } from '@app/ui';
 import { memo } from 'react';
-import { Path, Svg } from 'react-native-svg';
+import { Path } from 'react-native-svg';
 
-function Icon({ size }: { size?: RichIconSizes }) {
-  const sizeValue = getSafeTokenValue(size) || 56;
+function Icon({ size = 56 }: IconProps) {
   return (
-    <Svg width={sizeValue} height={sizeValue} viewBox="0 0 56 56" fill="none">
+    <SvgThemed viewBox="0 0 56 56" fill="none" size={size}>
       <Path
         d="M1.66753 13.8302C3.1044 7.81089 7.81089 3.1044 13.8302 1.66753C23.1442 -0.555844 32.8557 -0.555844 42.1698 1.66753C48.1891 3.1044 52.8955 7.81089 54.3325 13.8302C56.5558 23.1442 56.5558 32.8557 54.3325 42.1698C52.8955 48.1891 48.1891 52.8955 42.1698 54.3325C32.8557 56.5558 23.1442 56.5558 13.8302 54.3325C7.81089 52.8955 3.1044 48.1891 1.66753 42.1698C-0.555844 32.8557 -0.555844 23.1442 1.66753 13.8302Z"
         fill="#8E8E8E"
@@ -37,8 +36,8 @@ function Icon({ size }: { size?: RichIconSizes }) {
         d="M19.9463 41.9699L25.921 45.4986V42.3037L25.386 40.369L19.9463 41.9699ZM36.0559 41.9699L30.0809 45.4986V42.3037L30.6159 40.369L36.0559 41.9699Z"
         fill="#E7EBF6"
       />
-    </Svg>
+    </SvgThemed>
   );
 }
 
-export const MetaMask = memo(Icon) as IconProp;
+export const MetaMask = memo(Icon);
