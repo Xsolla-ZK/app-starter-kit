@@ -19,7 +19,7 @@
           "type": "opacity"
         },
         "dark": {
-          "value": "0.08",
+          "value": "0.12",
           "type": "opacity"
         },
         "static": {
@@ -33,7 +33,7 @@
           "type": "opacity"
         },
         "dark": {
-          "value": "0.04",
+          "value": "0.12",
           "type": "opacity"
         },
         "static": {

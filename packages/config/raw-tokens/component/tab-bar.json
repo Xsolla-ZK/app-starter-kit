@@ -19,7 +19,7 @@
       },
       "label": {
         "typography": {
-          "value": "compact.200.default",
+          "value": "compact.200.accent",
           "type": "other"
         }
       }

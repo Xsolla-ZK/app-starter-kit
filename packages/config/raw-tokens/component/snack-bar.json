@@ -7,7 +7,7 @@
           "type": "number"
         },
         "border-radius": {
-          "value": "{radius.550}",
+          "value": "{radius.300}",
           "type": "number"
         },
         "padding-top": {

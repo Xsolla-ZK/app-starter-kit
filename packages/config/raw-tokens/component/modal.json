@@ -40,19 +40,19 @@
         },
         "border-radius": {
           "sm": {
-            "value": "{radius.600}",
+            "value": "{radius.300}",
             "type": "number"
           },
           "md": {
-            "value": "{radius.600}",
+            "value": "{radius.300}",
             "type": "number"
           },
           "lg": {
-            "value": "{radius.700}",
+            "value": "{radius.300}",
             "type": "number"
           },
           "xl": {
-            "value": "{radius.700}",
+            "value": "{radius.300}",
             "type": "number"
           }
         }

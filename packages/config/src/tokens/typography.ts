@@ -63,7 +63,7 @@ export const typography = {
   'font-weight.display.default': 500,
   'font-weight.display.accent': 600,
   'font-weight.text.light': 100,
-  'font-weight.text.default': 500,
+  'font-weight.text.default': 400,
   'font-weight.text.accent': 600,
   'font-weight.compact.light': 100,
   'font-weight.compact.default': 500,

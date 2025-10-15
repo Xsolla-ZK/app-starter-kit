@@ -253,7 +253,7 @@
           "type": "number"
         },
         "default": {
-          "value": "500",
+          "value": "400",
           "type": "number"
         },
         "accent": {

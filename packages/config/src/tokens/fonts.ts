@@ -50,8 +50,8 @@ export const fonts = {
       '400': 30,
     },
     weight: {
-      default: '500',
-      numeric: '500',
+      default: '400',
+      numeric: '400',
       accent: '600',
       'accent-numeric': '600',
     },
@@ -75,8 +75,8 @@ export const fonts = {
       '400': 26,
     },
     weight: {
-      default: '500',
-      numeric: '500',
+      default: '400',
+      numeric: '400',
       accent: '600',
       'accent-numeric': '600',
     },

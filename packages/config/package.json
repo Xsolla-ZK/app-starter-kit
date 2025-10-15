@@ -13,16 +13,16 @@
     "watch": "tamagui-build --skip-types --watch",
     "clean": "tamagui-build clean",
     "clean:build": "tamagui-build clean:build",
-    "generate:tokens": "xzkui-tokens generate -t tamagui -i ./raw-tokens -o ./src/tokens -p",
-    "generate:tokens:remote": "xzkui-tokens generate -t tamagui -s https://github.com/Xsolla-ZK/Design-Tokens.git -o ./src/tokens -p"
+    "generate:tokens": "xzkui-tokens generate -t tamagui -i ./raw-tokens -o ./src/tokens",
+    "generate:tokens:remote": "xzkui-tokens generate -t tamagui -s https://github.com/Xsolla-ZK/Design-Tokens.git -i pentagram -o ./src/tokens -p"
   },
   "dependencies": {
-    "@xsolla-zk/config": "1.2.3",
-    "@xsolla-zk/react": "1.2.3"
+    "@xsolla-zk/config": "1.3.1",
+    "@xsolla-zk/react": "1.3.1"
   },
   "devDependencies": {
     "@app/typescript-config": "workspace:*",
     "@tamagui/build": "1.132.23",
-    "@xsolla-zk/tokens": "1.2.3"
+    "@xsolla-zk/tokens": "1.3.1"
   }
 }

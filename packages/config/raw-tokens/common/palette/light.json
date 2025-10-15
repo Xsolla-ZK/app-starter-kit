@@ -1,77 +1,77 @@
 {
   "brand": {
     "100": {
-      "value": "#E9FDB0",
+      "value": "#CCF9FF",
       "type": "color"
     },
     "200": {
-      "value": "#E1FC95",
+      "value": "#9BF3FF",
       "type": "color"
     },
     "300": {
-      "value": "#D9F97A",
+      "value": "#6BEEFF",
       "type": "color"
     },
     "400": {
-      "value": "#D2FA5C",
+      "value": "#3AE8FF",
       "type": "color"
     },
     "500": {
-      "value": "#C9F938",
+      "value": "#09E2FF",
       "type": "color"
     },
     "600": {
-      "value": "#9DD006",
+      "value": "#18B3D3",
       "type": "color"
     },
     "700": {
-      "value": "#769317",
+      "value": "#0E84A7",
       "type": "color"
     },
     "800": {
-      "value": "#4C6204",
+      "value": "#075A7B",
       "type": "color"
     },
     "900": {
-      "value": "#394902",
+      "value": "#02354F",
       "type": "color"
     }
   },
   "brand-extra": {
     "100": {
-      "value": "#E7E6FE",
+      "value": "#F8FFE3",
       "type": "color"
     },
     "200": {
-      "value": "#D2CEFD",
+      "value": "#EEFFB9",
       "type": "color"
     },
     "300": {
-      "value": "#B2A6FC",
+      "value": "#E3FF90",
       "type": "color"
     },
     "400": {
-      "value": "#977BEC",
+      "value": "#D9FF66",
       "type": "color"
     },
     "500": {
-      "value": "#6939F9",
+      "value": "#D0FF41",
       "type": "color"
     },
     "600": {
-      "value": "#541CF9",
+      "value": "#8CA415",
       "type": "color"
     },
     "700": {
-      "value": "#3703D3",
+      "value": "#6F820C",
       "type": "color"
     },
     "800": {
-      "value": "#2A00A7",
+      "value": "#516005",
       "type": "color"
     },
     "900": {
-      "value": "#1E0177",
+      "value": "#343E01",
       "type": "color"
     }
   },
@@ -81,195 +81,195 @@
       "type": "color"
     },
     "100": {
-      "value": "#F5F5F5",
+      "value": "#F7F7F5",
       "type": "color"
     },
     "200": {
-      "value": "#E5E5E5",
+      "value": "#DFDFD7",
       "type": "color"
     },
     "300": {
-      "value": "#CDCDCD",
+      "value": "#C6C7BB",
       "type": "color"
     },
     "400": {
-      "value": "#B3B2B2",
+      "value": "#ADB09F",
       "type": "color"
     },
     "500": {
-      "value": "#8E8E8E",
+      "value": "#949886",
       "type": "color"
     },
     "600": {
-      "value": "#5F5E61",
+      "value": "#7B806D",
       "type": "color"
     },
     "700": {
-      "value": "#424146",
+      "value": "#545E52",
       "type": "color"
     },
     "800": {
-      "value": "#2D2C33",
+      "value": "#363C39",
       "type": "color"
     },
     "900": {
-      "value": "#1C1B20",
+      "value": "#181A1A",
       "type": "color"
     },
     "999": {
-      "value": "#111014",
+      "value": "#000000",
       "type": "color"
     }
   },
   "negroni": {
     "100": {
-      "value": "#FDEBE9",
+      "value": "#FFE7E3",
       "type": "color"
     },
     "200": {
-      "value": "#FBD6D0",
+      "value": "#FFC2B8",
       "type": "color"
     },
     "300": {
-      "value": "#FAC1B8",
+      "value": "#FF9C8E",
       "type": "color"
     },
     "400": {
-      "value": "#FC9A8C",
+      "value": "#FF7763",
       "type": "color"
     },
     "500": {
-      "value": "#EE6B57",
+      "value": "#FF5138",
       "type": "color"
     },
     "600": {
-      "value": "#E8523B",
+      "value": "#F82B0E",
       "type": "color"
     },
     "700": {
-      "value": "#E5372B",
+      "value": "#C92209",
       "type": "color"
     },
     "800": {
-      "value": "#DA2017",
+      "value": "#991805",
       "type": "color"
     },
     "900": {
-      "value": "#B51911",
+      "value": "#6A0F02",
       "type": "color"
     }
   },
   "prosecco": {
     "100": {
-      "value": "#FFECC2",
+      "value": "#FFF7E3",
       "type": "color"
     },
     "200": {
-      "value": "#FFE09D",
+      "value": "#FFEBB8",
       "type": "color"
     },
     "300": {
-      "value": "#FFD475",
+      "value": "#FFDE8C",
       "type": "color"
     },
     "400": {
-      "value": "#FEC64A",
+      "value": "#FFD161",
       "type": "color"
     },
     "500": {
-      "value": "#FFB30F",
+      "value": "#FFC536",
       "type": "color"
     },
     "600": {
-      "value": "#FB9510",
+      "value": "#E77B08",
       "type": "color"
     },
     "700": {
-      "value": "#E56F00",
+      "value": "#C55F05",
       "type": "color"
     },
     "800": {
-      "value": "#CC5500",
+      "value": "#A44603",
       "type": "color"
     },
     "900": {
-      "value": "#AE3D00",
+      "value": "#823101",
       "type": "color"
     }
   },
   "absinthe": {
     "100": {
-      "value": "#D8FDEA",
+      "value": "#E3FFEA",
       "type": "color"
     },
     "200": {
-      "value": "#96FBC7",
+      "value": "#B8FFCA",
       "type": "color"
     },
     "300": {
-      "value": "#4BF69E",
+      "value": "#8DFFAA",
       "type": "color"
     },
     "400": {
-      "value": "#20ED84",
+      "value": "#63FF8A",
       "type": "color"
     },
     "500": {
-      "value": "#0CCE6B",
+      "value": "#38FF69",
       "type": "color"
     },
     "600": {
-      "value": "#2CAB49",
+      "value": "#06D138",
       "type": "color"
     },
     "700": {
-      "value": "#268928",
+      "value": "#05A72E",
       "type": "color"
     },
     "800": {
-      "value": "#137307",
+      "value": "#047E23",
       "type": "color"
     },
     "900": {
-      "value": "#115504",
+      "value": "#035418",
       "type": "color"
     }
   },
   "curacao": {
     "100": {
-      "value": "#EEF0FC",
+      "value": "#E7E3FF",
       "type": "color"
     },
     "200": {
-      "value": "#CED5F7",
+      "value": "#C9C1FF",
       "type": "color"
     },
     "300": {
-      "value": "#94A3EB",
+      "value": "#ABA0FF",
       "type": "color"
     },
     "400": {
-      "value": "#6971E2",
+      "value": "#8B7EFF",
       "type": "color"
     },
     "500": {
-      "value": "#454FDE",
+      "value": "#6B5DFF",
       "type": "color"
     },
     "600": {
-      "value": "#3742DF",
+      "value": "#573EF9",
       "type": "color"
     },
     "700": {
-      "value": "#2626DB",
+      "value": "#4A28E2",
       "type": "color"
     },
     "800": {
-      "value": "#1D1DBD",
+      "value": "#4015CB",
       "type": "color"
     },
     "900": {
-      "value": "#1212A1",
+      "value": "#3705B4",
       "type": "color"
     }
   }

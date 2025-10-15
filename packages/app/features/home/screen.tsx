@@ -275,13 +275,13 @@ export default function HomeScreen() {
           <Button.Text>Button</Button.Text>
         </Button>
         <RichIcon
-          size="$500"
+          size="$700"
           shape="leaf"
           backgroundColor="$background.brand-high"
           color="$content.on-brand"
           image={(size) => (
             <Image
-              src="https://whattofarm.io/assets/dex/tokens/200/wrapped-solana-sol-logo.webp"
+              src="https://whattofarm.io/assets/dex/networks/200/solana-logo.webp"
               width={size}
               height={size}
               objectFit="cover"

@@ -58,6 +58,7 @@
     "component/notification-provider",
     "component/tab-bar",
     "component/tab",
-    "component/toast"
+    "component/toast",
+    "component/tooltip"
   ]
 }

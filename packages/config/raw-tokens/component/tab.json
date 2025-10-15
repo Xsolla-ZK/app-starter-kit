@@ -29,11 +29,11 @@
           "type": "number"
         },
         "border-top-left-radius": {
-          "value": "{radius.999}",
+          "value": "{radius.0}",
           "type": "number"
         },
         "border-top-right-radius": {
-          "value": "{radius.999}",
+          "value": "{radius.0}",
           "type": "number"
         },
         "border-bottom-left-radius": {
@@ -75,11 +75,11 @@
           "type": "number"
         },
         "border-top-left-radius": {
-          "value": "{radius.999}",
+          "value": "{radius.0}",
           "type": "number"
         },
         "border-top-right-radius": {
-          "value": "{radius.999}",
+          "value": "{radius.0}",
           "type": "number"
         },
         "border-bottom-left-radius": {
@@ -121,11 +121,11 @@
           "type": "number"
         },
         "border-top-left-radius": {
-          "value": "{radius.999}",
+          "value": "{radius.0}",
           "type": "number"
         },
         "border-top-right-radius": {
-          "value": "{radius.999}",
+          "value": "{radius.0}",
           "type": "number"
         },
         "border-bottom-left-radius": {
@@ -167,11 +167,11 @@
           "type": "number"
         },
         "border-top-left-radius": {
-          "value": "{radius.999}",
+          "value": "{radius.0}",
           "type": "number"
         },
         "border-top-right-radius": {
-          "value": "{radius.999}",
+          "value": "{radius.0}",
           "type": "number"
         },
         "border-bottom-left-radius": {
@@ -213,11 +213,11 @@
           "type": "number"
         },
         "border-top-left-radius": {
-          "value": "{radius.999}",
+          "value": "{radius.0}",
           "type": "number"
         },
         "border-top-right-radius": {
-          "value": "{radius.999}",
+          "value": "{radius.0}",
           "type": "number"
         },
         "border-bottom-left-radius": {

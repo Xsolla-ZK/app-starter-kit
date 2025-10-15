@@ -93,7 +93,7 @@
       "type": "color"
     },
     "on-brand-extra": {
-      "value": "{goose.0}",
+      "value": "{goose.999}",
       "type": "color"
     },
     "on-positive": {
@@ -109,7 +109,7 @@
       "type": "color"
     },
     "on-info": {
-      "value": "{goose.0}",
+      "value": "{goose.999}",
       "type": "color"
     },
     "neutral-primary-inverted": {
@@ -305,11 +305,11 @@
   },
   "layer": {
     "floor-0": {
-      "value": "{goose.999}",
+      "value": "{goose.900}",
       "type": "color"
     },
     "floor-1": {
-      "value": "{goose.900}",
+      "value": "{goose.800}",
       "type": "color"
     },
     "floor-scrim": {

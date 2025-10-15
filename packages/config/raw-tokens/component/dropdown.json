@@ -11,7 +11,7 @@
           "type": "number"
         },
         "border-radius": {
-          "value": "{radius.400}",
+          "value": "{radius.200}",
           "type": "number"
         }
       },
@@ -33,7 +33,7 @@
           "type": "number"
         },
         "border-radius": {
-          "value": "{radius.500}",
+          "value": "{radius.200}",
           "type": "number"
         }
       },
@@ -55,7 +55,7 @@
           "type": "number"
         },
         "border-radius": {
-          "value": "{radius.500}",
+          "value": "{radius.200}",
           "type": "number"
         }
       },

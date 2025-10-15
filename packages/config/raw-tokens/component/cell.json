@@ -90,7 +90,7 @@
             "type": "number"
           },
           "border-radius": {
-            "value": "{radius.550}",
+            "value": "{radius.200}",
             "type": "number"
           }
         },
@@ -126,7 +126,7 @@
             "type": "number"
           },
           "border-radius": {
-            "value": "{radius.550}",
+            "value": "{radius.200}",
             "type": "number"
           }
         },
@@ -162,7 +162,7 @@
             "type": "number"
           },
           "border-radius": {
-            "value": "{radius.550}",
+            "value": "{radius.200}",
             "type": "number"
           }
         },

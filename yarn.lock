@@ -23,9 +23,9 @@ __metadata:
   dependencies:
     "@app/typescript-config": "workspace:*"
     "@tamagui/build": "npm:1.132.23"
-    "@xsolla-zk/config": "npm:1.2.3"
-    "@xsolla-zk/react": "npm:1.2.3"
-    "@xsolla-zk/tokens": "npm:1.2.3"
+    "@xsolla-zk/config": "npm:1.3.1"
+    "@xsolla-zk/react": "npm:1.3.1"
+    "@xsolla-zk/tokens": "npm:1.3.1"
   languageName: unknown
   linkType: soft
 
@@ -35,8 +35,8 @@ __metadata:
   dependencies:
     "@app/typescript-config": "workspace:*"
     "@tamagui/build": "npm:1.132.23"
-    "@xsolla-zk/icons-generator": "npm:1.2.3"
-    "@xsolla-zk/ui-primitives": "npm:1.2.3"
+    "@xsolla-zk/icons-generator": "npm:1.3.1"
+    "@xsolla-zk/ui-primitives": "npm:1.3.1"
     react-native-svg: "npm:15.11.2"
     typescript: "npm:5.8.3"
   languageName: unknown
@@ -57,8 +57,8 @@ __metadata:
     "@tamagui/build": "npm:1.132.23"
     "@tamagui/image-next": "npm:1.132.23"
     "@types/react": "npm:^19.0.0"
-    "@xsolla-zk/icons": "npm:1.2.3"
-    "@xsolla-zk/react": "npm:1.2.3"
+    "@xsolla-zk/icons": "npm:1.3.1"
+    "@xsolla-zk/react": "npm:1.3.1"
     react-native: "npm:0.79.6"
     typescript: "npm:5.8.3"
   languageName: unknown
@@ -1150,18 +1150,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@biomejs/biome@npm:2.1.4":
-  version: 2.1.4
-  resolution: "@biomejs/biome@npm:2.1.4"
+"@biomejs/biome@npm:2.2.4":
+  version: 2.2.4
+  resolution: "@biomejs/biome@npm:2.2.4"
   dependencies:
-    "@biomejs/cli-darwin-arm64": "npm:2.1.4"
-    "@biomejs/cli-darwin-x64": "npm:2.1.4"
-    "@biomejs/cli-linux-arm64": "npm:2.1.4"
-    "@biomejs/cli-linux-arm64-musl": "npm:2.1.4"
-    "@biomejs/cli-linux-x64": "npm:2.1.4"
-    "@biomejs/cli-linux-x64-musl": "npm:2.1.4"
-    "@biomejs/cli-win32-arm64": "npm:2.1.4"
-    "@biomejs/cli-win32-x64": "npm:2.1.4"
+    "@biomejs/cli-darwin-arm64": "npm:2.2.4"
+    "@biomejs/cli-darwin-x64": "npm:2.2.4"
+    "@biomejs/cli-linux-arm64": "npm:2.2.4"
+    "@biomejs/cli-linux-arm64-musl": "npm:2.2.4"
+    "@biomejs/cli-linux-x64": "npm:2.2.4"
+    "@biomejs/cli-linux-x64-musl": "npm:2.2.4"
+    "@biomejs/cli-win32-arm64": "npm:2.2.4"
+    "@biomejs/cli-win32-x64": "npm:2.2.4"
   dependenciesMeta:
     "@biomejs/cli-darwin-arm64":
       optional: true
@@ -1181,62 +1181,62 @@ __metadata:
       optional: true
   bin:
     biome: bin/biome
-  checksum: 10/6b29029d7c9d6042fe57b478ce9db89eb0a00b9604a39259026828bc10ba7c39ac47f73cf642ae1620e4468ac1d6de7beae244cb12fc0934f8b9e4b0e60545a7
+  checksum: 10/051ffd0109868eba6746f9f07022cfabf77c76149b040ad22f18c10fda9185b9923f1722600ef8eb7cef6101af1c6345cd3587b8e0f665207662990acefce48e
   languageName: node
   linkType: hard
 
-"@biomejs/cli-darwin-arm64@npm:2.1.4":
-  version: 2.1.4
-  resolution: "@biomejs/cli-darwin-arm64@npm:2.1.4"
+"@biomejs/cli-darwin-arm64@npm:2.2.4":
+  version: 2.2.4
+  resolution: "@biomejs/cli-darwin-arm64@npm:2.2.4"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@biomejs/cli-darwin-x64@npm:2.1.4":
-  version: 2.1.4
-  resolution: "@biomejs/cli-darwin-x64@npm:2.1.4"
+"@biomejs/cli-darwin-x64@npm:2.2.4":
+  version: 2.2.4
+  resolution: "@biomejs/cli-darwin-x64@npm:2.2.4"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-arm64-musl@npm:2.1.4":
-  version: 2.1.4
-  resolution: "@biomejs/cli-linux-arm64-musl@npm:2.1.4"
+"@biomejs/cli-linux-arm64-musl@npm:2.2.4":
+  version: 2.2.4
+  resolution: "@biomejs/cli-linux-arm64-musl@npm:2.2.4"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-arm64@npm:2.1.4":
-  version: 2.1.4
-  resolution: "@biomejs/cli-linux-arm64@npm:2.1.4"
+"@biomejs/cli-linux-arm64@npm:2.2.4":
+  version: 2.2.4
+  resolution: "@biomejs/cli-linux-arm64@npm:2.2.4"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-x64-musl@npm:2.1.4":
-  version: 2.1.4
-  resolution: "@biomejs/cli-linux-x64-musl@npm:2.1.4"
+"@biomejs/cli-linux-x64-musl@npm:2.2.4":
+  version: 2.2.4
+  resolution: "@biomejs/cli-linux-x64-musl@npm:2.2.4"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-x64@npm:2.1.4":
-  version: 2.1.4
-  resolution: "@biomejs/cli-linux-x64@npm:2.1.4"
+"@biomejs/cli-linux-x64@npm:2.2.4":
+  version: 2.2.4
+  resolution: "@biomejs/cli-linux-x64@npm:2.2.4"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@biomejs/cli-win32-arm64@npm:2.1.4":
-  version: 2.1.4
-  resolution: "@biomejs/cli-win32-arm64@npm:2.1.4"
+"@biomejs/cli-win32-arm64@npm:2.2.4":
+  version: 2.2.4
+  resolution: "@biomejs/cli-win32-arm64@npm:2.2.4"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@biomejs/cli-win32-x64@npm:2.1.4":
-  version: 2.1.4
-  resolution: "@biomejs/cli-win32-x64@npm:2.1.4"
+"@biomejs/cli-win32-x64@npm:2.2.4":
+  version: 2.2.4
+  resolution: "@biomejs/cli-win32-x64@npm:2.2.4"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -4572,7 +4572,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@xsolla-zk/app-starter-kit@workspace:."
   dependencies:
-    "@biomejs/biome": "npm:2.1.4"
+    "@biomejs/biome": "npm:2.2.4"
     "@types/node": "npm:^22.15.3"
     cross-env: "npm:^7.0.3"
     turbo: "npm:^2.5.4"
@@ -4580,59 +4580,59 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xsolla-zk/config@npm:1.2.3":
-  version: 1.2.3
-  resolution: "@xsolla-zk/config@npm:1.2.3"
+"@xsolla-zk/config@npm:1.3.1":
+  version: 1.3.1
+  resolution: "@xsolla-zk/config@npm:1.3.1"
   dependencies:
     "@tamagui/animations-css": "npm:1.132.23"
     "@tamagui/animations-moti": "npm:1.132.23"
     "@tamagui/animations-react-native": "npm:1.132.23"
     "@tamagui/core": "npm:1.132.23"
-    "@xsolla-zk/constants": "npm:1.2.3"
-    "@xsolla-zk/ui-utils": "npm:1.2.3"
+    "@xsolla-zk/constants": "npm:1.3.1"
+    "@xsolla-zk/ui-utils": "npm:1.3.1"
     react-native: "npm:0.79.6"
     react-native-reanimated: "npm:~3.17.4"
-  checksum: 10/8a27273bec2781a45942cea759e30db25044481840cc8095d68f696b60411e7c9cd355b66fde39b601a1eb0cc2351e8f31f4674575d6e17e897323b47654f58f
+  checksum: 10/abe5d1b6498e1348d40567f68866aed3ae6d9a9bab8153c2eabcfd2f534d62ce369f099ba27e9fcec2584ec83e8d3b53d0b98c45e7745d79276a070e3a6913d3
   languageName: node
   linkType: hard
 
-"@xsolla-zk/constants@npm:1.2.3":
-  version: 1.2.3
-  resolution: "@xsolla-zk/constants@npm:1.2.3"
-  checksum: 10/442708215c69698beed6497d9c243fbb1cc2fb4fc25bff3d61000f2396d00582f5a70488b802d29e02cfa952add4586bce8d881a01c005543e9013e9d3f7e9a1
+"@xsolla-zk/constants@npm:1.3.1":
+  version: 1.3.1
+  resolution: "@xsolla-zk/constants@npm:1.3.1"
+  checksum: 10/138a4cb7814adfdc4b3cd4d4da5704c7d84ae3944aa21240e9fae778178dc3d9c1ccc7ca86c37bac2f4f1529d34682d0a164646b49cb781d225f9db2ba6f06c1
   languageName: node
   linkType: hard
 
-"@xsolla-zk/icons-generator@npm:1.2.3":
-  version: 1.2.3
-  resolution: "@xsolla-zk/icons-generator@npm:1.2.3"
+"@xsolla-zk/icons-generator@npm:1.3.1":
+  version: 1.3.1
+  resolution: "@xsolla-zk/icons-generator@npm:1.3.1"
   dependencies:
     prettier: "npm:^3.5.0"
     svgo: "npm:^3.3.2"
   bin:
     xzkui-icons: index.mjs
-  checksum: 10/da94991d988ecab5ba39608b0d5135b414ae03f81b5b98da323b2307f253f970ebd8a7580c54967433cfc065d9a1efa1e980dc312108aaf278db0ab751ad82ea
+  checksum: 10/2797e8071fd267c28626ae1cf09d73594ca5b90dcdf2b63e86230ee7aefb75530b479c1b917f0ea6aa6501ed9043e68c95d95ebd47a95427acbd96279eca2eed
   languageName: node
   linkType: hard
 
-"@xsolla-zk/icons@npm:1.2.3":
-  version: 1.2.3
-  resolution: "@xsolla-zk/icons@npm:1.2.3"
+"@xsolla-zk/icons@npm:1.3.1":
+  version: 1.3.1
+  resolution: "@xsolla-zk/icons@npm:1.3.1"
   dependencies:
     "@tamagui/core": "npm:1.132.23"
-    "@xsolla-zk/ui-primitives": "npm:1.2.3"
+    "@xsolla-zk/ui-primitives": "npm:1.3.1"
     react-native-svg: "npm:15.11.2"
   peerDependencies:
     "@tamagui/core": 1.132.23
-    "@xsolla-zk/ui-primitives": 1.2.3
+    "@xsolla-zk/ui-primitives": 1.3.1
     react-native-svg: 15.11.2
-  checksum: 10/cbe21e6b0f1eb6f16fc276d9b0d1fa0b5843bb03954ae00499c4257d37f17a397888bfb06f04b7baa294e530681d64abccb1d162a4385300d0530dbe6a6ad448
+  checksum: 10/60cd05ec48554eae0a5da78f3cbef82c22582d2665880189e88756eae4fd5565b9d1689b97704e89d08d96d453d3aab00c4a2e7edf9fbd72c2c54a442f0bea49
   languageName: node
   linkType: hard
 
-"@xsolla-zk/react@npm:1.2.3":
-  version: 1.2.3
-  resolution: "@xsolla-zk/react@npm:1.2.3"
+"@xsolla-zk/react@npm:1.3.1":
+  version: 1.3.1
+  resolution: "@xsolla-zk/react@npm:1.3.1"
   dependencies:
     "@floating-ui/react": "npm:^0.27.16"
     "@react-native-community/blur": "npm:^4.4.1"
@@ -4659,9 +4659,9 @@ __metadata:
     "@tamagui/use-controllable-state": "npm:1.132.23"
     "@tamagui/use-direction": "npm:1.132.23"
     "@tamagui/z-index-stack": "npm:1.132.23"
-    "@xsolla-zk/constants": "npm:1.2.3"
-    "@xsolla-zk/ui-primitives": "npm:1.2.3"
-    "@xsolla-zk/ui-utils": "npm:1.2.3"
+    "@xsolla-zk/constants": "npm:1.3.1"
+    "@xsolla-zk/ui-primitives": "npm:1.3.1"
+    "@xsolla-zk/ui-utils": "npm:1.3.1"
     burnt: "npm:0.13.0"
     react-native-reanimated: "npm:~3.17.4"
     react-native-svg: "npm:15.11.2"
@@ -4673,42 +4673,42 @@ __metadata:
     burnt: 0.13.0
     react: 19.0.0
     react-dom: 19.0.0
-  checksum: 10/6dfbe1c3e1f083ce4796989827e699cf20728133af294579c9a3ac6b0245508911ee3b4f74b31e4b8c0466f92ed1543e79dddadf112785bc0c582a0fb8635811
+  checksum: 10/b293383061c955c95e2e0256cc07999131769718f7df7623f8be83ab93dc95ab15cc74be5258ec0a772481ef66c9db987c5572d0edfbf12e7ce04aad5c84b2cb
   languageName: node
   linkType: hard
 
-"@xsolla-zk/tokens@npm:1.2.3":
-  version: 1.2.3
-  resolution: "@xsolla-zk/tokens@npm:1.2.3"
+"@xsolla-zk/tokens@npm:1.3.1":
+  version: 1.3.1
+  resolution: "@xsolla-zk/tokens@npm:1.3.1"
   dependencies:
     dotenv: "npm:^16.4.7"
     prettier: "npm:^3.5.0"
   bin:
     xzkui-tokens: src/index.mjs
-  checksum: 10/5c5e5c6cccf5fdf8ae2dfdf610e26f53669dff234855fcee164eaaadaf817d6dbb5ff8faf27cbf46d1119e447e863e80ae9fc6e1b8b1753829307662a8dcad8f
+  checksum: 10/3b74ec4b9745198718a74144344e51e5760b42c525498e1ac6262f1dff5e83f5fbbbbda62d24336fd5fa713e036c4bdd1c7b20d5a4d1790577c0ed99620f3de2
   languageName: node
   linkType: hard
 
-"@xsolla-zk/ui-primitives@npm:1.2.3":
-  version: 1.2.3
-  resolution: "@xsolla-zk/ui-primitives@npm:1.2.3"
+"@xsolla-zk/ui-primitives@npm:1.3.1":
+  version: 1.3.1
+  resolution: "@xsolla-zk/ui-primitives@npm:1.3.1"
   dependencies:
     "@tamagui/core": "npm:1.132.23"
-    "@xsolla-zk/ui-utils": "npm:1.2.3"
+    "@xsolla-zk/ui-utils": "npm:1.3.1"
     react-native-svg: "npm:15.11.2"
   peerDependencies:
     "@tamagui/core": 1.132.23
     react-native-svg: 15.11.2
-  checksum: 10/e8bcd6c4d2446c3a2987bee6db6a7692834897409cc8cab7749458e193eeced0dafc381bdb2e434352489113c6227da7c085976e4401844394ff14733d48a41a
+  checksum: 10/5998734335ba9cbc5dc3217cefdfb089c3d4059d4759833c3ccd6063ec8c529754514b8485bba3d926190e38603f8cd08c829e63184a26b1006a937ccaad6a46
   languageName: node
   linkType: hard
 
-"@xsolla-zk/ui-utils@npm:1.2.3":
-  version: 1.2.3
-  resolution: "@xsolla-zk/ui-utils@npm:1.2.3"
+"@xsolla-zk/ui-utils@npm:1.3.1":
+  version: 1.3.1
+  resolution: "@xsolla-zk/ui-utils@npm:1.3.1"
   dependencies:
     "@tamagui/core": "npm:1.132.23"
-  checksum: 10/abfa0e7ac1254e594a2d1a7c78b186a867353211780ba1564eda10969ca2396be1d8fd3f4f4f68adc75fdb64af0511c3627e0a12b628efa9dd8bc6deb5bf9e59
+  checksum: 10/b5a2dfbfe13b65e15aea3350308954a439acf7990ada41a0697af5de9426a75be97ec2f5b7920af2c5f4aa40673423555824dcf2a1cef3c24f9095335ec41c16
   languageName: node
   linkType: hard
 
@@ -4944,7 +4944,7 @@ __metadata:
     "@app/utils": "workspace:*"
     "@tanstack/react-query": "npm:^5.80.7"
     "@types/react": "npm:^19.0.0"
-    "@xsolla-zk/icons": "npm:1.2.3"
+    "@xsolla-zk/icons": "npm:1.3.1"
     solito: "patch:solito@npm%3A4.4.1#~/.yarn/patches/solito-npm-4.4.1-976dc5859c.patch"
   languageName: unknown
   linkType: soft
@@ -8998,7 +8998,7 @@ __metadata:
     "@react-navigation/native": "npm:^7.1.6"
     "@tamagui/babel-plugin": "npm:1.132.23"
     "@types/react-native-get-random-values": "npm:^1"
-    "@xsolla-zk/icons": "npm:1.2.3"
+    "@xsolla-zk/icons": "npm:1.3.1"
     app: "npm:0.0.0"
     babel-plugin-module-resolver: "npm:^5.0.2"
     expo: "npm:^53.0.22"
@@ -11878,7 +11878,7 @@ __metadata:
     "@types/node": "npm:^22.15.3"
     "@types/react": "npm:^19.0.0"
     "@types/react-dom": "npm:^19.0.0"
-    "@xsolla-zk/icons": "npm:1.2.3"
+    "@xsolla-zk/icons": "npm:1.3.1"
     app: "npm:0.0.0"
     next: "npm:15.4.6"
     react: "npm:19.0.0"

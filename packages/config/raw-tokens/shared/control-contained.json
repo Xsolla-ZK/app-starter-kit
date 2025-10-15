@@ -25,7 +25,7 @@
     "200": {
       "frame": {
         "border-radius": {
-          "value": "{radius.300}",
+          "value": "{radius.200}",
           "type": "number"
         },
         "padding-horizontal": {
@@ -47,7 +47,7 @@
     "300": {
       "frame": {
         "border-radius": {
-          "value": "{radius.300}",
+          "value": "{radius.200}",
           "type": "number"
         },
         "padding-horizontal": {
@@ -69,7 +69,7 @@
     "400": {
       "frame": {
         "border-radius": {
-          "value": "{radius.400}",
+          "value": "{radius.200}",
           "type": "number"
         },
         "padding-horizontal": {
@@ -91,7 +91,7 @@
     "500": {
       "frame": {
         "border-radius": {
-          "value": "{radius.500}",
+          "value": "{radius.200}",
           "type": "number"
         },
         "padding-horizontal": {
@@ -113,7 +113,7 @@
     "600": {
       "frame": {
         "border-radius": {
-          "value": "{radius.500}",
+          "value": "{radius.200}",
           "type": "number"
         },
         "padding-horizontal": {
@@ -135,7 +135,7 @@
     "700": {
       "frame": {
         "border-radius": {
-          "value": "{radius.550}",
+          "value": "{radius.200}",
           "type": "number"
         },
         "padding-horizontal": {
@@ -157,7 +157,7 @@
     "800": {
       "frame": {
         "border-radius": {
-          "value": "{radius.600}",
+          "value": "{radius.200}",
           "type": "number"
         },
         "padding-horizontal": {
@@ -179,7 +179,7 @@
     "900": {
       "frame": {
         "border-radius": {
-          "value": "{radius.700}",
+          "value": "{radius.200}",
           "type": "number"
         },
         "padding-horizontal": {

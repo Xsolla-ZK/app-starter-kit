@@ -21,7 +21,7 @@ export const accordion = {
         },
         paddingRight: '$space.200',
         paddingVertical: '$space.200',
-        borderRadius: '$radius.500',
+        borderRadius: '$radius.200',
       },
       content: {
         minHeight: '$size.0',
@@ -57,7 +57,7 @@ export const button = {
   $200: {
     frame: {
       minSize: '$size.200',
-      borderRadius: '$radius.300',
+      borderRadius: '$radius.200',
       paddingHorizontal: '$space.100',
       gap: '$space.50',
     },
@@ -72,7 +72,7 @@ export const button = {
   $300: {
     frame: {
       minSize: '$size.300',
-      borderRadius: '$radius.300',
+      borderRadius: '$radius.200',
       paddingHorizontal: '$space.200',
       gap: '$space.50',
     },
@@ -87,7 +87,7 @@ export const button = {
   $400: {
     frame: {
       minSize: '$size.400',
-      borderRadius: '$radius.400',
+      borderRadius: '$radius.200',
       paddingHorizontal: '$space.250',
       gap: '$space.100',
     },
@@ -102,7 +102,7 @@ export const button = {
   $500: {
     frame: {
       minSize: '$size.500',
-      borderRadius: '$radius.500',
+      borderRadius: '$radius.200',
       paddingHorizontal: '$space.300',
       gap: '$space.100',
     },
@@ -117,7 +117,7 @@ export const button = {
   $600: {
     frame: {
       minSize: '$size.600',
-      borderRadius: '$radius.500',
+      borderRadius: '$radius.200',
       paddingHorizontal: '$space.350',
       gap: '$space.150',
     },
@@ -132,7 +132,7 @@ export const button = {
   $700: {
     frame: {
       minSize: '$size.700',
-      borderRadius: '$radius.550',
+      borderRadius: '$radius.200',
       paddingHorizontal: '$space.400',
       gap: '$space.150',
     },
@@ -187,7 +187,7 @@ export const cell = {
           $xl: '$platform.layout.content-compensation.xl',
         },
         paddingVertical: '$space.200',
-        borderRadius: '$radius.550',
+        borderRadius: '$radius.200',
       },
       content: {
         minHeight: '$size.700',
@@ -202,7 +202,7 @@ export const cell = {
           $xl: '$platform.layout.content-compensation.xl',
         },
         paddingVertical: '$space.200',
-        borderRadius: '$radius.550',
+        borderRadius: '$radius.200',
       },
       content: {
         minHeight: '$size.600',
@@ -217,7 +217,7 @@ export const cell = {
           $xl: '$platform.layout.content-compensation.xl',
         },
         paddingVertical: '$space.100',
-        borderRadius: '$radius.550',
+        borderRadius: '$radius.200',
       },
       content: {
         minHeight: '$size.500',
@@ -229,7 +229,7 @@ export const checkbox = {
   $400: {
     frame: {
       size: '$size.100',
-      borderRadius: '$radius.200',
+      borderRadius: '$radius.0',
       borderWidth: '$stroke.100',
     },
     icon: {
@@ -239,7 +239,7 @@ export const checkbox = {
   $500: {
     frame: {
       size: '$size.200',
-      borderRadius: '$radius.300',
+      borderRadius: '$radius.0',
       borderWidth: '$stroke.100',
     },
     icon: {
@@ -249,7 +249,7 @@ export const checkbox = {
   $600: {
     frame: {
       size: '$size.300',
-      borderRadius: '$radius.300',
+      borderRadius: '$radius.100',
       borderWidth: '$stroke.200',
     },
     icon: {
@@ -261,7 +261,7 @@ export const chip = {
   $200: {
     frame: {
       minSize: '$size.200',
-      borderRadius: '$radius.300',
+      borderRadius: '$radius.200',
       paddingHorizontal: '$space.100',
       gap: '$space.50',
     },
@@ -276,7 +276,7 @@ export const chip = {
   $300: {
     frame: {
       minSize: '$size.300',
-      borderRadius: '$radius.300',
+      borderRadius: '$radius.200',
       paddingHorizontal: '$space.200',
       gap: '$space.50',
     },
@@ -291,7 +291,7 @@ export const chip = {
   $400: {
     frame: {
       minSize: '$size.400',
-      borderRadius: '$radius.400',
+      borderRadius: '$radius.200',
       paddingHorizontal: '$space.250',
       gap: '$space.100',
     },
@@ -306,7 +306,7 @@ export const chip = {
   $500: {
     frame: {
       minSize: '$size.500',
-      borderRadius: '$radius.500',
+      borderRadius: '$radius.200',
       paddingHorizontal: '$space.300',
       gap: '$space.100',
     },
@@ -321,7 +321,7 @@ export const chip = {
   $600: {
     frame: {
       minSize: '$size.600',
-      borderRadius: '$radius.500',
+      borderRadius: '$radius.200',
       paddingHorizontal: '$space.350',
       gap: '$space.150',
     },
@@ -336,7 +336,7 @@ export const chip = {
   $700: {
     frame: {
       minSize: '$size.700',
-      borderRadius: '$radius.550',
+      borderRadius: '$radius.200',
       paddingHorizontal: '$space.400',
       gap: '$space.150',
     },
@@ -386,7 +386,7 @@ export const dropdown = {
     frame: {
       marginTop: '$space.200',
       padding: '$space.200',
-      borderRadius: '$radius.400',
+      borderRadius: '$radius.200',
     },
     content: {
       paddingHorizontal: '$space.200',
@@ -396,7 +396,7 @@ export const dropdown = {
     frame: {
       marginTop: '$space.200',
       padding: '$space.200',
-      borderRadius: '$radius.500',
+      borderRadius: '$radius.200',
     },
     content: {
       paddingHorizontal: '$space.200',
@@ -406,7 +406,7 @@ export const dropdown = {
     frame: {
       marginTop: '$space.200',
       padding: '$space.200',
-      borderRadius: '$radius.500',
+      borderRadius: '$radius.200',
     },
     content: {
       paddingHorizontal: '$space.200',
@@ -539,7 +539,7 @@ export const input = {
   $400: {
     frame: {
       minSize: '$size.400',
-      borderRadius: '$radius.400',
+      borderRadius: '$radius.200',
       gap: '$space.100',
       borderWidth: '$stroke.200',
       paddingVertical: '$space.250',
@@ -552,7 +552,7 @@ export const input = {
   $500: {
     frame: {
       minSize: '$size.500',
-      borderRadius: '$radius.500',
+      borderRadius: '$radius.200',
       gap: '$space.100',
       borderWidth: '$stroke.200',
       paddingVertical: '$space.250',
@@ -565,7 +565,7 @@ export const input = {
   $600: {
     frame: {
       minSize: '$size.600',
-      borderRadius: '$radius.500',
+      borderRadius: '$radius.200',
       gap: '$space.150',
       borderWidth: '$stroke.200',
       paddingVertical: '$space.250',
@@ -617,7 +617,7 @@ export const list = {
           $xl: '$platform.layout.content-compensation.xl',
         },
         paddingVertical: '$space.350',
-        borderRadius: '$radius.550',
+        borderRadius: '$radius.200',
       },
       content: {
         minHeight: '$size.200',
@@ -632,7 +632,7 @@ export const list = {
           $xl: '$platform.layout.content-compensation.xl',
         },
         paddingVertical: '$space.350',
-        borderRadius: '$radius.550',
+        borderRadius: '$radius.200',
       },
       content: {
         minHeight: '$size.200',
@@ -689,10 +689,7 @@ export const modal = {
         $lg: '$platform.layout.margin-horizontal.lg',
         $xl: '$platform.layout.margin-horizontal.xl',
       },
-      borderRadius: {
-        base: '$radius.600',
-        $lg: '$radius.700',
-      },
+      borderRadius: '$radius.300',
     },
     header: {
       paddingTop: {
@@ -875,7 +872,7 @@ export const progressBar = {
   $500: {
     frame: {
       height: '$size.20',
-      borderRadius: '$radius.999',
+      borderRadius: '$radius.0',
     },
   },
 };
@@ -1031,7 +1028,7 @@ export const segment = {
   $400: {
     frame: {
       minSize: '$size.300',
-      borderRadius: '$radius.300',
+      borderRadius: '$radius.0',
       borderWidth: '$stroke.100',
       paddingHorizontal: '$space.200',
       gap: '$space.50',
@@ -1047,7 +1044,7 @@ export const segment = {
   $500: {
     frame: {
       minSize: '$size.400',
-      borderRadius: '$radius.400',
+      borderRadius: '$radius.0',
       borderWidth: '$stroke.100',
       paddingHorizontal: '$space.250',
       gap: '$space.100',
@@ -1063,7 +1060,7 @@ export const segment = {
   $600: {
     frame: {
       minSize: '$size.500',
-      borderRadius: '$radius.400',
+      borderRadius: '$radius.0',
       borderWidth: '$stroke.100',
       paddingHorizontal: '$space.300',
       gap: '$space.100',
@@ -1079,7 +1076,7 @@ export const segment = {
   $700: {
     frame: {
       minSize: '$size.600',
-      borderRadius: '$radius.500',
+      borderRadius: '$radius.0',
       borderWidth: '$stroke.100',
       paddingHorizontal: '$space.350',
       gap: '$space.150',
@@ -1098,7 +1095,7 @@ export const segmentedControl = {
     frame: {
       paddingHorizontal: '$space.75',
       paddingVertical: '$space.75',
-      borderRadius: '$radius.400',
+      borderRadius: '$radius.200',
       borderWidth: '$stroke.100',
     },
   },
@@ -1106,7 +1103,7 @@ export const segmentedControl = {
     frame: {
       paddingHorizontal: '$space.75',
       paddingVertical: '$space.75',
-      borderRadius: '$radius.500',
+      borderRadius: '$radius.200',
       borderWidth: '$stroke.100',
     },
   },
@@ -1114,7 +1111,7 @@ export const segmentedControl = {
     frame: {
       paddingHorizontal: '$space.75',
       paddingVertical: '$space.75',
-      borderRadius: '$radius.500',
+      borderRadius: '$radius.200',
       borderWidth: '$stroke.100',
     },
   },
@@ -1122,7 +1119,7 @@ export const segmentedControl = {
     frame: {
       paddingHorizontal: '$space.75',
       paddingVertical: '$space.75',
-      borderRadius: '$radius.550',
+      borderRadius: '$radius.200',
       borderWidth: '$stroke.100',
     },
   },
@@ -1230,7 +1227,7 @@ export const slider = {
   $500: {
     frame: {
       height: '$size.20',
-      borderRadius: '$radius.999',
+      borderRadius: '$radius.0',
     },
     knob: {
       size: '$size.150',
@@ -1242,7 +1239,7 @@ export const snackBar = {
   $500: {
     frame: {
       maxWidth: 400,
-      borderRadius: '$radius.550',
+      borderRadius: '$radius.300',
       paddingTop: '$space.200',
       paddingBottom: '$space.200',
       paddingRight: '$space.650',
@@ -1335,7 +1332,7 @@ export const tabBar = {
       size: '$size.250',
     },
     label: {
-      typography: 'compact.200.default',
+      typography: 'compact.200.accent',
     },
   },
 };
@@ -1353,8 +1350,8 @@ export const tab = {
     },
     line: {
       height: '$size.20',
-      borderTopLeftRadius: '$radius.999',
-      borderTopRightRadius: '$radius.999',
+      borderTopLeftRadius: '$radius.0',
+      borderTopRightRadius: '$radius.0',
       borderBottomLeftRadius: '$radius.0',
       borderBottomRightRadius: '$radius.0',
     },
@@ -1372,8 +1369,8 @@ export const tab = {
     },
     line: {
       height: '$size.20',
-      borderTopLeftRadius: '$radius.999',
-      borderTopRightRadius: '$radius.999',
+      borderTopLeftRadius: '$radius.0',
+      borderTopRightRadius: '$radius.0',
       borderBottomLeftRadius: '$radius.0',
       borderBottomRightRadius: '$radius.0',
     },
@@ -1391,8 +1388,8 @@ export const tab = {
     },
     line: {
       height: '$size.20',
-      borderTopLeftRadius: '$radius.999',
-      borderTopRightRadius: '$radius.999',
+      borderTopLeftRadius: '$radius.0',
+      borderTopRightRadius: '$radius.0',
       borderBottomLeftRadius: '$radius.0',
       borderBottomRightRadius: '$radius.0',
     },
@@ -1410,8 +1407,8 @@ export const tab = {
     },
     line: {
       height: '$size.20',
-      borderTopLeftRadius: '$radius.999',
-      borderTopRightRadius: '$radius.999',
+      borderTopLeftRadius: '$radius.0',
+      borderTopRightRadius: '$radius.0',
       borderBottomLeftRadius: '$radius.0',
       borderBottomRightRadius: '$radius.0',
     },
@@ -1429,8 +1426,8 @@ export const tab = {
     },
     line: {
       height: '$size.20',
-      borderTopLeftRadius: '$radius.999',
-      borderTopRightRadius: '$radius.999',
+      borderTopLeftRadius: '$radius.0',
+      borderTopRightRadius: '$radius.0',
       borderBottomLeftRadius: '$radius.0',
       borderBottomRightRadius: '$radius.0',
     },
@@ -1439,7 +1436,7 @@ export const tab = {
 export const toast = {
   $500: {
     frame: {
-      borderRadius: '$radius.500',
+      borderRadius: '$radius.300',
       paddingTop: '$space.100',
       paddingBottom: '$space.100',
       paddingRight: '$space.300',

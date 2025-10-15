@@ -1,0 +1,28 @@
+{
+  "tooltip": {
+    "frame": {
+      "border-radius": {
+        "value": "{radius.300}",
+        "type": "number"
+      },
+      "min-height": {
+        "value": "{size.250}",
+        "type": "number"
+      },
+      "padding": {
+        "value": "{space.150}",
+        "type": "number"
+      },
+      "gap": {
+        "value": "{space.50}",
+        "type": "number"
+      }
+    },
+    "label": {
+      "typography": {
+        "value": "compact.200.default",
+        "type": "other"
+      }
+    }
+  }
+}
