@@ -12,19 +12,19 @@
     "dist"
   ],
   "scripts": {
-    "build": "yarn generate && tamagui-build --skip-types",
+    "build": "tamagui-build --skip-types",
     "watch": "tamagui-build --skip-types --watch",
     "clean": "tamagui-build clean",
     "clean:build": "tamagui-build clean:build",
     "generate": "xzkui-icons generate -i ./raw-icons -o ./src/icons"
   },
   "dependencies": {
-    "@xsolla-zk/ui-primitives": "1.3.1"
+    "@xsolla-zk/ui-primitives": "1.3.2"
   },
   "devDependencies": {
     "@app/typescript-config": "workspace:*",
     "@tamagui/build": "1.132.23",
-    "@xsolla-zk/icons-generator": "1.3.1",
+    "@xsolla-zk/icons-generator": "1.3.2",
     "react-native-svg": "15.11.2",
     "typescript": "5.8.3"
   },

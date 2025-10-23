@@ -13,7 +13,7 @@
     "android": "yarn build && cd apps/native && yarn android",
     "build": "yarn workspaces foreach --all --exclude web --exclude extension run build",
     "build:extension": "yarn workspace extension build",
-    "web": "yarn build && cd apps/web && yarn dev",
+    "web": "turbo build --filter=web^... && yarn workspace web dev",
     "web:extract": "DISABLE_EXTRACTION=false yarn workspace web dev",
     "web:prod": "yarn workspace web build",
     "web:prod:start": "yarn workspace web start",

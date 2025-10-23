@@ -23,9 +23,9 @@ __metadata:
   dependencies:
     "@app/typescript-config": "workspace:*"
     "@tamagui/build": "npm:1.132.23"
-    "@xsolla-zk/config": "npm:1.3.1"
-    "@xsolla-zk/react": "npm:1.3.1"
-    "@xsolla-zk/tokens": "npm:1.3.1"
+    "@xsolla-zk/config": "npm:1.3.2"
+    "@xsolla-zk/react": "npm:1.3.2"
+    "@xsolla-zk/tokens": "npm:1.3.2"
   languageName: unknown
   linkType: soft
 
@@ -35,8 +35,8 @@ __metadata:
   dependencies:
     "@app/typescript-config": "workspace:*"
     "@tamagui/build": "npm:1.132.23"
-    "@xsolla-zk/icons-generator": "npm:1.3.1"
-    "@xsolla-zk/ui-primitives": "npm:1.3.1"
+    "@xsolla-zk/icons-generator": "npm:1.3.2"
+    "@xsolla-zk/ui-primitives": "npm:1.3.2"
     react-native-svg: "npm:15.11.2"
     typescript: "npm:5.8.3"
   languageName: unknown
@@ -57,8 +57,8 @@ __metadata:
     "@tamagui/build": "npm:1.132.23"
     "@tamagui/image-next": "npm:1.132.23"
     "@types/react": "npm:^19.0.0"
-    "@xsolla-zk/icons": "npm:1.3.1"
-    "@xsolla-zk/react": "npm:1.3.1"
+    "@xsolla-zk/icons": "npm:1.3.2"
+    "@xsolla-zk/react": "npm:1.3.2"
     react-native: "npm:0.79.6"
     typescript: "npm:5.8.3"
   languageName: unknown
@@ -4580,59 +4580,59 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@xsolla-zk/config@npm:1.3.1":
-  version: 1.3.1
-  resolution: "@xsolla-zk/config@npm:1.3.1"
+"@xsolla-zk/config@npm:1.3.2":
+  version: 1.3.2
+  resolution: "@xsolla-zk/config@npm:1.3.2"
   dependencies:
     "@tamagui/animations-css": "npm:1.132.23"
     "@tamagui/animations-moti": "npm:1.132.23"
     "@tamagui/animations-react-native": "npm:1.132.23"
     "@tamagui/core": "npm:1.132.23"
-    "@xsolla-zk/constants": "npm:1.3.1"
-    "@xsolla-zk/ui-utils": "npm:1.3.1"
+    "@xsolla-zk/constants": "npm:1.3.2"
+    "@xsolla-zk/ui-utils": "npm:1.3.2"
     react-native: "npm:0.79.6"
     react-native-reanimated: "npm:~3.17.4"
-  checksum: 10/abe5d1b6498e1348d40567f68866aed3ae6d9a9bab8153c2eabcfd2f534d62ce369f099ba27e9fcec2584ec83e8d3b53d0b98c45e7745d79276a070e3a6913d3
+  checksum: 10/402285bafceab8e90aa181159e1560867a56d6cc8b73ba132941a6e8c6970d880d87ee53b299f5da3ee931c14d8328fe6d003edd0f8a465650bf9174ab392736
   languageName: node
   linkType: hard
 
-"@xsolla-zk/constants@npm:1.3.1":
-  version: 1.3.1
-  resolution: "@xsolla-zk/constants@npm:1.3.1"
-  checksum: 10/138a4cb7814adfdc4b3cd4d4da5704c7d84ae3944aa21240e9fae778178dc3d9c1ccc7ca86c37bac2f4f1529d34682d0a164646b49cb781d225f9db2ba6f06c1
+"@xsolla-zk/constants@npm:1.3.2":
+  version: 1.3.2
+  resolution: "@xsolla-zk/constants@npm:1.3.2"
+  checksum: 10/ef2942abf9900e11b98f15ead88c01aa4f27c54684baba317fb9e30a67c4a876d684b832d28d509afecb489c8e66031f229bb209703e599c8d0d1d9e5470b65b
   languageName: node
   linkType: hard
 
-"@xsolla-zk/icons-generator@npm:1.3.1":
-  version: 1.3.1
-  resolution: "@xsolla-zk/icons-generator@npm:1.3.1"
+"@xsolla-zk/icons-generator@npm:1.3.2":
+  version: 1.3.2
+  resolution: "@xsolla-zk/icons-generator@npm:1.3.2"
   dependencies:
     prettier: "npm:^3.5.0"
     svgo: "npm:^3.3.2"
   bin:
     xzkui-icons: index.mjs
-  checksum: 10/2797e8071fd267c28626ae1cf09d73594ca5b90dcdf2b63e86230ee7aefb75530b479c1b917f0ea6aa6501ed9043e68c95d95ebd47a95427acbd96279eca2eed
+  checksum: 10/2b462d58d9a7ba836d9796d057c01f14fbe7786eeb296f0a648fde1b10298c1b8e7e0889fa4cc44eb1c708911c23f133405b1fba88f73e046a269e44b255e1ff
   languageName: node
   linkType: hard
 
-"@xsolla-zk/icons@npm:1.3.1":
-  version: 1.3.1
-  resolution: "@xsolla-zk/icons@npm:1.3.1"
+"@xsolla-zk/icons@npm:1.3.2":
+  version: 1.3.2
+  resolution: "@xsolla-zk/icons@npm:1.3.2"
   dependencies:
     "@tamagui/core": "npm:1.132.23"
-    "@xsolla-zk/ui-primitives": "npm:1.3.1"
+    "@xsolla-zk/ui-primitives": "npm:1.3.2"
     react-native-svg: "npm:15.11.2"
   peerDependencies:
     "@tamagui/core": 1.132.23
-    "@xsolla-zk/ui-primitives": 1.3.1
+    "@xsolla-zk/ui-primitives": 1.3.2
     react-native-svg: 15.11.2
-  checksum: 10/60cd05ec48554eae0a5da78f3cbef82c22582d2665880189e88756eae4fd5565b9d1689b97704e89d08d96d453d3aab00c4a2e7edf9fbd72c2c54a442f0bea49
+  checksum: 10/5d405bf6ab823c9bc444997934bd369e239fd7cee0e5865fe6347673faf100cfa6bcf3ea2fb504d4f1cd7b4bd6433a283fe86fa8969d68893b1f025ea3e5c217
   languageName: node
   linkType: hard
 
-"@xsolla-zk/react@npm:1.3.1":
-  version: 1.3.1
-  resolution: "@xsolla-zk/react@npm:1.3.1"
+"@xsolla-zk/react@npm:1.3.2":
+  version: 1.3.2
+  resolution: "@xsolla-zk/react@npm:1.3.2"
   dependencies:
     "@floating-ui/react": "npm:^0.27.16"
     "@react-native-community/blur": "npm:^4.4.1"
@@ -4659,9 +4659,9 @@ __metadata:
     "@tamagui/use-controllable-state": "npm:1.132.23"
     "@tamagui/use-direction": "npm:1.132.23"
     "@tamagui/z-index-stack": "npm:1.132.23"
-    "@xsolla-zk/constants": "npm:1.3.1"
-    "@xsolla-zk/ui-primitives": "npm:1.3.1"
-    "@xsolla-zk/ui-utils": "npm:1.3.1"
+    "@xsolla-zk/constants": "npm:1.3.2"
+    "@xsolla-zk/ui-primitives": "npm:1.3.2"
+    "@xsolla-zk/ui-utils": "npm:1.3.2"
     burnt: "npm:0.13.0"
     react-native-reanimated: "npm:~3.17.4"
     react-native-svg: "npm:15.11.2"
@@ -4673,42 +4673,42 @@ __metadata:
     burnt: 0.13.0
     react: 19.0.0
     react-dom: 19.0.0
-  checksum: 10/b293383061c955c95e2e0256cc07999131769718f7df7623f8be83ab93dc95ab15cc74be5258ec0a772481ef66c9db987c5572d0edfbf12e7ce04aad5c84b2cb
+  checksum: 10/2e7b78b25d12df76f64096ed54ecabec325551ea81c7391bd125491a1889debf380a63c66e4fc497ee96b0afa23aabbe73de875e980c6dbf0ef063cfce6c7533
   languageName: node
   linkType: hard
 
-"@xsolla-zk/tokens@npm:1.3.1":
-  version: 1.3.1
-  resolution: "@xsolla-zk/tokens@npm:1.3.1"
+"@xsolla-zk/tokens@npm:1.3.2":
+  version: 1.3.2
+  resolution: "@xsolla-zk/tokens@npm:1.3.2"
   dependencies:
     dotenv: "npm:^16.4.7"
     prettier: "npm:^3.5.0"
   bin:
     xzkui-tokens: src/index.mjs
-  checksum: 10/3b74ec4b9745198718a74144344e51e5760b42c525498e1ac6262f1dff5e83f5fbbbbda62d24336fd5fa713e036c4bdd1c7b20d5a4d1790577c0ed99620f3de2
+  checksum: 10/33ad8cb4d16ba84baedf3d5c85005ea6d114bd37b5f153fffba7c0f6db38971413e8ecd7a8d14c23b56c305341f8c7f5479f436275325b8e73ea6a70a32986f8
   languageName: node
   linkType: hard
 
-"@xsolla-zk/ui-primitives@npm:1.3.1":
-  version: 1.3.1
-  resolution: "@xsolla-zk/ui-primitives@npm:1.3.1"
+"@xsolla-zk/ui-primitives@npm:1.3.2":
+  version: 1.3.2
+  resolution: "@xsolla-zk/ui-primitives@npm:1.3.2"
   dependencies:
     "@tamagui/core": "npm:1.132.23"
-    "@xsolla-zk/ui-utils": "npm:1.3.1"
+    "@xsolla-zk/ui-utils": "npm:1.3.2"
     react-native-svg: "npm:15.11.2"
   peerDependencies:
     "@tamagui/core": 1.132.23
     react-native-svg: 15.11.2
-  checksum: 10/5998734335ba9cbc5dc3217cefdfb089c3d4059d4759833c3ccd6063ec8c529754514b8485bba3d926190e38603f8cd08c829e63184a26b1006a937ccaad6a46
+  checksum: 10/8172abc2f30ddc2d14df0fce63b4432f309bd1dbe47ce7aae5a7cf6cdb0f293e64d89ecec0badc5bf1067ded84a58762cd27d6b3884563d96c948b77493fc76f
   languageName: node
   linkType: hard
 
-"@xsolla-zk/ui-utils@npm:1.3.1":
-  version: 1.3.1
-  resolution: "@xsolla-zk/ui-utils@npm:1.3.1"
+"@xsolla-zk/ui-utils@npm:1.3.2":
+  version: 1.3.2
+  resolution: "@xsolla-zk/ui-utils@npm:1.3.2"
   dependencies:
     "@tamagui/core": "npm:1.132.23"
-  checksum: 10/b5a2dfbfe13b65e15aea3350308954a439acf7990ada41a0697af5de9426a75be97ec2f5b7920af2c5f4aa40673423555824dcf2a1cef3c24f9095335ec41c16
+  checksum: 10/70dfa283de3d8c3a86bf559beb2b2e432f8f358e1ad40d629f924345c35027d9dc1b969bffbe94844835d3260f9521b23e320b06abfd7e4d5137de6aa4f64153
   languageName: node
   linkType: hard
 
@@ -4944,7 +4944,7 @@ __metadata:
     "@app/utils": "workspace:*"
     "@tanstack/react-query": "npm:^5.80.7"
     "@types/react": "npm:^19.0.0"
-    "@xsolla-zk/icons": "npm:1.3.1"
+    "@xsolla-zk/icons": "npm:1.3.2"
     solito: "patch:solito@npm%3A4.4.1#~/.yarn/patches/solito-npm-4.4.1-976dc5859c.patch"
   languageName: unknown
   linkType: soft
@@ -8998,7 +8998,7 @@ __metadata:
     "@react-navigation/native": "npm:^7.1.6"
     "@tamagui/babel-plugin": "npm:1.132.23"
     "@types/react-native-get-random-values": "npm:^1"
-    "@xsolla-zk/icons": "npm:1.3.1"
+    "@xsolla-zk/icons": "npm:1.3.2"
     app: "npm:0.0.0"
     babel-plugin-module-resolver: "npm:^5.0.2"
     expo: "npm:^53.0.22"
@@ -11878,7 +11878,7 @@ __metadata:
     "@types/node": "npm:^22.15.3"
     "@types/react": "npm:^19.0.0"
     "@types/react-dom": "npm:^19.0.0"
-    "@xsolla-zk/icons": "npm:1.3.1"
+    "@xsolla-zk/icons": "npm:1.3.2"
     app: "npm:0.0.0"
     next: "npm:15.4.6"
     react: "npm:19.0.0"
